@@ -1,9 +1,9 @@
-const express = require('express')
-let app = express();
+const express = require('express');
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res)=>{
-  res.send("<h1 style='color:pink;'>ŻARTOWAŁEM MIKOŁAJ NIE OBRAŻAJ SIĘ</h1>");
-});
+let app = express();
+app.set('view engine', 'hbs');
+
+app.get('/', (req, res) => res.render('index') );
 
 app.listen(PORT, ()=>console.log('server is running!'));
