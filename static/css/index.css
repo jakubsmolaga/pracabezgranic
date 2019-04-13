@@ -1,0 +1,26 @@
+body {
+  background-color: orange;
+}
+
+.main_div {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0px 5px 80px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+#starybulwy {
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+}
+
+h1 {
+  color: white;
+  align-self: center;
+}
