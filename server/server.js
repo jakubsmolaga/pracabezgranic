@@ -30,11 +30,11 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
 
   app.get('/',          (req, res) => res.render('index'));
   app.get('/register',  (req, res) => {
-    if(req.session.email) res.redirect('/dashboard');
+    if(req.session && req.session.email) res.redirect('/dashboard');
     else res.render('register')
   });
   app.get('/login',     (req, res) => {
-    if(req.session.email) res.redirect('/dashboard');
+    if(req.session && req.session.email) res.redirect('/dashboard');
     else res.render('login');
   });
   app.get('/dashboard', (req, res) => res.render('dashboard'));
