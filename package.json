@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "connect-redis": "^3.4.1",
     "express": "^4.16.4",
-    "hbs": "^4.0.3"
+    "express-session": "^1.16.1",
+    "hbs": "^4.0.4",
+    "mongodb": "^3.2.3"
   }
 }

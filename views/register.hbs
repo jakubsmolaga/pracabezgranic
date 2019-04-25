@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Praca Bez Granic!</title>
+    <link rel="stylesheet" href="/css/register.css">
+  </head>
+  <body>
+    <p class="error-message">{{error}}</p>
+    <form action="/register" method="POST">
+      <p>Nazwa: </p> <input type="text" name="username"/>
+      <p>Email:</p> <input type="text" name="email"/>
+      <p>Telefon:</p> <input type="text" name="phonenumber"/>
+      <p>Hasło:</p> <input type="text" name="password"/>
+
+      <br><br>
+      <input type="submit" value="Utwórz konto"/>
+    </form>
+    <p>lub</p>
+    <a href="/login"><button>Zaloguj się</button></a>
+  </body>
+</html>
