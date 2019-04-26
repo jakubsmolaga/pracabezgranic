@@ -7,7 +7,7 @@ let setup = (app) => {
   app.use(session({
     secret: 'mamma mia!',
     store: new RedisStore({host: 'localhost', port: 6379, client: redisClient, ttl: 3600}),
-    saveUninitalized: false,
+    saveUninitialized: false,
     resave: false
   }));
 };

@@ -12,7 +12,7 @@ let app = express();
 authentication.setup(app);
 app.set('view engine', 'hbs');
 app.use(express.static(staticDirectoryPath));
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 
 MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   if(error) return console.log('Unable to connect to database!');
