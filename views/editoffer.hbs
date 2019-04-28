@@ -1,0 +1,24 @@
+<form action="/updateoffer" method="post">
+  <input type="text" name="_id" value="{{offer._id}}" hidden/>
+  <p>Tytuł</p>
+  <input type="text" name="title" value="{{offer.title}}"/>
+  <p>Opis</p>
+  <textarea name="description" rows="8" cols="80" maxlength="2000">{{offer.description}}</textarea>
+  <p>Miasto</p>
+  <input type="text" name="city" value="{{offer.city}}"/>
+  <p>Ulica</p>
+  <input type="text" name="street" value="{{offer.street}}"/>
+  <p>Numer</p>
+  <input type="number" name="number" value="{{offer.number}}"/>
+  <p>Czy może tu pracować osoba niewidoma?</p>
+  <input type="checkbox" name="blind" {{#if offer.blind}}checked {{/if}}/>
+  <p>Czy może tu pracować osoba niesłysząca?</p>
+  <input type="checkbox" name="deaf" {{#if offer.deaf}}checked {{/if}}/>
+  <p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim?</p>
+  <input type="checkbox" name="wheelchair" {{#if offer.wheelchair}}checked {{/if}}/>
+  <p>Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn?</p>
+  <input type="checkbox" name="upperbody" {{#if offer.upperbody}}checked {{/if}}/>
+
+  <br><br>
+  <input type="submit" value="Zapisz">
+</form>

@@ -1,0 +1,9 @@
+<p>Tytuł: {{offerData.title}}</p>
+<p>Opis: {{offerData.description}}</p>
+<p>Adres: {{offerData.city}}, {{offerData.street}} {{offerData.number}}</p>
+{{#if offerData.blind}}<p>Sprzyja osobom niewidomym</p>{{/if}}
+{{#if offerData.deaf}}<p>Sprzyja osobom niesłyszącym</p>{{/if}}
+{{#if offerData.wheelchair}}<p>Sprzyja osobom poruszającym się na wózku inwalidzkim</p>{{/if}}
+{{#if offerData.upperbody}}<p>Sprzyja osobom z niepełnosprawnościami górnych partii ciała</p>{{/if}}
+
+<p>Dodano przez: {{offerData.username}}</p>

@@ -1,5 +1,19 @@
 <h1>Wiatj {{username}}, to jest twoje konto</h1>
-<p>Tutaj kiedyś będą twoje posty</p>
+{{#each offers}}
+  <a href="/offers/{{this._id}}">{{this.title}}</a> - {{this.city}}
+    <form action="/editoffer" method="post">
+      <input type="text" name="offerId" value="{{this._id}}" hidden/>
+      <input type="submit" value="Edytuj">
+    </form>
+    <form action="/removeoffer" method="post">
+      <input type="text" name="offerId" value="{{this._id}}" hidden/>
+      <input type="submit" value="Usuń">
+    </form>
+{{else}}
+  <p>Aktualnie nie masz żadnych ogłoszeń :/</p>
+{{/each}}
+
+<a href="/newoffer"><button>Dodaj ogłoszenie</button></a>
 <form action="/logout" method="post">
   <input type="submit" value="Wyloguj">
 </form>

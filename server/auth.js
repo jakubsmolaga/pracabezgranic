@@ -18,12 +18,14 @@ let register = async (req, db) => {
     return 'Nie udało się utworzyć konta.';
   let user = await db.collection('users').findOne({email: data.email});
   if (user != null) return 'Użytkownik o podanym adresie email już istnieje';
-  db.collection('users').insertOne({
+  let response = await db.collection('users').insertOne({
     username: data.username,
     email: data.email,
     phonenumber: data.phonenumber,
-    password: data.password
+    password: data.password,
+    offers: []
   });
+  req.session.userId = response.insertedId;
   req.session.username = data.username;
 };
 
@@ -32,6 +34,7 @@ let login = async (req, db) => {
   if(!data.email || !data.password) return 'Nie udało się zalogować.';
   let user = await db.collection('users').findOne({email: data.email});
   if(user == null || data.password != user.password) return 'Nie udało się zalogować.';
+  req.session.userId =  user._id;
   req.session.username = user.username;
 }
 
