@@ -35,10 +35,14 @@
 
 			<!-- MENU -->
 			<div class="menu" id="menu">
-				<a href="">POWIĘKSZ CZCIONKĘ<img src="/img/font-big.png"/>
-				</a><a href="">ODWRÓĆ KOLORY<img src="/img/colors-on.png"/>
-				</a><a href="">ZALOGUJ SIĘ<img src="/img/login.png"/>
-				</a><a href="">INFORMACJE<img src="/img/info.png"/>
+				<a href="">POWIĘKSZ CZCIONKĘ
+				</a><a href=""><img  style="margin-right:2vw" src="/img/font-big.png"/>
+				</a><a href="">ZMIEŃ KONTRAST
+				</a><a href=""><img  style="margin-right:2vw" src="/img/contrast-on.png"/>
+				</a><a href="">ZALOGUJ SIĘ
+				</a><a href=""><img style="margin-right:2vw" src="/img/login.png"/>
+				</a><a href="">INFORMACJE
+				</a><a href=""><img src="/img/info.png"/>
 				</a>
 			</div>
 		</div>
@@ -46,21 +50,18 @@
 		<!-- TREŚĆ -->
 		<div class="login">
 			<h1>Logowanie do profilu pracodawcy</h1>
-
 			<form action="/login" method="POST">
-				{{error}}
 				<p><input type="text" id="fname" name="email" placeholder="Email"></p>
 				<p><input type="text" id="lname" name="password" placeholder="Hasło"></p>
-				<p><input class="buttons-login" type="submit" value="ZALOGUJ SIĘ"></p>
+				<p class="error">{{error}}</p>
+				<p><input class="button" type="submit" value="ZALOGUJ SIĘ"></p>
 			</form>
-
-			<p>lub <a href="/register">utwórz nowe konto</a></p>
-			<!-- <p><a href="/register"><button class="buttons-login">REJESTRACJA</button></a></p> -->
+			<p style="font-size:1.2vw">lub <a class="link" href="/register">utwórz nowe konto.</a></p>
 		</div>
 
 		<!-- STOPKA -->
 		<div class="footer">&#169; 2019 Classic<span style="color:red">Net</span></div>
-
+		
 		<script>
 
 			<!-- MENU (TRYB MOBILNY) -->
@@ -72,8 +73,6 @@
 			y.classList.toggle('open');
 			}
 
-
 		</script>
-
 	</body>
 </html>
