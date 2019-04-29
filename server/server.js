@@ -45,7 +45,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   });
   app.get('/offers/:offerId', (req, res) => {
     offers.getById(req.params.offerId,db).then((result) => {
-      if(result.error) return res.redirect('/');
+      if(result.error) return res.redirect('/offers');
       res.render('offer', {offerData:result.data});
     });
   });
@@ -67,13 +67,16 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   app.post('/newoffer', (req, res) => {
     if(!req.session.username) return res.redirect('/login');
     offers.add(req, db).then((result) => {
-      if(result.error) return res.render('login', {error});
+      if(result.errorCode == 1) return res.render('login', {error});
+      if(result.errorCode == 2) return res.render('newoffer', {error});
       res.redirect('/offers/'+result.offerId);
     });
   });
   app.post('/removeoffer', (req, res) => {
     if(!req.body.offerId || !req.session.userId) return res.redirect('/dashboard');
     offers.getById(req.body.offerId,db).then((result) => {
+      console.log(result);
+      if(result.error) return res.redirect('/dashboard');
       if(result.data.userId != req.session.userId) return res.redirect('/dashboard');
       offers.removeById(req.body.offerId, db).then((result) => res.redirect('/dashboard'));
     });
@@ -92,5 +95,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
       offers.update(req.body, db).then((result) => res.redirect('/dashboard'));
     })
   });
+
+  app.get('*', (req,res) => res.redirect('/'));
   app.listen(PORT, ()=>console.log(`server running on port ${PORT}`));
 });

@@ -6,10 +6,6 @@
   <textarea name="description" rows="8" cols="80" maxlength="2000">{{offer.description}}</textarea>
   <p>Miasto</p>
   <input type="text" name="city" value="{{offer.city}}"/>
-  <p>Ulica</p>
-  <input type="text" name="street" value="{{offer.street}}"/>
-  <p>Numer</p>
-  <input type="number" name="number" value="{{offer.number}}"/>
   <p>Czy może tu pracować osoba niewidoma?</p>
   <input type="checkbox" name="blind" {{#if offer.blind}}checked {{/if}}/>
   <p>Czy może tu pracować osoba niesłysząca?</p>

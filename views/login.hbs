@@ -1,9 +1,79 @@
-<p>{{error}}</p>
-<form action="/login" method="POST">
-  <p>Email:</p> <input type="text" name="email" />
-  <p>Hasło:</p> <input type="text" name="password" />
-  <br><br>
-  <input type="submit" value="Zaloguj się" />
-</form>
-<p>lub</p>
-<a href="/register"><button>Utwórz konto</button></a>
+<!DOCTYPE html>
+
+<!--[if lt IE 9]>
+	<html class="legacy">
+<![endif]-->
+<!--[if lte IE 8]>
+	<html class="legacy">
+<![endif]-->
+
+<html lang="pl-PL">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="/img/logo.png"/>
+		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+		<title>Pracabezgranic.pl</title>
+	</head>
+	<body>
+
+		<!-- NAGŁÓWEK -->
+		<div class="header">
+
+			<!-- LOGO -->
+			<a class="logo" href="index.html">Pracabezgranic.pl</b>
+
+			<!-- PRZYCISK MENU (TRYB MOBILNY) -->
+			</a>
+
+			<div class="icon" id="icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<!-- MENU -->
+			<div class="menu" id="menu">
+				<a href="">POWIĘKSZ CZCIONKĘ<img src="/img/font-big.png"/>
+				</a><a href="">ODWRÓĆ KOLORY<img src="/img/colors-on.png"/>
+				</a><a href="">ZALOGUJ SIĘ<img src="/img/login.png"/>
+				</a><a href="">INFORMACJE<img src="/img/info.png"/>
+				</a>
+			</div>
+		</div>
+
+		<!-- TREŚĆ -->
+		<div class="login">
+			<h1>Logowanie do profilu pracodawcy</h1>
+
+			<form action="/login" method="POST">
+				{{error}}
+				<p><input type="text" id="fname" name="email" placeholder="Email"></p>
+				<p><input type="text" id="lname" name="password" placeholder="Hasło"></p>
+				<p><input class="buttons-login" type="submit" value="ZALOGUJ SIĘ"></p>
+			</form>
+
+			<p>lub <a href="/register">utwórz nowe konto</a></p>
+			<!-- <p><a href="/register"><button class="buttons-login">REJESTRACJA</button></a></p> -->
+		</div>
+
+		<!-- STOPKA -->
+		<div class="footer">&#169; 2019 Classic<span style="color:red">Net</span></div>
+
+		<script>
+
+			<!-- MENU (TRYB MOBILNY) -->
+			var x = document.getElementById("icon");
+			var y = document.getElementsById("menu");
+
+			x.onclick = function(event) {
+			x.classList.toggle('open');
+			y.classList.toggle('open');
+			}
+
+
+		</script>
+
+	</body>
+</html>
