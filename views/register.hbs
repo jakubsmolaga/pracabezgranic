@@ -48,17 +48,23 @@
 		</div>
 
 		<!-- TREŚĆ -->
-		<div class="register">
+		<div class="container">
 			<h1>Rejestracja profilu pracodawcy</h1>
-			<form action="/register" method="POST">
-				<p><input type="text" name="username" placeholder="Login"></p>
-				<p><input type="text" name="email" placeholder="Email"></p>
-				<p><input type="text" name="password" placeholder="Hasło"></p>
-				<p><input type="text" name="phonenumber" placeholder="Numer telefonu"></p>
-				<p class="error">{{error}}</p>
-				<p><input class="button" type="submit" value="UTWÓRZ KONTO"></p>
-			</form>
-			<p style="font-size:1.2vw">lub zaloguj się na <a class="link" href="/login">istniejące konto.</a></p>
+			<div class="container-register">
+				<form action="/register" method="POST">
+					<p>Nazwa użytkownika</p>
+					<p><input type="text" name="username" placeholder="Login"></p>
+					<p>Adres email</p>
+					<p><input type="text" name="email" placeholder="Email"></p>
+					<p>Hasło</p>
+					<p><input type="text" name="password" placeholder="Hasło"></p>
+					<p>Numer telefonu</p>
+					<p class="padding"><input type="text" name="phonenumber" placeholder="Numer telefonu"></p>
+			</div>
+					<p class="error">{{error}}</p>
+					<p><input class="button" type="submit" value="UTWÓRZ KONTO"></p>
+				</form>
+			<p style="padding-bottom:5vh"><a class="link" href="/login">lub zaloguj się na istniejące konto.</a></p>
 		</div>
 
 		<!-- STOPKA -->

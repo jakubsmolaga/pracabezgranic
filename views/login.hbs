@@ -48,15 +48,19 @@
 		</div>
 
 		<!-- TREŚĆ -->
-		<div class="login">
+		<div class="container">
 			<h1>Logowanie do profilu pracodawcy</h1>
+			<div class="container-register">
 			<form action="/login" method="POST">
+			<p>Adres email</p>
 				<p><input type="text" id="fname" name="email" placeholder="Email"></p>
-				<p><input type="text" id="lname" name="password" placeholder="Hasło"></p>
+			<p>Hasło</p>
+				<p class="padding"><input type="text" id="lname" name="password" placeholder="Hasło"></p>
+			</div>
 				<p class="error">{{error}}</p>
 				<p><input class="button" type="submit" value="ZALOGUJ SIĘ"></p>
 			</form>
-			<p style="font-size:1.2vw">lub <a class="link" href="/register">utwórz nowe konto.</a></p>
+			<p class="padding"><a class="link" href="/register">lub utwórz nowe konto.</a></p>
 		</div>
 
 		<!-- STOPKA -->

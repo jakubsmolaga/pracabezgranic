@@ -11,7 +11,7 @@ body {
 	background-size: cover;
 }
 
-/* NAGŁÓWEK */
+/* POCZĄTEK NAGŁÓWKA */
 
 .header {
 	position: fixed;
@@ -33,14 +33,13 @@ body {
 	text-decoration: none;
 }
 
-/* MENU */
-
 .menu {
 	float: right;
 	margin-top: 1.5vh;
 	margin-right: 10vw;
 }
 
+/* Przyciski menu */
 .menu a {
 	display: inline-block;
 	
@@ -50,21 +49,24 @@ body {
 	transition: color 0.2s
 }
 
+/* Przyciski menu pod kursorem */
 .menu a:hover {
 	color: #006bb3;
 }
 
+/* Ikony przycisków menu */
 .menu img {
 	width: 2vw;
 	padding-left: 0.3vw;
 	margin-bottom: -0.9vh;
 }
+/* KONIEC NAGŁÓWKA */
 
 /* ZAWARTOŚĆ */
 
-.index {
+/* Główny kontener zawartości strony */
+.container {
 	width: 70vw;
-	height: 55vh;
 	
 	margin: 0 auto;
 	margin-top: 20vh;
@@ -73,29 +75,27 @@ body {
 	box-shadow: 1vw 1vw 0.8vw 0vw rgba(0,0,0,0.3);
 }
 
-.login {
-
-	width: 70vw;
-	height: 65vh;
-	
+/* Pod-kontener dla formularzy */
+.container-form {
+	width: 50vw;
 	margin: 0 auto;
-	margin-top: 20vh;
-	
-	background-color: rgba(255,255,255,0.9);
-	box-shadow: 1vw 1vw 0.8vw 0vw rgba(0,0,0,0.3);
 }
 
-.register {
-	width: 70vw;
-	height: 83vh;
-	
-	margin: 0 auto;
-	margin-top: 20vh;
-	
-	background-color: rgba(255,255,255,0.9);
-	box-shadow: 1vw 1vw 0.8vw 0vw rgba(0,0,0,0.3);
+.container-form p {
+	text-align:left;
 }
 
+/* Pod-kontener dla wąskich formularz */
+.container-register {
+	width: 20vw;
+	margin: 0 auto;
+}
+
+.container-register p {
+	text-align:left;
+}
+
+/* Stopka */
 .footer {
 	width: 80vw;
 	margin: 10vh 10vw;
@@ -104,10 +104,12 @@ body {
 
 /* PRZYCISKI */
 
+/* Przyciski (index.hbs) */
 .buttons-index {
 	width: 25vw;
 	height: 10vh;
 	margin-top:10vh;
+	margin-bottom:8vh;
 	margin-left:2vw;
 	margin-right:2vw;
 	padding:0;
@@ -125,10 +127,12 @@ body {
 	cursor: pointer;
 }
 
+/* Przyciski pod kursorem (index.hbs) */
 .buttons-index:hover {
 	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
 }
 
+/* Przyciski */
 .button {
 	width: 15vw;
 	height: 8vh;
@@ -147,6 +151,7 @@ body {
 	cursor: pointer;
 }
 
+/* Przyciski pod kursorem */
 .button:hover {
 	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
 }
@@ -157,29 +162,82 @@ form {
 	margin-top: 5vh
 }
 
+/* Pola tekstowe */
 input[type=text] {
 	width: 20vw;
 	font-size:1vw;
 	padding: 1vw 1vw;
-	box-sizing: border-box;
 	border: 0.1vw solid #ccc;
 	-webkit-transition: border 0.2s;
 	transition: border 0.5s;
 	outline: none;
 }
 
+/* Aktywne pola tekstowe */
 input[type=text]:focus {
 	border: 0.1vw solid #006bb3;
 }
 
+/* Domyślnye wartości pól tekstowych */
 ::placeholder {
 	color: #ccc;
 	font-family: Segoe UI Light;
 	font-size: 1vw;
 }
 
+/* Pola tekstowe (email) */
+input[type=email] {
+	width: 20vw;
+	font-size:1vw;
+	padding: 1vw 1vw;
+	border: 0.1vw solid #ccc;
+	-webkit-transition: border 0.2s;
+	transition: border 0.5s;
+	outline: none;
+}
+
+/* Aktywne pola tekstowe (email) */
+input[type=email]:focus {
+	border: 0.1vw solid #006bb3;
+}
+
+/* Pola tekstowe (newoffer.hbs) */
+.newoffer input[type=text] {
+	width: 20vw;
+	font-size:1vw;
+	padding: 1vw 1vw;
+	border: 0.1vw solid #ccc;
+	-webkit-transition: border 0.2s;
+	transition: border 0.5s;
+	outline: none;
+}
+
+/* Akywne pola tekstowe (newoffer.hbs) */
+.newoffer input[type=text]:focus {
+	border: 0.1vw solid #006bb3;
+}
+
+/* Pola opisu */
+textarea {
+	width: 50vw;
+	height:20vh;
+	font-size:1vw;
+	font-family: Segoe UI;
+	padding: 1vw 1vw;
+	border: 0.1vw solid #ccc;
+	-webkit-transition: border 0.2s;
+	transition: border 0.5s;
+	outline: none;
+}
+
+/* Aktywne pola opisu */
+textarea:focus {
+	border: 0.1vw solid #006bb3;
+}
+
 /* FORMATOWANIE TEKSTU */
 
+/* Nagłówki */
 h1 {
 	color: #006bb3;
 	font-size: 2.5vw;
@@ -189,21 +247,29 @@ h1 {
 	margin:0;
 }
 
+/* Tekst */
 p {
 	text-align: center;
 	font-size: 1.5vw;
-	padding-bottom: 2vh;
-	margin: 0;
+	padding: 0;
 }
 
+/* Tekst na końcu kontenera */
+.padding {
+	padding-bottom:5vh;
+}
+
+/* Linki */
 .link {
 	text-decoration: none;
+	font-size:1.2vw;
 	color: #006bb3;
 }
 
+/* Komunikaty błędów */
 .error {
-	margin-top: 1vh;
-	margin-bottom: 1vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 	font-size:1.2vw;
 	color:#ff0000;
 }
@@ -239,19 +305,6 @@ p {
 	font-size:70%;
 }
 
-.legacy .news p {
-	text-indent:-6%;
-	margin-left:5%;
-}
-
-.legacy .list p {
-	margin-top:5%;
-}
-
-.legacy .list img {
-	width: 6%;
-	margin-right: 5%;
-}
 
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
@@ -265,7 +318,8 @@ p {
 	}
 
 	.logo {
-		font-size: 10vw;
+		padding-top:0.5vh;
+		font-size: 8vw;
 	}
 
 	/* PRZYCISK MENU */
@@ -361,60 +415,66 @@ p {
 	}
 
 	.menu.open {
-		height: 40vh;
+		height: 30vh;
 	}
 
 	.menu a {
-		display: block;
+
 		margin-top: 2vh;
 		margin-left: 10vw;
 		font-size: 5vw;
 	}
+	
+	/* Ikony przycisków menu */
+	.menu img {
+		width: 7vw;
+		padding-left: 0vw;
+		margin-bottom: 0vh;
+	}
 
 	/* ZAWARTOŚĆ */
 
-	.content {
-		width: 80vw;
-		margin-top: 16vh;
+	.container {
+		margin-top:16vh;
+		width: 90vw;
 	}
-
-	.news {
-		width: 80vw;
-		margin-top: 4vh;
-		margin-left: 10vw;
-	}
-
+	
 	.footer {
 		margin-top:10%;
 		font-size:2vw;
 	}
 
+	/* FORMULARZE */
+
+	form {
+		margin-top: 0vh
+	}
+
+	/* Pola tekstowe */
+	input[type=text] {
+		width: 80vw;
+		font-size:5vw;
+		border: 0.2vw solid #ccc;
+	}
+	
+	/* Domyślnye wartości pól tekstowych */
+	::placeholder {
+		font-size: 5vw;
+	}
+
+	/* Pola tekstowe (email) */
+	input[type=email] {
+		width: 80vw;
+		font-size:5vw;
+	}
+
 	/* FORMATOWANIE TEKSTU */
 
 	h1 {
-		font-size: 4vw;
+		font-size: 7vw;
 	}
 
 	p {
-		font-size: 3vw;
-	}
-
-	.news p {
-		text-indent: -3.5vw;
-		margin-left: 3.5vw;
-	}
-
-	.list {
-		margin-top: 4vh;
-		margin-bottom: 8vh;
-	}
-
-	.list p {
-		height: 4vw;
-	}
-
-	.list img {
-		height: 5vw;
-		margin-right: 3vw;
+		font-size: 5vw;
 	}
 }
