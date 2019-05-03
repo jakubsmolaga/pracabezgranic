@@ -3,10 +3,9 @@ const RESULTS_PER_PAGE = 5;
 
 let add = async (req, db) => {
   if(!req.session.userId) return {error:'Użytkownik nie jest zalogowany', errorCode: 1};
-  // TODO validate and normalize data
   let data = req.body;
-  if(!data.title || !data.description || !data.city || !data.email)
-    return {error: 'Nie udało się dodać ogłoszenia', errorCode: 2};
+  let validationInfo = validateAndNormalize(data);
+  if(validationInfo.error) return validationInfo;
   data.userId = req.session.userId;
   let insertion = await db.collection('offers').insertOne(data);
   return {offerId:insertion.insertedId};
@@ -26,8 +25,8 @@ let getByUserId = async (userId, db) => {
   return offers.toArray();
 };
 
-let getAll = async (db) => {
-  let offers = await db.collection('offers').find();
+let getAll = async (db, filters) => {
+  let offers = await db.collection('offers').find(filters);
   return offers.toArray();
 };
 
@@ -41,9 +40,20 @@ let removeById = async (offerId, db) => {
 };
 
 let update = async (offer, db) => {
+  let validationInfo = validateAndNormalize(data);
+  if(validationInfo.error) return {error: validationInfo};
   let idToUpdate = offer._id;
   delete offer._id;
   await db.collection('offers').updateOne({_id: ObjectId(idToUpdate)}, {$set: offer});
 };
+
+let validateAndNormalize = (data) => {
+  if(!data.title || !data.description || !data.city || !data.email)
+    return {error: 'Nie udało się dodać ogłoszenia', errorCode: 2};
+  data.city = data.city.toLowerCase();
+  data.city = data.city.charAt(0).toUpperCase() + data.city.slice(1);
+  //TODO finish this function
+  return {}
+}
 
 module.exports = {add, getById, getByUserId, getAll, removeById, update};

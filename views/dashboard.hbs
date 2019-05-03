@@ -1,14 +1,19 @@
+<link rel="stylesheet" href="/css/dashboard.css">
 <h1>Witaj {{username}}</h1>
 {{#each offers}}
-	<p><a class="link" href="/offers/{{this._id}}">{{this.title}} - {{this.city}}</a></p>
-	<form action="/editoffer" method="post">
-		<input type="text" name="offerId" value="{{this._id}}" hidden/>
-		<input class="button" type="submit" value="Edytuj" />
-	</form>
-	<form action="/removeoffer" method="post">
-		<input type="text" name="offerId" value="{{this._id}}" hidden/>
-		<input class="button" type="submit" value="Usuń" />
-	</form>
+	<div class="offer">
+		<p><a class="link" href="/offers/{{this._id}}">{{this.title}} - {{this.city}}</a></p>
+		<div class="offerButtons">
+			<form action="/editoffer" method="post">
+				<input type="text" name="offerId" value="{{this._id}}" hidden/>
+				<input class="button" type="submit" value="Edytuj" />
+			</form>
+			<form action="/removeoffer" method="post">
+				<input type="text" name="offerId" value="{{this._id}}" hidden/>
+				<input class="button" type="submit" value="Usuń" />
+			</form>
+		</div>
+	</div>
 	{{else}}
 		<p style="margin-top:3vh">Aktualnie nie masz żadnych ogłoszeń.</p>
 {{/each}}

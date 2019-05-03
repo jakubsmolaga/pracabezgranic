@@ -1,0 +1,13 @@
+.offer {
+  display: flex;
+  width: 90%;
+  box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+.offerButtons {
+  width: 100%;
+}
+.offerButtons *{
+  float: right;
+}

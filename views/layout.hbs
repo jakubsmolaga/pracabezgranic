@@ -39,7 +39,10 @@
 				</a><a href=""><img  style="margin-right:2vw" src="/img/font-big.png"/>
 				</a><a href="">ZMIEŃ KONTRAST
 				</a><a href=""><img  style="margin-right:2vw" src="/img/contrast-on.png"/>
-				</a><a href="">ZALOGUJ SIĘ
+				<!-- </a><a href="">ZALOGUJ SIĘ -->
+				{{#if loggedIn}} <a href="/logout">WYLOGUJ</a>
+				{{else}} <a href="/login">ZALOGUJ SIĘ</a>
+				{{/if}}
 				</a><a href=""><img style="margin-right:2vw" src="/img/login.png"/>
 				</a><a href="">INFORMACJE
 				</a><a href=""><img src="/img/info.png"/>
@@ -49,6 +52,7 @@
 
 		<!-- TREŚĆ -->
 		<div class="container">
+
 			{{{body}}}
 		</div>
 
