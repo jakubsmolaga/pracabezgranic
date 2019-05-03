@@ -1,88 +1,47 @@
-﻿<!DOCTYPE html>
+<h1>Dodaj nowe ogłoszenie</h1>
+<div class="container-register">
+  <form action="/newoffer" method="post">
+    <p>Tytuł</p>
+    <p><input type="text" name="title" /></p>
+    <p>Opis</p>
+    <p><textarea name="description" maxlength="2000"></textarea></p>
+    <p>Miejscowość</p>
+    <p><input type="text" name="city" /></p>
+    <p>Email kontaktowy</p>
+    <p style="padding-bottom:3vh"><input type="email" name="email" /></p>
+    <select name="industry">
+      <option value="1">Architektura, budownictwo</option>
+      <option value="2">Biotechnologia</option>
+      <option value="3">Chemia</option>
+      <option value="4">Doradztwo, consulting</option>
+      <option value="5">Edukacja, szkolenia</option>
+      <option value="6">Ekologia, energie odnawialne</option>
+      <option value="7">Elektronika, elektrotechnika</option>
+      <option value="8">Finanse, ubezpieczenia</option>
+      <option value="9">Gastronomia</option>
+      <option value="10">Handel hurtowy i detaliczny</option>
+      <option value="11">Marketing, reklama</option>
+      <option value="12">Informatyka, IT, internet</option>
+      <option value="13">Media</option>
+      <option value="14">Medycyna, farmacja</option>
+      <option value="15">Motoryzacja</option>
+      <option value="16">Nieruchomości</option>
+      <option value="17">Ochrona środowiska</option>
+      <option value="18">Paliwa, energia, gaz</option>
+      <option value="19">Produkcja - inne</option>
+      <option value="20">Rolnictwo</option>
+      <option value="21">Rozrywka, kultura, sport</option>
+      <option value="22">Sprzęt, maszyny, urządzenia</option>
+      <option value="23">Transport, spedycja, logistyka</option>
+      <option value="24">Turystyka, hotele</option>
+      <option value="25">Usługi - inne</option>
+      <option value="26">Inna branża</option>
+    </select>
 
-<!--[if lt IE 9]>
-	<html class="legacy">
-<![endif]-->
-<!--[if lte IE 8]>
-	<html class="legacy">
-<![endif]-->
-
-<html lang="pl-PL">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
-		<title>Pracabezgranic.pl</title>
-	</head>
-	<body>
-
-		<!-- NAGŁÓWEK -->
-		<div class="header">
-
-			<!-- LOGO -->
-			<a class="logo" href="index.html">Pracabezgranic.pl</b>
-
-			<!-- PRZYCISK MENU (TRYB MOBILNY) -->
-			</a>
-
-			<div class="icon" id="icon">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-
-			<!-- MENU -->
-			<div class="menu" id="menu">
-				<a href="">POWIĘKSZ CZCIONKĘ
-				</a><a href=""><img  style="margin-right:2vw" src="/img/font-big.png"/>
-				</a><a href="">ZMIEŃ KONTRAST
-				</a><a href=""><img  style="margin-right:2vw" src="/img/contrast-on.png"/>
-				</a><a href="">ZALOGUJ SIĘ
-				</a><a href=""><img style="margin-right:2vw" src="/img/login.png"/>
-				</a><a href="">INFORMACJE
-				</a><a href=""><img src="/img/info.png"/>
-				</a>
-			</div>
-		</div>
-
-		<!-- TREŚĆ -->
-		<div class="container">
-			<h1>Dodaj nowe ogłoszenie</h1>
-				<div class="container-register">
-					<form action="/newoffer" method="post">
-						<p>Tytuł</p>
-						<p><input type="text" name="title"/></p>
-						<p>Opis</p>
-						<p><textarea name="description" maxlength="2000"></textarea></p>
-						<p>Miejscowość</p>
-						<p><input type="text" name="city"/></p>
-						<p>Email kontaktowy</p>
-						<p style="padding-bottom:3vh"><input type="email" name="email"/></p>
-						<p>Czy może tu pracować osoba niewidoma? <input type="checkbox" name="blind"/></p>
-						<p>Czy może tu pracować osoba niesłysząca? <input type="checkbox" name="deaf"/></p>
-						<p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim? <input type="checkbox" name="wheelchair"/></p>
-						<p class="padding">Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody"/></p>
-				</div>
-			<p class="padding"><input class="button" type="submit" value="Dodaj ogłoszenie"/></p>
-					</form>
-				
-		</div>
-
-		<!-- STOPKA -->
-		<div class="footer">&#169; 2019 Classic<span style="color:red">Net</span></div>
-		
-		<script>
-
-			<!-- MENU (TRYB MOBILNY) -->
-			var x = document.getElementById("icon");
-			var y = document.getElementsById("menu");
-
-			x.onclick = function(event) {
-			x.classList.toggle('open');
-			y.classList.toggle('open');
-			}
-
-		</script>
-	</body>
-</html>
+    <p>Czy może tu pracować osoba niewidoma? <input type="checkbox" name="blind" /></p>
+    <p>Czy może tu pracować osoba niesłysząca? <input type="checkbox" name="deaf" /></p>
+    <p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim? <input type="checkbox" name="wheelchair" /></p>
+    <p class="padding">Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody" /></p>
+  </form>
+</div>
+<p class="padding"><input class="button" type="submit" value="Dodaj ogłoszenie" /></p>
