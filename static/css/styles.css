@@ -83,7 +83,11 @@ body {
 }
 
 .container-form p {
-	text-align:left;
+	text-align: left;
+}
+
+.container-form img {
+	width: 2vw;
 }
 
 /* Pod-kontener dla wąskich formularz */
@@ -93,7 +97,7 @@ body {
 }
 
 .container-register p {
-	text-align:left;
+	text-align: left;
 }
 
 /* Stopka */
@@ -167,7 +171,7 @@ form {
 input[type=text] {
 	width: 20vw;
 	font-size:1vw;
-	padding: 1vw 1vw;
+	padding: 0.5vw 0.5vw;
 	border: 0.1vw solid #ccc;
 	-webkit-transition: border 0.2s;
 	transition: border 0.5s;
@@ -190,7 +194,7 @@ input[type=text]:focus {
 input[type=email] {
 	width: 20vw;
 	font-size:1vw;
-	padding: 1vw 1vw;
+	padding: 0.5vw 0.5vw;
 	border: 0.1vw solid #ccc;
 	-webkit-transition: border 0.2s;
 	transition: border 0.5s;
@@ -206,7 +210,7 @@ input[type=email]:focus {
 .newoffer input[type=text] {
 	width: 20vw;
 	font-size:1vw;
-	padding: 1vw 1vw;
+	padding: 0.5vw 0.5vw;
 	border: 0.1vw solid #ccc;
 	-webkit-transition: border 0.2s;
 	transition: border 0.5s;
@@ -224,7 +228,7 @@ textarea {
 	height:20vh;
 	font-size:1vw;
 	font-family: Segoe UI;
-	padding: 1vw 1vw;
+	padding: 0.5vw 0.5vw;
 	border: 0.1vw solid #ccc;
 	-webkit-transition: border 0.2s;
 	transition: border 0.5s;
@@ -233,6 +237,22 @@ textarea {
 
 /* Aktywne pola opisu */
 textarea:focus {
+	border: 0.1vw solid #006bb3;
+}
+
+/* Listy rozwijane */
+select {
+	width: 20vw;
+	font-size:1vw;
+	padding: 0.5vw 0.5vw;
+	border: 0.1vw solid #ccc;
+	-webkit-transition: border 0.2s;
+	transition: border 0.5s;
+	outline: none;
+}
+
+/* Aktywne listy rozwijane */
+select:focus {
 	border: 0.1vw solid #006bb3;
 }
 
@@ -269,7 +289,6 @@ p {
 
 /* Komunikaty błędów */
 .error {
-	margin-top: 5vh;
 	margin-bottom: 5vh;
 	font-size:1.2vw;
 	color:#ff0000;

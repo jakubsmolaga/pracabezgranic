@@ -1,17 +1,17 @@
-<h1>{{offerData.title}}</h1>
-<p>Branża: {{offerData.industry}}</p>
-<p>{{offerData.city}} {{offerData.email}}</p>
-<p style="text-align:justify">{{offerData.description}}</p>
-{{#if offerData.blind}}
-	<p>Sprzyja osobom niewidomym</p>
-{{/if}}
-{{#if offerData.deaf}}
-	<p>Sprzyja osobom niesłyszącym</p>
-{{/if}}
-{{#if offerData.wheelchair}}
-	<p>Sprzyja osobom poruszającym się na wózku inwalidzkim</p>
-{{/if}}
-{{#if offerData.upperbody}}
-	<p>Sprzyja osobom z niepełnosprawnościami górnych partii ciała</p>
-{{/if}}
-<p>Dodano przez: {{offerData.username}}</p>
+<div class="container-form">
+	<h1>{{offerData.username}} - {{offerData.title}}</h1>
+	<p style="text-align:center; color:#006bb3">{{offerData.industry}} * {{offerData.city}} * {{offerData.email}}</p>
+	<p style="text-align:justify">{{offerData.description}}</p>
+	{{#if offerData.blind}}
+		<p><img src="/img/tick.png" /> Sprzyjamy osobom niewidomym.</p>
+	{{/if}}
+	{{#if offerData.deaf}}
+		<p><img src="/img/tick.png" /> Sprzyjamy osobom niesłyszącym.</p>
+	{{/if}}
+	{{#if offerData.wheelchair}}
+		<p><img src="/img/tick.png" /> Sprzyjamy osobom poruszającym się na wózku inwalidzkim.</p>
+	{{/if}}
+	{{#if offerData.upperbody}}
+		<p><img src="/img/tick.png" /> Sprzyjamy osobom z niepełnosprawnościami górnych partii ciała.</p>
+	{{/if}}
+</div>

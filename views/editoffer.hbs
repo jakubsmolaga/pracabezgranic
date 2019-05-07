@@ -1,48 +1,49 @@
-<h1>Edytuj ogłoszenie</h1>
+﻿<h1>Edytuj ogłoszenie</h1>
 <div class="container-form">
 	<form action="/updateoffer" method="post">
-		<p><input type="text" name="_id" value="{{offer._id}}" hidden/>
-			<p>Tytuł</p>
-			<p><input type="text" name="title" value="{{offer.title}}" /></p>
-			<p>Opis</p>
-			<p><textarea name="description" rows="8" cols="80" maxlength="2000">{{offer.description}}</textarea></p>
-			<p>Miasto</p>
-			<p><input type="text" name="city" value="{{offer.city}}" /></p>
-			<p>Email kontaktowy</p>
-	    <p style="padding-bottom:3vh"><input type="email" name="email" /></p>
-			<p>Branża:</p>
+		<input type="text" name="_id" value="{{offer._id}}" hidden/>
+		<p>Tytuł</p>
+		<p><input type="text" name="title" value="{{offer.title}}" /></p>
+		<p>Opis</p>
+		<p><textarea name="description" rows="8" cols="80" maxlength="2000">{{offer.description}}</textarea></p>
+		<p>Miasto</p>
+		<p><input type="text" name="city" value="{{offer.city}}" /></p>
+		<p>Email kontaktowy</p>
+	    <p><input type="email" name="email" /></p>
+		<p>Branża:</p>
 	    <select name="industry">
-	      <option value="1">Architektura, budownictwo</option>
-	      <option value="2">Biotechnologia</option>
-	      <option value="3">Chemia</option>
-	      <option value="4">Doradztwo, consulting</option>
-	      <option value="5">Edukacja, szkolenia</option>
-	      <option value="6">Ekologia, energie odnawialne</option>
-	      <option value="7">Elektronika, elektrotechnika</option>
-	      <option value="8">Finanse, ubezpieczenia</option>
-	      <option value="9">Gastronomia</option>
-	      <option value="10">Handel hurtowy i detaliczny</option>
-	      <option value="11">Marketing, reklama</option>
-	      <option value="12">Informatyka, IT, internet</option>
-	      <option value="13">Media</option>
-	      <option value="14">Medycyna, farmacja</option>
-	      <option value="15">Motoryzacja</option>
-	      <option value="16">Nieruchomości</option>
-	      <option value="17">Ochrona środowiska</option>
-	      <option value="18">Paliwa, energia, gaz</option>
-	      <option value="19">Produkcja - inne</option>
-	      <option value="20">Rolnictwo</option>
-	      <option value="21">Rozrywka, kultura, sport</option>
-	      <option value="22">Sprzęt, maszyny, urządzenia</option>
-	      <option value="23">Transport, spedycja, logistyka</option>
-	      <option value="24">Turystyka, hotele</option>
-	      <option value="25">Usługi - inne</option>
-	      <option value="26">Inna branża</option>
-	    </select>
-			<p>Czy może tu pracować osoba niewidoma? <input type="checkbox" name="blind" {{#if offer.blind}} checked {{/if}} /></p>
-			<p>Czy może tu pracować osoba niesłysząca? <input type="checkbox" name="deaf" {{#if offer.deaf}} checked {{/if}} /></p>
-			<p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim? <input type="checkbox" name="wheelchair" {{#if offer.wheelchair}} checked {{/if}} /></p>
-			<p class="padding">Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody" {{#if offer.upperbody}} checked {{/if}} /></p>
+			<option value="1">Architektura, budownictwo</option>
+			<option value="2">Biotechnologia</option>
+			<option value="3">Chemia</option>
+			<option value="4">Doradztwo, consulting</option>
+			<option value="5">Edukacja, szkolenia</option>
+			<option value="6">Ekologia, energie odnawialne</option>
+			<option value="7">Elektronika, elektrotechnika</option>
+			<option value="8">Finanse, ubezpieczenia</option>
+			<option value="9">Gastronomia</option>
+			<option value="10">Handel hurtowy i detaliczny</option>
+			<option value="11">Marketing, reklama</option>
+			<option value="12">Informatyka, IT, internet</option>
+			<option value="13">Media</option>
+			<option value="14">Medycyna, farmacja</option>
+			<option value="15">Motoryzacja</option>
+			<option value="16">Nieruchomości</option>
+			<option value="17">Ochrona środowiska</option>
+			<option value="18">Paliwa, energia, gaz</option>
+			<option value="19">Produkcja - inne</option>
+			<option value="20">Rolnictwo</option>
+			<option value="21">Rozrywka, kultura, sport</option>
+			<option value="22">Sprzęt, maszyny, urządzenia</option>
+			<option value="23">Transport, spedycja, logistyka</option>
+			<option value="24">Turystyka, hotele</option>
+			<option value="25">Usługi - inne</option>
+			<option value="26">Inna branża</option>
+		</select>
+		
+		<p>Czy może tu pracować osoba niewidoma? <input type="checkbox" name="blind" {{#if offer.blind}} checked {{/if}} /></p>
+		<p>Czy może tu pracować osoba niesłysząca? <input type="checkbox" name="deaf" {{#if offer.deaf}} checked {{/if}} /></p>
+		<p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim? <input type="checkbox" name="wheelchair" {{#if offer.wheelchair}} checked {{/if}} /></p>
+		<p class="padding">Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody" {{#if offer.upperbody}} checked {{/if}} /></p>
+		<p style="text-align:center"><input class="button" type="submit" value="Zapisz zmiany" /></p>
+	</form>
 </div>
-<p class="padding"><input class="button" type="submit" value="Zapisz zmiany" /></p>
-</form>
