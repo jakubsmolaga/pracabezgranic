@@ -349,7 +349,7 @@ p {
 		width: 8vw;
 		height: 8vw;
 		margin-right: 10vw;
-		margin-top: 2.4vh;
+		margin-top: 3.5vh;
 
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
@@ -455,15 +455,55 @@ p {
 	/* ZAWARTOŚĆ */
 
 	.container {
-		margin-top:16vh;
+		margin-top:20vh;
 		width: 90vw;
 	}
 
+	/* Pod-kontener dla formularzy */
+	.container-form {
+		width: 80vw;
+	}
+
+	.container-form p {
+		text-align: left;
+	}
+
+	.container-form img {
+		width: 5vw;
+	}
+
+	/* Pod-kontener dla wąskich formularzy */
+	.container-register {
+		width: 80vw;
+	}
+	
 	.footer {
 		margin-top:10%;
 		font-size:2vw;
 	}
 
+	/* PRZYCISKI */
+
+	/* Przyciski (index.hbs) */
+	.buttons-index {
+		width: 80vw;
+		height: 15vh;
+		margin-top:5vh;
+		margin-bottom:0vh;
+		margin-left:1vw;
+		margin-right:1vw;
+		border-width: 0.2vw;
+		font-size: 6vw;
+	}
+	
+	/* Przyciski */
+	.button {
+		width: 80vw;
+		height: 15vh;
+		border-width: 0.2vw;
+		font-size: 6vw;
+	}
+	
 	/* FORMULARZE */
 
 	form {
@@ -488,13 +528,95 @@ p {
 		font-size:5vw;
 	}
 
+	/* Pola tekstowe */
+	input[type=text] {
+		width: 80vw;
+		font-size:5vw;
+		padding: 3vw 3vw;
+		border: 0.2vw solid #ccc;
+	}
+
+	/* Aktywne pola tekstowe */
+	input[type=text]:focus {
+		border: 0.2vw solid #006bb3;
+	}
+
+	/* Domyślnye wartości pól tekstowych */
+	::placeholder {
+		font-size: 5vw;
+	}
+
+	/* Pola tekstowe (email) */
+	input[type=email] {
+		width: 80vw;
+		font-size:5vw;
+		padding: 3vw 3vw;
+		border: 0.2vw solid #ccc;
+	}
+
+	/* Aktywne pola tekstowe (email) */
+	input[type=email]:focus {
+		border: 0.2vw solid #006bb3;
+	}
+	
+	/* Pola tekstowe (newoffer.hbs) */
+	.newoffer input[type=text] {
+		width: 80vw;
+		font-size:5vw;
+		padding: 3vw 3vw;
+		border: 0.2vw solid #ccc;
+	}
+
+	/* Akywne pola tekstowe (newoffer.hbs) */
+	.newoffer input[type=text]:focus {
+		border: 0.2vw solid #006bb3;
+	}
+
+	/* Pola opisu */
+	textarea {
+		width: 80vw;
+		height:30vh;
+		font-size:5vw;
+		font-family: Segoe UI;
+		padding: 3vw 3vw;
+		border: 0.2vw solid #ccc;
+	}
+
+	/* Aktywne pola opisu */
+	textarea:focus {
+		border: 0.2vw solid #006bb3;
+	}
+
+	/* Listy rozwijane */
+	select {
+		width: 80vw;
+		font-size: 5vw;
+		padding: 3vw 3vw;
+		border: 0.2vw solid #ccc;
+	}
+
+	/* Aktywne listy rozwijane */
+	select:focus {
+		border: 0.2vw solid #006bb3;
+	}
+	
 	/* FORMATOWANIE TEKSTU */
 
 	h1 {
-		font-size: 7vw;
+		font-size: 5.5vw;
 	}
 
 	p {
 		font-size: 5vw;
+	}
+
+	/* Linki */
+	.link {
+		font-size:5vw;
+	}
+
+	/* Komunikaty błędów */
+	.error {
+		font-size:5vw;
 	}
 }

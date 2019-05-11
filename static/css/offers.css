@@ -30,12 +30,40 @@ form {
 	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
 }
 
+.button-filter {
+	float: right;
+	padding-top: 6vh;
+}
+
+p {
+	font-size: 5vw;
+	margin-bottom:3vh;
+	padding: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
 .location {
-  float: right;
-  font-size: 1.5vw;
+	float: right;
+	font-size: 1.5vw;
+}
+
+/* --- WERSJA MOBILNA --- */
+@media only screen and (max-width: 768px) {
+	
+	.offer {
+		padding: 2vw;
+		margin-top: 2vh;
+
+		border-width: 0.2vw;
+		font-size: 4vw;
+	}
+	
+	.location {
+		display: none;
+	}
+	
 }
