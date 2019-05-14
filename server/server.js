@@ -1,9 +1,9 @@
 const express = require('express');
 const path    = require('path');
 const mongodb = require('mongodb');
+const hbs     = require('hbs');
 const auth    = require('./auth');
 const offers  = require('./offers');
-const INDUSTRY_IDS = require('./INDUSTRY_IDS');
 const PORT = process.env.PORT || 3000;
 const staticDirectoryPath = path.join(__dirname, '../static');
 const MongoClient = mongodb.MongoClient;
@@ -20,6 +20,9 @@ let render = (req,res,page,data) => {
   data.loggedIn = req.session.userId;
   res.render(page, data);
 }
+hbs.registerHelper('formatDate', (timestamp) => {
+  // TODO formatowanie
+});
 
 MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   if(error) return console.log('Unable to connect to database!');
@@ -55,7 +58,6 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   app.get('/offers/:offerId', (req, res) => {
     offers.getById(req.params.offerId,db).then((result) => {
       if(result.error) return res.redirect('/offers');
-      result.data.industry = INDUSTRY_IDS[result.data.industry];
       render(req,res,'offer', {offerData:result.data});
     });
   });

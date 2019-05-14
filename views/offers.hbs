@@ -2,7 +2,6 @@
 <div class="container-form">
 	<h1>Aktualna lista ogłoszeń</h1>
 	<form action="/offers" method="post">
-		<p class="button-filter"><input class="button" type="submit" value="FILTRUJ"></p>
 		<p>Miasto:</p>
 		<p><input type="text" name="city"/ value="{{city}}"></p>
 		<p>Branża:</p>
@@ -36,16 +35,22 @@
 				<option value="25">Usługi - inne</option>
 				<option value="26">Inna branża</option>
 			</select>
+			<br><br><br>
+			<input class="button" type="submit" value="filtruj">
 		</p>
 	</form>
 	{{#each offers}}
 	<a href="/offers/{{this._id}}">
 		<div class="offer">
 			<span style="color:#006bb3" >{{this.title}}</span>
+			<br class="mobile-only">
 			<div class="location">
 				{{this.city}}
 			</div>
+			<p class="date">{{this.industry}}, Wygasa 32.13.1945</p>
 		</div>
 	</a>
+	{{else}}
+	<p>Nie znaleziono żadnych ogłoszeń :(</p>
 	{{/each}}
 </div>

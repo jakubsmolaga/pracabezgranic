@@ -1,3 +1,5 @@
+const utils = require('./utils');
+const INDUSTRY_IDS = require('./INDUSTRY_IDS');
 const ObjectId = require('mongodb').ObjectId;
 const RESULTS_PER_PAGE = 5;
 
@@ -7,6 +9,7 @@ let add = async (req, db) => {
   let validationInfo = validateAndNormalize(data);
   if(validationInfo.error) return validationInfo;
   data.userId = req.session.userId;
+  data.timeStamp = utils.getTimeStamp();
   let insertion = await db.collection('offers').insertOne(data);
   return {offerId:insertion.insertedId};
 };
@@ -17,17 +20,22 @@ let getById = async (offerId, db) => {
   if (!data) return {error: 'To ogłoszenie nie istnieje'};
   let user = await db.collection('users').findOne({_id: ObjectId(data.userId)});
   data.username = user.username;
+  data.industry = INDUSTRY_IDS[data.industry];
   return {data};
 };
 
 let getByUserId = async (userId, db) => {
   let offers = await db.collection('offers').find({userId});
-  return offers.toArray();
+  offers = await offers.toArray();
+  for(offer of offers) offer.industry = INDUSTRY_IDS[offer.industry];
+  return offers;
 };
 
 let getAll = async (db, filters) => {
   let offers = await db.collection('offers').find(filters);
-  return offers.toArray();
+  offers = await offers.toArray();
+  for(offer of offers) offer.industry = INDUSTRY_IDS[offer.industry];
+  return offers;
 };
 
 let getByPageNumber = async (pageNumber, db) => {

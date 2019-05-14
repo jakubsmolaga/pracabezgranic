@@ -36,7 +36,8 @@ form {
 }
 
 p {
-	font-size: 5vw;
+	/* TODO zmienić to */
+	font-size: 4vh;
 	margin-bottom:3vh;
 	padding: 0;
 }
@@ -50,10 +51,17 @@ a {
 	float: right;
 	font-size: 1.5vw;
 }
+.mobile-only {
+	display: none;
+}
+.date {
+	color: rgba(100, 100, 100, 0.9);
+	font-size: 2vh
+}
 
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
-	
+
 	.offer {
 		padding: 2vw;
 		margin-top: 2vh;
@@ -61,9 +69,14 @@ a {
 		border-width: 0.2vw;
 		font-size: 4vw;
 	}
-	
-	.location {
-		display: none;
+
+	.mobile-only {
+		display: block;
 	}
-	
+
+	.location {
+		font-size: 2vh;
+		/* display: none; */
+	}
+
 }
