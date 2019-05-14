@@ -21,7 +21,13 @@ let render = (req,res,page,data) => {
   res.render(page, data);
 }
 hbs.registerHelper('formatDate', (timestamp) => {
-  // TODO formatowanie
+  let date = new Date(timestamp);
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+  if(day<=9) day = '0'+day
+  if(month<=9) month = '0'+month
+  return day + '-' + month + '-' + year
 });
 
 MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
