@@ -45,7 +45,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   });
   app.get('/dashboard', (req, res) => {
     if(!req.session.username) return res.redirect('/login');
-    offers.getByUserId(req.session.userId, db).then((result) => {
+    offers.getByUserId(db, req.session.userId).then((result) => {
       render(req,res,'dashboard', {username: req.session.username, offers: result});
     });
   });

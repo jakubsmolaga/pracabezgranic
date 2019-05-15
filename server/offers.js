@@ -1,5 +1,6 @@
 const utils = require('./utils');
 const INDUSTRY_IDS = require('./INDUSTRY_IDS');
+const NAMES = require('./NAMES.js')
 const ObjectId = require('mongodb').ObjectId;
 const RESULTS_PER_PAGE = 5;
 
@@ -20,27 +21,30 @@ let getById = async (offerId, db) => {
   if (!data) return {error: 'To ogłoszenie nie istnieje'};
   let user = await db.collection('users').findOne({_id: ObjectId(data.userId)});
   data.username = user.username;
-  data.industry = INDUSTRY_IDS[data.industry];
+  data.industry = NAMES.industry[data.industry];
+  data.industry = NAMES.workTime[data.workTime];
   return {data};
 };
 
-let getByUserId = async (userId, db) => {
-  let offers = await db.collection('offers').find({userId});
-  offers = await offers.toArray();
-  for(offer of offers) offer.industry = INDUSTRY_IDS[offer.industry];
-  return offers;
-};
-
 let getAll = async (db, filters) => {
+  if(filters.workTime == 0) delete filters.workTime;
   let offers = await db.collection('offers').find(filters);
   offers = await offers.toArray();
-  for(offer of offers) offer.industry = INDUSTRY_IDS[offer.industry];
+  console.log(filters);
+  console.log(offers);
+  for(offer of offers) offer.industry = NAMES.industry[offer.industry];
+  for(offer of offers) offer.workTime = NAMES.workTime[offer.workTime];
   return offers;
 };
 
 let getByPageNumber = async (pageNumber, db) => {
   let from = (pageNumber-1)*RESULTS_PER_PAGE;
 
+};
+
+let getByUserId = async (db, userId) => {
+  let offers = await getAll(db, {userId})
+  return offers;
 };
 
 let removeById = async (offerId, db) => {

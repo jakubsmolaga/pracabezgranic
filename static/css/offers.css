@@ -53,6 +53,10 @@ a {
 	color: rgba(100, 100, 100, 0.9);
 	font-size: 2vh;
 }
+.offer-title {
+	font-size: 4vh;
+	color:#006bb3
+}
 
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
