@@ -27,11 +27,9 @@ let getById = async (offerId, db) => {
 };
 
 let getAll = async (db, filters) => {
-  if(filters.workTime == 0) delete filters.workTime;
+  if(filters && filters.workTime == 0) delete filters.workTime;
   let offers = await db.collection('offers').find(filters);
   offers = await offers.toArray();
-  console.log(filters);
-  console.log(offers);
   for(offer of offers) offer.industry = NAMES.industry[offer.industry];
   for(offer of offers) offer.workTime = NAMES.workTime[offer.workTime];
   return offers;
