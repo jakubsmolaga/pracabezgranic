@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/css/dashboard.css">
-<h1>Witaj {{username}}</h1>
+<link rel="stylesheet" href="/css/dashboard.css" />
+<h1>Panel administracyjny profilu firmy {{username}}</h1>
 {{#each offers}}
 	<div class="offer">
 		<p><a class="link" href="/offers/{{this._id}}">{{this.title}} {{this.city}}</a></p>
@@ -15,9 +15,9 @@
 		</div>
 	</div>
 	{{else}}
-		<p style="margin-top:3vh">Aktualnie nie masz żadnych ogłoszeń.</p>
+		<p>Aktualnie nie masz żadnych ogłoszeń :(</p>
 {{/each}}
-<p><a href="/newoffer"><button class="button" style="margin-top:10vh">Dodaj ogłoszenie</button></a></p>
+<p><a href="/newoffer"><button class="button">Dodaj ogłoszenie</button></a></p>
 <form action="/logout" method="post">
-	<p class="padding"><input class="button" type="submit" value="Wyloguj" /></p>
+	<p><input class="button" type="submit" value="Wyloguj" /></p>
 </form>

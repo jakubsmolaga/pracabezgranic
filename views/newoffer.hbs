@@ -1,16 +1,17 @@
-﻿<h1>Dodaj nowe ogłoszenie</h1>
-<div class="container-form">
-	<form action="/newoffer" method="post">
+﻿<link rel="stylesheet" href="/css/newoffer.css" />
+<h1>Dodaj nowe ogłoszenie</h1>
+<form action="/newoffer" method="post">
+	<div class="form-A">
 		<p>Tytuł</p>
-		<p><input type="text" name="title" /></p>
+		<p><input type="text" name="title" placeholder="Tytuł ogłoszenia" /></p>
 		<p>Opis</p>
-		<p><textarea name="description" maxlength="2000"></textarea></p>
+		<p><textarea name="description" maxlength="2000" placeholder="Opis ogłoszenia"></textarea></p>
 		<p>Miejscowość</p>
-		<p><input type="text" name="city" /></p>
+		<p><input type="text" name="city" placeholder="Miejscowość" /></p>
 		<p>Email kontaktowy</p>
-		<p><input type="email" name="email" /></p>
+		<p><input type="text" name="email" placeholder="Email" /></p>
 		<p>Branża</p>
-		<select name="industry" style="margin-bottom:3vh">
+		<select name="industry">
 			<option value="1">Architektura, budownictwo</option>
 			<option value="2">Biotechnologia</option>
 			<option value="3">Chemia</option>
@@ -38,17 +39,19 @@
 			<option value="25">Usługi - inne</option>
 			<option value="26">Inna branża</option>
 		</select>
+		<p>Wymair pracy</p>
 		<select name="workTime">
 			<option value="1">Pełny Etat</option>
 			<option value="2">Część Etatu</option>
 			<option value="3">Praca Czasowa</option>
 			<option value="4">Kontrakt</option>
 		</select>
-
-		<p>Czy może tu pracować osoba niewidoma? <input type="checkbox" name="blind" /></p>
-		<p>Czy może tu pracować osoba niesłysząca? <input type="checkbox" name="deaf" /></p>
-		<p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim? <input type="checkbox" name="wheelchair" /></p>
-		<p class="padding">Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody" /></p>
-		<p style="text-align:center"><input class="button" type="submit" value="Dodaj ogłoszenie" /></p>
-  </form>
-</div>
+	</div>
+	<div class="form-B">
+		<p><input type="checkbox" name="blind" />Akceptujemy osoby niewidome.</p>
+		<p><input type="checkbox" name="deaf" />Akceptujemy osoby niesłyszące.</p>
+		<p><input type="checkbox" name="wheelchair" />Akceptujemy osoby poruszające się na wózku inwalidzkim.</p>
+		<p><input type="checkbox" name="upperbody" />Akceptujemy osoby z ograniczoną sprawnością kończyn górnych.</p>
+		<p style="text-align:center"><input type="submit" value="Dodaj ogłoszenie" /></p>
+	</div>
+</form>

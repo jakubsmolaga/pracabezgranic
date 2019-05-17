@@ -1,25 +1,196 @@
-p {
-margin:0;
-margin-top:1vh;
+/* SEKCJA FILTOWANIA */
+
+.filter {
+	margin: 0 auto;
+	width: 70vw;
+	height: 6vw;
+	padding: 2vw;
+	background: white;
+	box-shadow: 0vw 0.5vw 1vh 0vh lightgrey;
+	transition: 0.1s;
 }
 
-h1 {
-	/* padding-top: 3vh; */
+.filter.open {
+	height: 25vw;
 }
+
+.filter p {
+	font-size: 1.2vw;
+}
+
+/* UKRYJ / POKAŻ FILTRY */
 
 form {
-	margin-top: 0vh
+	display: none;
 }
 
-.offer {
-	padding: 2vh;
-	margin-top: 2vh;
+form.open {
+	display: block;
+}
+
+/* KONTENER PÓL FORMULARZA */
+
+.form {
+	display: inline-block;
+	margin-top: 1vw;
+}
+
+/* FORMATOWANIE TEKSTU */
+
+h1 {
+	color: #006bb3;
+	font-size: 2.5vw;
+	font-weight: normal;
+	padding-top: 2vw;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	margin-top: 1vw;
+}
+
+/* POLE TEKSTOWE [MIASTO] */
+
+input[type=text]{
+	width: 25vw;
+	font-family: Segoe UI Light;
+	font-size: 1.2vw;
+	padding: 0.5vw;
+	outline: none;
+	
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #ccc;
+	
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	transition: border 0.5s;
+}
+
+input:focus {
+	border-color: #006bb3;
+}
+input:hover {
+	border-color: #006bb3;
+}
+
+::placeholder {
+	color: #000;
+	font-family: Segoe UI Light;
+	font-size: 1.2vw;
+}
+
+/* POLA KOMBI [BRANŻA] i [WYMIAR] */
+
+select {
+	width: 20.1vw;
+	font-size: 1.2vw;
+	font-family: Segoe UI Light;
+	padding: 0.5vw;
+	outline: none;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #ccc;
+	
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	transition: border 0.5s;
+}
+
+select:focus {
+	border-color: #006bb3;
+}
+select:hover {
+	border-color: #006bb3;
+}
+
+/* POLA WYBORU */
+
+input[type=checkbox]{
+	width: 1vw;
+	height: 1vw;
+	
+	margin:0;
+	margin-right: 0.5vw;
+	
+	cursor: pointer;
+}
+
+/* PRZYCISK [POKAŻ] */
+
+button {
+	width: 10vw;
+	height: 4vw;
+	margin-top: 3vh;
+	padding: 0;
+
 
 	border-style: solid;
 	border-width: 0.1vw;
 	border-color: #006bb3;
 
+	color: #006bb3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
 	font-size: 1.5vw;
+
+	background: white;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+button:hover {
+	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+}
+
+/* PRZYCISK [FILTRUJ OFERTY] */
+
+input[type=submit] {
+	float:right;
+	width: 15vw;
+	height: 4vw;
+	padding: 0;
+	margin-top: 7.5vw;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
+
+	color: #006bb3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.5vw;
+
+	background: white;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+}
+
+/* KONTENER OFERT */
+
+.offers {
+	width: 65vw;
+	margin: 0 auto;
+	margin-top: 5vw;
+}
+
+/* OFERTA */
+
+.offer {
+	padding: 1vw;
+	margin-top: 1vw;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
 
 	background: white;
 	transition: box-shadow 0.2s;
@@ -30,20 +201,8 @@ form {
 	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
 }
 
-.button-filter {
-	float: right;
-	padding-top: 6vh;
-}
-
-p {
-	/* TODO zmienić to */
-	font-size: 4vh;
-	/* margin-bottom:3vh; */
-	/* padding: 0; */
-}
-
 a {
-  color: inherit;
+  color: #006bb3;
   text-decoration: none;
 }
 .mobile-only {
@@ -61,16 +220,90 @@ a {
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
 
-	.offer {
-		padding: 3vh;
-		margin-top: 2vh;
+	/* SEKCJA FILTOWANIA */
 
-		border-width: 0.2vw;
+	.filter {
+		width: 95vw;
+		height: 15vw;
+		box-shadow: 0vw 1vw 1vh 0vh lightgrey;
+	}
+
+	.filter.open {
+		height: 110vw;
+	}
+	
+	.form p {
 		font-size: 4vw;
 	}
-
-	.mobile-only {
-		display: block;
+	
+	/* FORMATOWANIE TEKSTU */
+	
+	h1 {
+		font-size: 6vw;
+		margin-top: 3.5vw;
 	}
 
+	p {
+		margin-top: 2vw;
+	}
+
+	/* POLE TEKSTOWE [MIASTO] */
+	
+	input[type=text]{
+		width: 90vw;
+		font-size:4vw;
+		padding: 2vw;
+		border-width: 0.2vw;
+	}
+
+	::placeholder {
+		font-size: 4vw;
+	}
+	
+	/* POLA KOMBI [BRANŻA] i [WYMIAR] */
+	
+	select {
+		width: 90vw;
+		font-size: 4vw;
+		padding: 2vw;
+		margin-top: 3vh;
+		border-width: 0.2vw;
+	}
+
+	/* POLA WYBORU */
+
+	input[type=checkbox]{
+		width: 3vw;
+		height: 3vw;
+		margin-right: 2vw;
+	}
+	
+	/* PRZYCISK [POKAŻ] */
+
+	button {
+		width: 25vw;
+		height: 8vw;
+		margin-top: 6vw;
+		font-size: 4vw;
+		border-width: 0.2vw;
+	}
+	
+	/* PRZYCISK [FILTRUJ OFERTY] */
+	
+	input[type=submit]{
+		float:none;
+		width: 90vw;
+		height: 15vw;
+		
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+		font-size: 5vw;
+		border-width: 0.2vw;
+	}
+	
+	/* KONTENER OFERT */
+	
+	.offers {
+		width: 90vw;
+	}
 }

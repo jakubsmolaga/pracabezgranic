@@ -1,7 +1,11 @@
-<div class="container-form">
-	<h1>{{offerData.username}} - {{offerData.title}}</h1>
-	<p style="text-align:center; color:#006bb3">{{offerData.industry}} * {{offerData.city}} * {{offerData.email}}</p>
-	<p style="text-align:justify">{{offerData.description}}</p>
+<link rel="stylesheet" href="/css/offer.css">
+<div class="form">
+	<h1>{{offerData.title}}</h1>
+	<h2>Oferta firmy {{offerData.username}}</h2>
+	<p>Wymiar pracy: {{offerData.industry}}</p>
+	<p>Miejscowość: {{offerData.city}}</p>
+	<p>Email: {{offerData.email}}</p>
+	<p class="description">{{offerData.description}}</p>
 	{{#if offerData.blind}}
 		<p><img src="/img/tick.png" /> Sprzyjamy osobom niewidomym.</p>
 	{{/if}}

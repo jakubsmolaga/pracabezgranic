@@ -1,0 +1,73 @@
+/* FORMATOWANIE TEKSTU */
+
+h1 {
+	color: #006bb3;
+	font-size: 2.5vw;
+	font-weight: normal;
+	text-align: center;
+	
+	padding-top: 2vw;
+	padding-bottom: 3vw;
+	margin: 0;
+}
+
+p {
+	font-size: 1.5vw;
+	text-align: center;
+	padding: 0;
+}
+
+/* PRZYCISKI [SZUKAM PRACY] i [SZUKAM PRACPWNIKÓW] */
+
+button {
+	width: 25vw;
+	height: 5vw;
+	
+	margin: 5vw 2vw;
+	padding: 0;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
+
+	color: #006bb3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.7vw;
+
+	background: white;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+button:hover {
+	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+}
+
+/* --- WERSJA MOBILNA --- */
+@media only screen and (max-width: 768px) {
+	
+	/* FORMATOWANIE TEKSTU */
+	
+	h1 {
+		font-size: 7vw;
+		padding-top: 5vw;
+	}
+
+	p {
+		font-size: 5vw;
+	}
+	
+	/* PRZYCISKI [SZUKAM PRACY] i [SZUKAM PRACPWNIKÓW] */
+	
+	button {
+		width: 60vw;
+		height: 15vw;
+		
+		margin-top: 5vw;
+		margin-bottom: 0vw;
+		
+		font-size: 4.5vw;
+		border-width: 0.2vw;
+	}
+}

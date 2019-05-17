@@ -1,12 +1,13 @@
+<link rel="stylesheet" href="/css/login.css" />
 <h1>Logowanie do profilu pracodawcy</h1>
-<div class="container-register">
-	<form action="/login" method="POST">
+<form action="/login" method="POST">
+	<div class="form">
 		<p>Adres email</p>
 		<p><input type="text" id="fname" name="email" placeholder="Email"></p>
 		<p>Hasło</p>
-		<p class="padding"><input type="text" id="lname" name="password" placeholder="Hasło"></p>
-</div>
-<p class="error">{{error}}</p>
-<p><input class="button" type="submit" value="ZALOGUJ SIĘ"></p>
+		<p><input type="password" id="lname" name="password" placeholder="Hasło"></p>
+	</div>
+	<p class="error">{{error}}</p>
+	<p><input type="submit" value="ZALOGUJ SIĘ"></p>
 </form>
-<p class="padding"><a class="link" href="/register">lub utwórz nowe konto.</a></p>
+<p><a href="/register">lub utwórz nowe konto.</a></p>

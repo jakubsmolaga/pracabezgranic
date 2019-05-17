@@ -1,16 +1,17 @@
-﻿<h1>Edytuj ogłoszenie</h1>
-<div class="container-form">
-	<form action="/updateoffer" method="post">
+﻿<link rel="stylesheet" href="/css/newoffer.css">
+<h1>Edytuj ogłoszenie</h1>
+<form action="/updateoffer" method="post">
+	<div class="form-A">
 		<input type="text" name="_id" value="{{offer._id}}" hidden/>
 		<p>Tytuł</p>
-		<p><input type="text" name="title" value="{{offer.title}}" /></p>
+		<p><input type="text" name="title" value="{{offer.title}}" placeholder="Tytuł ogłoszenia" /></p>
 		<p>Opis</p>
-		<p><textarea name="description" rows="8" cols="80" maxlength="2000">{{offer.description}}</textarea></p>
-		<p>Miasto</p>
-		<p><input type="text" name="city" value="{{offer.city}}" /></p>
+		<p><textarea name="description" rows="8" cols="80" maxlength="2000" placeholder="Opis ogłoszenia">{{offer.description}}</textarea></p>
+		<p>Miejscowość</p>
+		<p><input type="text" name="city" value="{{offer.city}}" placeholder="Miejscowość"" /></p>
 		<p>Email kontaktowy</p>
-	    <p><input type="email" name="email" /></p>
-		<p>Branża:</p>
+	    <p><input type="text" name="email" value="{{offer.email}}" placeholder="Email"/></p>
+		<p>Branża</p>
 	    <select name="industry">
 			<option value="1">Architektura, budownictwo</option>
 			<option value="2">Biotechnologia</option>
@@ -39,6 +40,7 @@
 			<option value="25">Usługi - inne</option>
 			<option value="26">Inna branża</option>
 		</select>
+		<p>Wymiar pracy</p>
 		<select name="workTime">
 			<option value="0">Dowolny Wymiar</option>
 			<option value="1">Pełny Etat</option>
@@ -46,11 +48,12 @@
 			<option value="3">Praca Czasowa</option>
 			<option value="4">Kontrakt</option>
 		</select>
-
-		<p>Czy może tu pracować osoba niewidoma? <input type="checkbox" name="blind" {{#if offer.blind}} checked {{/if}} /></p>
-		<p>Czy może tu pracować osoba niesłysząca? <input type="checkbox" name="deaf" {{#if offer.deaf}} checked {{/if}} /></p>
-		<p>Czy może tu pracować osoba przemieszczająca się na wózku inwalidzkim? <input type="checkbox" name="wheelchair" {{#if offer.wheelchair}} checked {{/if}} /></p>
-		<p class="padding">Czy może tu pracować osoba z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody" {{#if offer.upperbody}} checked {{/if}} /></p>
-		<p style="text-align:center"><input class="button" type="submit" value="Zapisz zmiany" /></p>
-	</form>
-</div>
+	</div>
+	<div class="form-B">
+		<p><input type="checkbox" name="blind" {{#if offer.blind}} checked {{/if}} /> Akceptujemy osoby niewidome.</p>
+		<p><input type="checkbox" name="deaf" {{#if offer.deaf}} checked {{/if}} /> Akceptujemy osoby niesłyszące.</p>
+		<p><input type="checkbox" name="wheelchair" {{#if offer.wheelchair}} checked {{/if}} />Akceptujemy osoby poruszające się na wózku inwalidzkim.</p>
+		<p><input type="checkbox" name="upperbody" {{#if offer.upperbody}} checked {{/if}} />Akceptujemy osoby z ograniczoną sprawnością kończyn górnych.</p>
+		<p style="text-align:center"><input type="submit" value="Zapisz zmiany" /></p>
+	</div>
+</form>

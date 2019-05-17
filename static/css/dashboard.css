@@ -1,3 +1,50 @@
+/* FORMATOWANIE TEKSTU */
+
+h1 {
+	color: #006bb3;
+	font-size: 2.5vw;
+	font-weight: normal;
+	text-align: center;
+	
+	padding-top: 5vh;
+	padding-bottom: 3vh;
+	margin: 0;
+}
+
+p {
+	font-size: 1.5vw;
+	text-align: center;
+	padding: 0;
+}
+
+/* PRZYCISK [DODAJ OGŁOSZENIE]  i [WYLOGUJ] */
+
+.button {
+	width: 15vw;
+	height: 4vw;
+	margin-top: 2vw;
+	padding: 0;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
+
+	color: #006bb3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.5vw;
+
+	background: white;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+.button:hover {
+	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+}
+
+/* OFERTY */
+
 .offer {
 	display: flex;
 	width: 90%;
@@ -27,15 +74,16 @@
 
 /* --- Przyciski oferty --- */
 .buttons-offer {
-	width: 15vw;
-	height: 8vh;
-	padding:0;
+	width: 10vw;
+	height: 3vw;
+	padding: 0;
 
 	border-style: solid;
 	border-width: 0.1vw;
 	border-color: #006bb3;
 
 	color: #006bb3;
+	font-family: Segoe UI Light;
 	font-weight: bold;
 	font-size: 1.5vw;
 
@@ -47,6 +95,8 @@
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
 	
+	/* COMING SOON... */
+	
 	.buttons-offer {
 		width: 30vw;
 		height: 8vh;
@@ -54,6 +104,17 @@
 		margin-bottom: 3vh;
 		border-width: 0.2vw;
 		font-size: 4vw;
+	}
+	
+	.button{
+		width: 60vw;
+		height: 12vh;
+		
+		margin-top:5vh;
+		margin-bottom:5vh;
+		
+		font-size: 5vw;
+		border-width: 0.2vw;
 	}
 	
 }

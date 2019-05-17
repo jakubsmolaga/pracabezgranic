@@ -1,0 +1,165 @@
+/* KONTENER FORMULARZA */
+
+.form {
+	width: 20vw;
+	margin: 0 auto;
+}
+
+.form p {
+	font-size: 1.5vw;
+	text-align: left;
+	margin-top: 1vh;
+	margin-bottom:1vh;
+
+}
+
+/* FORMATOWANIE TEKSTU */
+
+h1 {
+	color: #006bb3;
+	font-size: 2.5vw;
+	font-weight: normal;
+	text-align: center;
+	
+	padding-top: 5vh;
+	padding-bottom: 3vh;
+	margin: 0;
+}
+
+p {
+	font-size: 1.2vw;
+	text-align: center;
+}
+
+a {
+	color: #006bb3;
+	text-decoration: none;
+}
+
+.error {
+	height:5vh;
+	
+	color:red;
+	font-size: 1.2vw;
+	text-align: center;
+}
+
+/* POLA TEKSTOWE */
+
+input {
+	width: 20vw;
+	font-family: Segoe UI Light;
+	font-size: 1vw;
+	padding: 0.5vw;
+	margin-bottom: 2vh;
+	outline: none;
+	
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #ccc;
+	
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	transition: border 0.5s;
+}
+
+input:focus {
+	border-color: #006bb3;
+}
+input:hover {
+	border-color: #006bb3;
+}
+
+::placeholder {
+	color: #ccc;
+	font-family: Segoe UI Light;
+	font-size: 1vw;
+}
+
+/* PRZYCISKI [ZALOGUJ] i [ZAREJESTRUJ] */
+
+input[type=submit]{
+	width: 15vw;
+	height: 4vw;
+	padding: 0;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
+
+	color: #006bb3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.5vw;
+
+	background: white;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+}
+
+/* --- WERSJA MOBILNA --- */
+@media only screen and (max-width: 768px) {
+	
+	/* KONTENER FORMULARZA */
+	
+	.form {
+		width: 80vw;
+		margin: 0 auto;
+	}
+
+	.form p {
+		font-size: 5vw;
+		text-align: left;
+		margin-top: 2vh;
+	}
+	
+	/* FORMATOWANIE TEKSTU */
+	
+	h1 {
+		font-size: 6vw;
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+	}
+
+	p {
+		text-align: center;
+		font-size: 5vw;
+		padding: 0;
+	}
+	
+	.error {
+		margin-top: 3vh;
+		font-size: 5vw;
+	}
+	
+	/* POLA TEKSTOWE */
+	
+	input {
+		width: 80vw;
+		font-size: 5vw;
+		padding: 2vw 2vw;
+		border-width: 0.2vw;
+	}
+	
+	::placeholder {
+		font-size: 5vw;
+	}
+	
+	/* PRZYCISK [ZALOGUJ] */
+	
+	input[type=submit]{
+		width: 60vw;
+		height: 12vh;
+		
+		margin-top:2vh;
+		margin-bottom:0vh;
+		
+		font-size: 5vw;
+		border-width: 0.2vw;
+	}
+}

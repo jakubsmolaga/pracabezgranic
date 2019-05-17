@@ -1,16 +1,17 @@
+<link rel="stylesheet" href="/css/login.css" />
 <h1>Rejestracja profilu pracodawcy</h1>
-<div class="container-register">
-	<form action="/register" method="POST">
-		<p>Nazwa użytkownika</p>
+<form action="/register" method="POST">
+	<div class="form">
+		<p>Nazwa firmy</p>
 		<p><input type="text" name="username" placeholder="Login"></p>
 		<p>Adres email</p>
 		<p><input type="text" name="email" placeholder="Email"></p>
 		<p>Hasło</p>
-		<p><input type="text" name="password" placeholder="Hasło"></p>
+		<p><input type="password" name="password" placeholder="Hasło"></p>
 		<p>Numer telefonu</p>
-		<p class="padding"><input type="text" name="phonenumber" placeholder="Numer telefonu"></p>
-		<p class="error">{{error}}</p>
-		<p><input class="button" type="submit" value="UTWÓRZ KONTO"></p>
-	</form>
-</div>
-<p style="padding-bottom:5vh"><a class="link" href="/login">lub zaloguj się na istniejące konto.</a></p>
+		<p><input type="text" name="phonenumber" placeholder="Numer telefonu"></p>
+	</div>
+	<p class="error">{{error}}</p>
+	<p><input type="submit" value="UTWÓRZ KONTO"></p>
+</form>
+<p><a href="/login">lub zaloguj się na istniejące konto.</a></p>

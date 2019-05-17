@@ -1,56 +1,60 @@
 ﻿<link rel="stylesheet" href="/css/offers.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<div class="container-form">
-	<h1>Aktualna lista ogłoszeń</h1>
-	<form action="/offers" method="post">
-		<p>Miasto:</p>
-		<p><input type="text" name="city"/ value="{{city}}"></p>
-		<p>Branża:</p>
-		<p style="margin-bottom:8vh">
-			<select name="industry">
-				<option value="0">Wszytkie branże</option>
-				<option value="1">Architektura, budownictwo</option>
-				<option value="2">Biotechnologia</option>
-				<option value="3">Chemia</option>
-				<option value="4">Doradztwo, consulting</option>
-				<option value="5">Edukacja, szkolenia</option>
-				<option value="6">Ekologia, energie odnawialne</option>
-				<option value="7">Elektronika, elektrotechnika</option>
-				<option value="8">Finanse, ubezpieczenia</option>
-				<option value="9">Gastronomia</option>
-				<option value="10">Handel hurtowy i detaliczny</option>
-				<option value="11">Informatyka, IT, internet</option>
-				<option value="12">Marketing, reklama</option>
-				<option value="13">Media</option>
-				<option value="14">Medycyna, farmacja</option>
-				<option value="15">Motoryzacja</option>
-				<option value="16">Nieruchomości</option>
-				<option value="17">Ochrona środowiska</option>
-				<option value="18">Paliwa, energia, gaz</option>
-				<option value="19">Produkcja - inne</option>
-				<option value="20">Rolnictwo</option>
-				<option value="21">Rozrywka, kultura, sport</option>
-				<option value="22">Sprzęt, maszyny, urządzenia</option>
-				<option value="23">Transport, spedycja, logistyka</option>
-				<option value="24">Turystyka, hotele</option>
-				<option value="25">Usługi - inne</option>
-				<option value="26">Inna branża</option>
-			</select>
-			<select name="workTime">
-				<option value="0">Dowolny Wymiar</option>
-				<option value="1">Pełny Etat</option>
-				<option value="2">Część Etatu</option>
-				<option value="3">Praca Czasowa</option>
-				<option value="4">Kontrakt</option>
-			</select>
-			<p>Dostosowane do osób niewidomych <input type="checkbox" name="blind" {{#if blind}} checked {{/if}} /></p>
-			<p>Dostosowane do osób niesłyszących<input type="checkbox" name="deaf" {{#if deaf}} checked {{/if}} /></p>
-			<p>Dostosowane do osób na wózkach inwalidzkich <input type="checkbox" name="wheelchair" {{#if wheelchair}} checked {{/if}} /></p>
-			<p>Dostosowane do osób z ograniczoną sprawnością górnych kończyn? <input type="checkbox" name="upperbody" {{#if upperbody}} checked {{/if}} /></p>
-			<br><br><br>
-			<input class="button" type="submit" value="filtruj">
-		</p>
+<div style="float:left;margin-left:2vw"><h1>Ustawienia filtrowania</h1></div>
+<div style="float:right;margin-right:2vw"><button id="button">POKAŻ</button></div>
+<div class="filter" id="filter">
+	<form action="/offers" method="post" id="form">
+		<div class="form">
+			<p>
+				<input type="text" name="city"/ value="{{city}}" placeholder="Dowolne miasto" />
+				<select name="industry">
+					<option value="0">Dowolna branża</option>
+					<option value="1">Architektura, budownictwo</option>
+					<option value="2">Biotechnologia</option>
+					<option value="3">Chemia</option>
+					<option value="4">Doradztwo, consulting</option>
+					<option value="5">Edukacja, szkolenia</option>
+					<option value="6">Ekologia, energie odnawialne</option>
+					<option value="7">Elektronika, elektrotechnika</option>
+					<option value="8">Finanse, ubezpieczenia</option>
+					<option value="9">Gastronomia</option>
+					<option value="10">Handel hurtowy i detaliczny</option>
+					<option value="11">Informatyka, IT, internet</option>
+					<option value="12">Marketing, reklama</option>
+					<option value="13">Media</option>
+					<option value="14">Medycyna, farmacja</option>
+					<option value="15">Motoryzacja</option>
+					<option value="16">Nieruchomości</option>
+					<option value="17">Ochrona środowiska</option>
+					<option value="18">Paliwa, energia, gaz</option>
+					<option value="19">Produkcja - inne</option>
+					<option value="20">Rolnictwo</option>
+					<option value="21">Rozrywka, kultura, sport</option>
+					<option value="22">Sprzęt, maszyny, urządzenia</option>
+					<option value="23">Transport, spedycja, logistyka</option>
+					<option value="24">Turystyka, hotele</option>
+					<option value="25">Usługi - inne</option>
+					<option value="26">Inna branża</option>
+				</select>
+				<select name="workTime">
+					<option value="0">Dowolny wymiar pracy</option>
+					<option value="1">Pełny etat</option>
+					<option value="2">Część etatu</option>
+					<option value="3">Praca dorywcza</option>
+					<option value="4">Umowa o dzieło</option>
+				</select>
+			</p>
+		</div>
+		<div class="form">
+			<p><input type="checkbox" name="upperbody" {{#if upperbody}} checked {{/if}} />Dostosowane do osób z ograniczoną sprawnością górnych kończyn</p>
+			<p><input type="checkbox" name="wheelchair" {{#if wheelchair}} checked {{/if}} />Dostosowane do osób na wózkach inwalidzkich</p>
+			<p><input type="checkbox" name="blind" {{#if blind}} checked {{/if}} />Dostosowane do osób niewidomych</p>
+			<p><input type="checkbox" name="deaf" {{#if deaf}} checked {{/if}} />Dostosowane do osób niesłyszących</p>
+		</div>
+		<input type="submit" value="FILTRUJ OFERTY" />
 	</form>
+</div>
+<div class="offers">
 	{{#each offers}}
 	<a href="/offers/{{this._id}}">
 		<div class="offer">
@@ -58,7 +62,6 @@
 			<p class="offer-info">
 				<i class="fas fa-map-marker-alt"></i> {{this.city}}
 				<i class="fas fa-briefcase"></i> {{this.industry}}
-				<br class="mobile-only">
 				<i class="fas fa-clock"></i> {{this.workTime}}
 				<i class="fas fa-calendar-alt"></i> Dodano {{formatDate this.timeStamp}}
 			</p>
@@ -68,3 +71,17 @@
 	<p>Nie znaleziono żadnych ogłoszeń :(</p>
 	{{/each}}
 </div>
+
+<script>
+
+	<!-- MENU (TRYB MOBILNY) -->
+	var z = document.getElementById("button");
+	var v = document.getElementById("filter");
+	var q = document.getElementById("form");
+
+	z.onclick = function(event) {
+	v.classList.toggle('open');
+	q.classList.toggle('open');
+	}
+
+</script>

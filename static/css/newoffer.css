@@ -1,0 +1,274 @@
+/* KONTENER PÓL TEKSTOWYCH */
+
+.form-A {
+	margin: 0 auto;
+	width: 30vw;
+}
+
+.form-A p {
+	font-size: 1.5vw;
+	text-align: left;
+	margin-top: 1vh;
+	margin-bottom:1vh;
+}
+
+/* KONTENER PÓL WYBORU */
+
+.form-B {
+	margin: 0 auto;
+	width: 45vw;
+	margin-top: 5vh;
+}
+
+.form-B p {
+	font-size: 1.5vw;
+	text-align: left;
+	margin-top: 2vh;
+	margin-bottom:2vh;
+}
+
+/* FORMATOWANIE TEKSTU */
+
+h1 {
+	color: #006bb3;
+	font-size: 2.5vw;
+	font-weight: normal;
+	text-align: center;
+	
+	padding-top: 2vw;
+	padding-bottom: 3vw;
+	margin: 0;
+}
+
+/* POLA TEKSTOWE */
+
+input {
+	width: 30vw;
+	margin-bottom: 2vh;
+	
+	font-family: Segoe UI Light;
+	font-size: 1vw;
+	padding: 0.5vw;
+	outline: none;
+	
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #ccc;
+	
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	transition: border 0.5s;
+}
+
+input:focus {
+	border-color: #006bb3;
+}
+input:hover {
+	border-color: #006bb3;
+}
+
+::placeholder {
+	color: #ccc;
+	font-family: Segoe UI Light;
+	font-size: 1vw;
+}
+
+/* POLA KOMBI */
+
+select {
+	width: 30vw;
+	margin-bottom: 2vh;
+	
+	font-size: 1vw;
+	font-family: Segoe UI Light;
+	padding: 0.5vw;
+	outline: none;
+	
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #ccc;
+	
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	transition: border 0.5s;
+}
+
+select:focus {
+	border-color: #006bb3;
+}
+select:hover {
+	border-color: #006bb3;
+}
+
+/* POLE OPISU */
+
+textarea {
+	width: 30vw;
+	height: 20vh;
+	margin-bottom: 2vh;
+	
+	font-family: Segoe UI Light;
+	font-size: 1vw;
+	padding: 0.5vw;
+	outline: none;
+	
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #ccc;
+	
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	transition: border 0.5s;
+}
+
+textarea:focus {
+	border-color: #006bb3;
+}
+textarea:hover {
+	border-color: #006bb3;
+}
+
+/* POLA WYBORU */
+
+input[type=checkbox]{
+	width: 2vw;
+	height: 2.5vh;
+	
+	margin:0;
+	margin-right: 1vw;
+	
+	cursor: pointer;
+}
+
+/* PRZYCISK [DODAJ / ZAPISZ OGŁOSZENIE] */
+
+input[type=submit]{
+	width: 15vw;
+	height: 4vw;
+	padding: 0;
+	margin-top: 4vw;
+
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
+
+	color: #006bb3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.5vw;
+
+	background: white;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+}
+
+/* --- WERSJA MOBILNA --- */
+@media only screen and (max-width: 768px) {
+	
+	/* KONTENER FORMULARZA */
+	
+	.form-A {
+		width: 80vw;
+	}
+
+	.form-A p {
+		font-size: 5vw;
+		text-align: left;
+		margin-top: 2vh;
+	}
+	
+	
+	/* KONTENER PÓL WYBORU */
+
+	.form-B {
+		width: 80vw;
+		margin-top: 5vh;
+	}
+
+	.form-B p {
+		font-size: 5vw;
+		margin-top: 3vh;
+		margin-bottom:2vh;
+	}
+	
+	/* FORMATOWANIE TEKSTU */
+	
+	h1 {
+		font-size: 6vw;
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+	}
+
+	p {
+		text-align: center;
+		font-size: 5vw;
+		padding: 0;
+	}
+	
+	.error {
+		margin-top: 3vh;
+		font-size: 5vw;
+	}
+	
+	/* POLA TEKSTOWE */
+	
+	input {
+		width: 80vw;
+		font-size: 5vw;
+		padding: 2vw;
+		border: 0.2vw solid #ccc;
+	}
+	
+	::placeholder {
+		font-size: 5vw;
+	}
+	
+	/* POLA KOMBI */
+
+	select {
+		width: 80vw;
+		font-size: 5vw;
+		padding: 2vw;
+		border: 0.2vw solid #ccc;
+	}
+	
+	/* POLE OPISU */
+	
+	textarea {
+		width: 80vw;
+		height: 40vh;
+		font-size: 5vw;
+		padding: 2vw;
+		border: 0.2vw solid #ccc;
+	}
+	
+	/* POLA WYBORU */
+
+	input[type=checkbox]{
+		width: 4vw;
+		height: 3.5vh;
+		margin:0;
+		margin-right: 1vw;
+		
+		cursor: pointer;
+	}
+	
+	/* PRZYCISK [DODAJ OGŁOSZENIE] */
+	
+	input[type=submit]{
+		width: 80vw;
+		height: 15vw;
+		
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+		font-size: 5vw;
+		border-width: 0.2vw;
+	}
+}
