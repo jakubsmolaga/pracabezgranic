@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="/css/dashboard.css" />
 <h1>Panel administracyjny profilu firmy {{username}}</h1>
 {{#each offers}}
+<a class="link" href="/offers/{{this._id}}">
 	<div class="offer">
-		<p><a class="link" href="/offers/{{this._id}}">{{this.title}} {{this.city}}</a></p>
+		<div class="offer-info">
+			<p class="offer-title">{{this.title}}</p>
+			<p class="offer-city">{{this.city}}</p>
+		</div>
 		<div class="buttons-offer-container">
 			<form action="/editoffer" method="post">
 				<input type="text" name="offerId" value="{{this._id}}" hidden/>
@@ -10,10 +14,11 @@
 			</form>
 			<form action="/removeoffer" method="post">
 				<input type="text" name="offerId" value="{{this._id}}" hidden/>
-				<input class="buttons-offer" type="submit" value="Usuń" />
+				<input class="buttons-offer button-delete" type="submit" value="Usuń" />
 			</form>
 		</div>
 	</div>
+	</a>
 	{{else}}
 		<p>Aktualnie nie masz żadnych ogłoszeń :(</p>
 {{/each}}

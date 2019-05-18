@@ -2,14 +2,24 @@
 	box-sizing: border-box;
 }
 
+html {
+  background: url("/img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 body {
     margin:0;
 	font-family: Segoe UI Light, Tahoma, Sans-serif;
-	
-	background: url("/img/background.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+
+	/* background: url("/img/background.jpg"); */
+	/* background-position: center; */
+	/* background-repeat: no-repeat; */
+	/* background-size: cover; */
 }
 
 /* NAGŁÓWEK */
@@ -81,7 +91,7 @@ body {
 .footer {
 	width: 70vw;
 	font-size: 1vw;
-	
+
 	margin: 0 auto;
 	margin-top: 4vw;
 	margin-bottom: 4vw;
@@ -213,9 +223,9 @@ body {
 		width: 95vw;
 		margin-top: 18vw;
 	}
-	
+
 	/* STOPKA */
-	
+
 	.footer {
 		width: 95vw;
 		font-size: 2vw;
