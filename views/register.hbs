@@ -3,13 +3,13 @@
 <form action="/register" method="POST">
 	<div class="form">
 		<p>Nazwa firmy</p>
-		<p><input type="text" name="username" placeholder="Login"></p>
+		<p><input type="text" name="username" placeholder="Nazwa Firmy" required></p>
 		<p>Adres email</p>
-		<p><input type="text" name="email" placeholder="Email"></p>
+		<p><input type="email" name="email" placeholder="Email" required></p>
 		<p>Hasło</p>
-		<p><input type="password" name="password" placeholder="Hasło"></p>
+		<p><input type="password" name="password" placeholder="Hasło" required></p>
 		<p>Numer telefonu</p>
-		<p><input type="text" name="phonenumber" placeholder="Numer telefonu"></p>
+		<p><input type="tel" onkeydown="return (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode==8 || event.keyCode==13" maxlength="9" name="phonenumber" placeholder="Numer telefonu" required></p>
 	</div>
 	<p class="error">{{error}}</p>
 	<p><input type="submit" value="UTWÓRZ KONTO"></p>
