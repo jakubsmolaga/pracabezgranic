@@ -3,10 +3,10 @@
 .filter {
 	margin: 0 auto;
 	width: 70vw;
-	height: 6vw;
+	height: 7vw;
 	padding: 2vw;
 	background: white;
-	box-shadow: 0vw 0.5vw 1vh 0vh lightgrey;
+	box-shadow: 0vw 0.5vw 0.5vw 0vh lightgrey;
 	transition: 0.1s;
 }
 
@@ -41,7 +41,8 @@ h1 {
 	color: #006bb3;
 	font-size: 2.5vw;
 	font-weight: normal;
-	padding-top: 2vw;
+	padding-top: 1.8vw;
+	padding-bottom: 1vw;
 	margin: 0;
 }
 
@@ -144,7 +145,7 @@ button {
 }
 
 button:hover {
-	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 
 /* PRZYCISK [FILTRUJ OFERTY] */
@@ -171,15 +172,15 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 
 /* KONTENER OFERT */
 
 .offers {
-	width: 65vw;
 	margin: 0 auto;
-	margin-top: 5vw;
+	width: 65vw;
+	margin-top: 2vw;
 }
 
 /* OFERTA */
@@ -197,24 +198,27 @@ input[type=submit]:hover {
 	cursor: pointer;
 }
 
-.offer:hover {
-	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+i {
+	margin-left: 1vw;
 }
 
-a {
-  color: #006bb3;
-  text-decoration: none;
+.offer:hover {
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
+
 .mobile-only {
 	display: none;
 }
+
 .offer-info {
-	color: rgba(100, 100, 100, 0.9);
-	font-size: 2vh;
+	color: #777;
+	font-size: 1vw;
 }
+
 .offer-title {
-	font-size: 4vh;
-	color:#006bb3
+	color:#006bb3;
+	font-size: 2vw;
+	margin-left:1vw;
 }
 
 /* --- WERSJA MOBILNA --- */
@@ -224,12 +228,12 @@ a {
 
 	.filter {
 		width: 95vw;
-		height: 15vw;
+		height: 18vw;
 		box-shadow: 0vw 1vw 1vh 0vh lightgrey;
 	}
 
 	.filter.open {
-		height: 110vw;
+		height: 117vw;
 	}
 	
 	.form p {
@@ -240,7 +244,7 @@ a {
 	
 	h1 {
 		font-size: 6vw;
-		margin-top: 3.5vw;
+		margin-top: 3vw;
 	}
 
 	p {
@@ -282,8 +286,8 @@ a {
 
 	button {
 		width: 25vw;
-		height: 8vw;
-		margin-top: 6vw;
+		height: 12vw;
+		margin-top: 3vw;
 		font-size: 4vw;
 		border-width: 0.2vw;
 	}
@@ -305,5 +309,44 @@ a {
 	
 	.offers {
 		width: 90vw;
+		margin-top: 4vh;
+		
 	}
+	
+	/* OFERTA */
+
+	.offer {
+		padding: 2vw;
+		margin-top: 5vw;
+
+		border-style: solid;
+		border-width: 0.1vw;
+		border-color: #006bb3;
+
+		background: white;
+		transition: box-shadow 0.2s;
+		cursor: pointer;
+	}
+
+	i {
+		margin: 1.5vw;
+	}
+
+	.mobile-only {
+		display: block;
+	}
+
+	.offer:hover {
+		box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
+	}
+
+	.offer-info {
+		font-size: 3.5vw;
+	}
+
+	.offer-title {
+		font-size: 5.5vw;
+		margin-left:0vw;
+	}
+	
 }

@@ -6,8 +6,8 @@ h1 {
 	font-weight: normal;
 	text-align: center;
 
-	padding-top: 5vh;
-	padding-bottom: 3vh;
+	padding-top: 2vw;
+	padding-bottom: 3vw;
 	margin: 0;
 }
 
@@ -40,7 +40,7 @@ p {
 }
 
 .button:hover {
-	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 
 
@@ -51,7 +51,7 @@ p {
 	width: 90%;
 
 	margin-left: 3vw;
-	margin-bottom: 2vh;
+	margin-bottom: 1vw;
 
 	background: white;
 
@@ -62,7 +62,7 @@ p {
 }
 
 .offer:hover {
-	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 .offer-info {
 	width: 100%;
@@ -82,7 +82,7 @@ p {
 	width: 10vw;
 	height: 3vw;
 	padding: 0;
-	margin: 2vh;
+	margin: 1vw;
 
 	border-style: solid;
 	border-width: 0.1vw;

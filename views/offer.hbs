@@ -2,20 +2,31 @@
 <div class="form">
 	<h1>{{offerData.title}}</h1>
 	<h2>Oferta firmy {{offerData.username}}</h2>
-	<p>Wymiar pracy: {{offerData.industry}}</p>
-	<p>Miejscowość: {{offerData.city}}</p>
-	<p>Email: {{offerData.email}}</p>
+	<div class="info-A">
+		<p>Wymiar pracy:</p>
+		<p>Miejscowość:</p>
+		<p>Email:</p>
+	</div>
+	<div class="info-B">
+		<p>{{offerData.industry}}</p>
+		<p>{{offerData.city}}</p>
+		<p>{{offerData.email}}</p>
+	</div>
 	<p class="description">{{offerData.description}}</p>
 	{{#if offerData.blind}}
-		<p><img src="/img/tick.png" /> Sprzyjamy osobom niewidomym.</p>
+		<div class="disability-A"><img src="/img/tick.png" /></div>
+		<div class="disability">Sprzyjamy osobom niewidomym.</div>
 	{{/if}}
 	{{#if offerData.deaf}}
-		<p><img src="/img/tick.png" /> Sprzyjamy osobom niesłyszącym.</p>
+		<div class="disability-A"><img src="/img/tick.png" /></div>
+		<div class="disability">Sprzyjamy osobom niesłyszącym.</div>
 	{{/if}}
 	{{#if offerData.wheelchair}}
-		<p><img src="/img/tick.png" /> Sprzyjamy osobom poruszającym się na wózku inwalidzkim.</p>
+		<div class="disability-B"><img src="/img/tick.png" /></div>
+		<div class="disability">Sprzyjamy osobom poruszającym się na wózku inwalidzkim.</div>
 	{{/if}}
 	{{#if offerData.upperbody}}
-		<p><img src="/img/tick.png" /> Sprzyjamy osobom z niepełnosprawnościami górnych partii ciała.</p>
+		<div class="disability-B"><img src="/img/tick.png" /></div>
+		<div class="disability">Sprzyjamy osobom z niepełnosprawnościami górnych partii ciała.</div>
 	{{/if}}
 </div>

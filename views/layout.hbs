@@ -14,13 +14,13 @@
 		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
 		<title>Pracabezgranic.pl</title>
 	</head>
-	<body>
+	<body id="mymain">
 
 		<!-- NAGŁÓWEK -->
 		<div class="header">
 
 			<!-- LOGO -->
-			<a class="logo" href="/"><b>Pracabezgranic.pl</b>
+			<a class="logo" href="/"><img src="/img/logo.png"/>Pracabezgranic.pl
 
 			<!-- PRZYCISK MENU (TRYB MOBILNY) -->
 			</a>
@@ -34,13 +34,22 @@
 
 			<!-- MENU -->
 			<div class="menu" id="menu">
-				<a href="">POWIĘKSZ CZCIONKĘ <img  style="margin-right:2vw" src="/img/font-big.png"/></a>
-				<a href="">ZMIEŃ KONTRAST <img  style="margin-right:2vw" src="/img/contrast-on.png"/></a>
-				{{#if loggedIn}} <a href="/dashboard">MOJE KONTO
-				{{else}} <a href="/login">DLA FIRM
+				<a class="menu-button">KONTRAST:
+				</a><a class="contrast-1">A
+				</a><a class="contrast-2">A
+				</a><a class="contrast-3">A
+				</a><a class="menu-button">CZCIONKA:
+				</a><a class="font-1" href="javascript:void(0);" onclick="changemysize(1);">A
+				</a><a class="font-2" href="javascript:void(0);" onclick="changemysize(4);">A
+				</a><a class="font-3" href="javascript:void(0);" onclick="changemysize(6);">A
+				</a>{{#if loggedIn}}<a class="menu-button" href="/dashboard">MOJE KONTO
+				</a>{{else}}
+				<a class="menu-button" href="/login">DLA FIRM
 				{{/if}}
-				<img style="margin-right:2vw" src="/img/login.png"/></a>
-				<a href="">INFORMACJE <img src="/img/info.png"/></a>
+				</a><a><img src="/img/login.png"/>
+				</a><a class="menu-button" href="">INFORMACJE
+				</a><a><img src="/img/info.png"/>
+				</a>
 			</div>
 		</div>
 
@@ -62,7 +71,18 @@
 				x.classList.toggle('open');
 				y.classList.toggle('open');
 			}
-
+			
 		</script>
+		
+		<script type="text/javascript">
+		
+			function changemysize(myvalue) {
+				var div = document.getElementById("mymain");
+				div.style.fontSize = myvalue + "vw";   
+			}
+			
+		</script>
+			
+
 	</body>
 </html>

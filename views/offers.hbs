@@ -55,6 +55,7 @@
 	</form>
 </div>
 <div class="offers">
+	<h1>Lista aktualnych ofert</h1>
 	{{#each offers}}
 	<a href="/offers/{{this._id}}">
 		<div class="offer">
@@ -62,6 +63,7 @@
 			<p class="offer-info">
 				<i class="fas fa-map-marker-alt"></i> {{this.city}}
 				<i class="fas fa-briefcase"></i> {{this.industry}}
+				<br class="mobile-only">
 				<i class="fas fa-clock"></i> {{this.workTime}}
 				<i class="fas fa-calendar-alt"></i> Dodano {{formatDate this.timeStamp}}
 			</p>
@@ -74,7 +76,7 @@
 
 <script>
 
-	<!-- MENU (TRYB MOBILNY) -->
+	<!-- SEKCJA FILTROWANIA OFERT -->
 	var z = document.getElementById("button");
 	var v = document.getElementById("filter");
 	var q = document.getElementById("form");

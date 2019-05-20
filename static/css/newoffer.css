@@ -166,7 +166,7 @@ input[type=submit]{
 }
 
 input[type=submit]:hover {
-	box-shadow: 0vw 0vw 2vh 0vh rgba(0,0,0,0.5);
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 
 /* --- WERSJA MOBILNA --- */
