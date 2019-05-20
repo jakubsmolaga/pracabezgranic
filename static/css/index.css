@@ -2,7 +2,7 @@
 
 h1 {
 	color: #006bb3;
-	font-size: 2.5vw;
+	font-size: 2.5rem;
 	font-weight: normal;
 	text-align: center;
 	
@@ -12,16 +12,23 @@ h1 {
 }
 
 p {
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 	text-align: center;
-	padding: 0;
+	padding: 0;	
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.buttons {
+	text-align: center;
+	padding: 0;	
 }
 
 /* PRZYCISKI [SZUKAM PRACY] i [SZUKAM PRACPWNIKÓW] */
 
 button {
-	width: 25vw;
-	height: 5vw;
+	width: 28vw;
+	height: 5rem;
 	
 	margin: 5vw 2vw;
 	padding: 0;
@@ -33,7 +40,7 @@ button {
 	color: #006bb3;
 	font-family: Segoe UI Light;
 	font-weight: bold;
-	font-size: 1.7vw;
+	font-size: 1.7rem;
 
 	background: white;
 	transition: box-shadow 0.2s;
@@ -50,12 +57,12 @@ button:hover {
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 7vw;
+		font-size: 7rem;
 		padding-top: 5vw;
 	}
 
 	p {
-		font-size: 4.5vw;
+		font-size: 4.5rem;
 		margin-left: 9vw;
 		margin-right: 9vw;
 	}
@@ -63,13 +70,13 @@ button:hover {
 	/* PRZYCISKI [SZUKAM PRACY] i [SZUKAM PRACPWNIKÓW] */
 	
 	button {
-		width: 60vw;
-		height: 15vw;
+		width: 60rem;
+		height: 15rem;
 		
-		margin-top: 5vw;
-		margin-bottom: 0vw;
+		margin-top: 2.5vw;
+		margin-bottom: 2.5vw;
 		
-		font-size: 4.5vw;
+		font-size: 4.5rem;
 		border-width: 0.2vw;
 	}
 }

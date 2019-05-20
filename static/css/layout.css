@@ -9,6 +9,8 @@ html {
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
+	
+	font-size: 1vw;
 }
 
 body {
@@ -26,18 +28,19 @@ a {
 	top: 0;
 	position: fixed;
 	width: 100vw;
-	padding-top: 1vw;
-	padding-bottom: 1.5vw;
+	padding-top: 0.5vw;
+	padding-bottom: 1.4rem;
 	background-color: white;
 	box-shadow: 0vw 0vw 0.5vw grey;
 }
 
 .logo {
 	float: left;
-	margin-left: 10vw;
+	margin-left: 9vw;
+	margin-top: 0.4rem;
 
 	color: #006bb3;
-	font-size: 2.5vw;
+	font-size: 1.9rem;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -52,7 +55,7 @@ a {
 .menu {
 	float: right;
 	margin-top: 0.5vw;
-	margin-right: 10vw;
+	margin-right: 9vw;
 }
 
 .menu a {
@@ -67,57 +70,66 @@ a {
 
 .menu-button {
 	color: #000000;
-	font-size: 1.2vw;
-	margin-left: 2vw;
-	margin-right: 0.5vw;
+	font-size: 1.2rem;
+	margin-left: 1.5rem;
+	margin-right: 0.5rem;
 }
 
 /* PRZYCISKI ZMIANY KONTRASTU */
 
 .contrast-1 {
-	width: 1.5vw;
+	width: 1.3rem;
 	color: #006bb3;
-	font-size: 1.2vw;
+	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 .contrast-2 {
-	width: 1.5vw;
-	font-size: 1.2vw;
+	width: 1.3rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 .contrast-3 {
-	width: 1.5vw;
+	width: 1.3rem;
 	color: #FFA500;
-	font-size: 1.2vw;
+	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 /* PRZYCISKI ZMIANY ROZMIARU CZCIONKI */
 
 .font-1 {
-	width: 1.5vw;
-	font-size: 1.2vw;
+	width: 1.3rem;
+	color: #006bb3;
+	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 .font-2 {
-	width: 1.5vw;
-	font-size: 1.5vw;
+	width: 1.3rem;
+	color: #006bb3;
+	font-size: 1.5rem;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 .font-3 {
-	width: 1.5vw;
-	font-size: 1.8vw;
+	width: 1.3rem;
+	color: #006bb3;
+	font-size: 1.8rem;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 /* GŁÓWNY KONTENER ZAWARTOŚCI */
@@ -135,11 +147,15 @@ a {
 
 .footer {
 	width: 70vw;
-	font-size: 1vw;
+	font-size: 1rem;
 
 	margin: 0 auto;
 	margin-top: 4vw;
 	margin-bottom: 4vw;
+}
+
+.mobile-only {
+	display: none;
 }
 
 /* --- WERSJA MOBILNA --- */
@@ -149,27 +165,29 @@ a {
 
 	.header {
 		box-shadow: 0vw 0vw 1vw grey;
+		padding-top: 2vw;
 	}
 
 	.logo {
-		font-size: 8vw;
+		font-size: 6rem;
+		margin-top: 0.5rem;
+		margin-bottom: 1.5rem;
 		margin-left: 5vw;
 	}
 
 	.logo img{
-		width: 8vw;
-		padding-top: 1.5vw;
-		margin-bottom: -1.2vw;
+		width: 6rem;
+		margin-bottom: -0.8vw;
 	}
 
 	/* PRZYCISK MENU */
 
 	.icon {
 		float: right;
-		width: 8vw;
-		height: 8vw;
+		width: 8rem;
+		height: 8rem;
 		margin-right: 5vw;
-		margin-top: 3.5vw;
+		margin-top: 2rem;
 
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
@@ -186,7 +204,7 @@ a {
 		position: absolute;
 		left: 0;
 		width: 100%;
-		height: 0.7vw;
+		height: 0.7rem;
 		background: black;
 		border-radius: 0.5vw;
 		opacity: 1;
@@ -203,24 +221,24 @@ a {
 	}
 
 	.icon span:nth-child(1) {
-		top: 0vw;
+		top: 0;
 	}
 
 	.icon span:nth-child(2) {
-		top: 2.5vw;
+		top: 2.5rem;
 	}
 
 	.icon span:nth-child(3) {
-		top: 2.5vw;
+		top: 2.5rem;
 	}
 
 	.icon span:nth-child(4) {
-		top: 5vw;
+		top: 5rem;
 	}
 
 	.icon.open span:nth-child(1) {
-		top: 1vw;
-		width: 0vw;
+		top: 1rem;
+		width: 0;
 		left: 50%;
 	}
 
@@ -239,8 +257,8 @@ a {
 	}
 
 	.icon.open span:nth-child(4) {
-		top: 1vw;
-		width: 0%;
+		top: 1rem;
+		width: 0;
 		left: 50%;
 	}
 
@@ -254,19 +272,52 @@ a {
 	}
 
 	.menu.open {
-		height: 45vw;
-	}
-
-	.menu a {
-		font-size: 5vw;
-		margin-top: 2vw;
-		margin-left: 10vw;
+		height: 45rem;
 	}
 
 	.menu img {
-		width: 7vw;
-		padding: 0vw;
-		margin: 0vw;
+	display: none;
+	}
+
+	.menu-button {
+	font-size: 5rem;
+	margin-top: 3rem;
+	margin-left: 5vw;
+	margin-right: 2vw;
+	}
+
+	/* PRZYCISKI ZMIANY KONTRASTU */
+
+	.contrast-1 {
+		width: 8rem;
+		font-size: 5rem;
+	}
+
+	.contrast-2 {
+		width: 8rem;
+		font-size: 5rem;
+	}
+
+	.contrast-3 {
+		width: 8rem;
+		font-size: 5rem;
+	}
+
+	/* PRZYCISKI ZMIANY ROZMIARU CZCIONKI */
+
+	.font-1 {
+		width: 8rem;
+		font-size: 5rem;
+	}
+
+	.font-2 {
+		width: 8rem;
+		font-size: 7rem;
+	}
+
+	.font-3 {
+		width: 8rem;
+		font-size: 9rem;
 	}
 
 	/* GŁÓWNY KONTENER ZAWARTOŚCI */
@@ -280,6 +331,10 @@ a {
 
 	.footer {
 		width: 95vw;
-		font-size: 3vw;
+		font-size: 2rem;
+	}
+	
+	.mobile-only {
+		display: block;
 	}
 }

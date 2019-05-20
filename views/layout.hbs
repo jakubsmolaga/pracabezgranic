@@ -7,14 +7,14 @@
 	<html class="legacy">
 <![endif]-->
 
-<html lang="pl-PL">
+<html lang="pl-PL" id="html">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
 		<title>Pracabezgranic.pl</title>
 	</head>
-	<body id="mymain">
+	<body>
 
 		<!-- NAGŁÓWEK -->
 		<div class="header">
@@ -38,16 +38,16 @@
 				</a><a class="contrast-1">A
 				</a><a class="contrast-2">A
 				</a><a class="contrast-3">A
-				</a><a class="menu-button">CZCIONKA:
-				</a><a class="font-1" href="javascript:void(0);" onclick="changemysize(1);">A
-				</a><a class="font-2" href="javascript:void(0);" onclick="changemysize(4);">A
-				</a><a class="font-3" href="javascript:void(0);" onclick="changemysize(6);">A
-				</a>{{#if loggedIn}}<a class="menu-button" href="/dashboard">MOJE KONTO
+				</a><br class="mobile-only"><a class="menu-button">CZCIONKA:
+				</a><a class="font-1" onclick="DefaultFont();">A
+				</a><a class="font-2" onclick="MediumFont();">A
+				</a><a class="font-3" onclick="LargeFont();">A
+				</a>{{#if loggedIn}}<br class="mobile-only"><a class="menu-button" href="/dashboard">MOJE KONTO
 				</a>{{else}}
-				<a class="menu-button" href="/login">DLA FIRM
+				<br class="mobile-only"><a class="menu-button" href="/login">DLA FIRM
 				{{/if}}
 				</a><a><img src="/img/login.png"/>
-				</a><a class="menu-button" href="">INFORMACJE
+				</a><br class="mobile-only"><a class="menu-button" href="">INFORMACJE
 				</a><a><img src="/img/info.png"/>
 				</a>
 			</div>
@@ -61,7 +61,7 @@
 		<!-- STOPKA -->
 		<div class="footer">&#169; 2019 ZSEIL</div>
 
-		<script>
+		<script type="text/javascript">
 
 			<!-- MENU (TRYB MOBILNY) -->
 			var x = document.getElementById("icon");
@@ -76,9 +76,14 @@
 		
 		<script type="text/javascript">
 		
-			function changemysize(myvalue) {
-				var div = document.getElementById("mymain");
-				div.style.fontSize = myvalue + "vw";   
+			function DefaultFont() {
+			  document.getElementById('html').style.fontSize = '1vw';
+			}
+			function MediumFont() {
+			  document.getElementById('html').style.fontSize = '1.2vw';
+			}
+			function LargeFont() {
+			  document.getElementById('html').style.fontSize = '1.4vw';
 			}
 			
 		</script>
