@@ -1,40 +1,141 @@
+/* GŁÓWNY KONTENER OFERTY */
+
+.offer {
+	display: flex;
+	width: 65vw;
+
+	margin-left: 2.5vw;
+	margin-bottom: 1vw;
+
+	border-style: solid;
+	border-width: 0.1rem;
+	border-color: #006BB3;
+	
+	background: #FFFFFF;
+	transition: box-shadow 0.2s;
+}
+
+.offer:hover {
+	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
+}
+
+/* INFORMACJE O OFERCIE */
+
+.offer-A {
+	width: 55rem;
+	padding: 1vw;
+}
+
+.offer-title {
+	color:#006BB3;
+	font-size: 2rem;
+	margin-left: 1vw;
+}
+
+.offer-info {
+	color: #777777;
+	font-size: 1rem;
+}
+
+i {
+	margin-left: 1vw;
+}
+
+
+/* PRZYCISKI OFERTY */
+.offer-B {
+	padding: 0.5vw;
+	width: 10vw;
+}
+
+.button-edit {
+	width: 9vw;
+	height: 3rem;
+	margin-bottom: 0.5vw;
+
+	border-style: solid;
+	border-width: 0.1rem;
+	border-color: #006BB3;
+
+	color: #006BB3;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.5rem;
+
+	background: #FFFFFF;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
+.button-delete {
+	width: 9vw;
+	height: 3rem;
+	margin-top: 0.5vw;
+
+	border-style: solid;
+	border-width: 0.1rem;
+	border-color: #FF0000;
+
+	color: #FF0000;
+	font-family: Segoe UI Light;
+	font-weight: bold;
+	font-size: 1.5rem;
+
+	background: #FFFFFF;
+	transition: box-shadow 0.2s;
+	cursor: pointer;
+}
+
 /* FORMATOWANIE TEKSTU */
 
 h1 {
-	color: #006bb3;
-	font-size: 2.5vw;
+	color: #006BB3;
+	font-size: 2.5rem;
 	font-weight: normal;
 	text-align: center;
 
 	padding-top: 2vw;
 	padding-bottom: 3vw;
+	
+	margin:0;
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+h2 {
+	color: #006BB3;
+	font-size: 2rem;
+	font-weight: normal;
+	
+	padding-bottom: 2vw;
+	padding-left: 2.5vw;
 	margin: 0;
 }
 
 p {
-	font-size: 1.5vw;
-	text-align: center;
+	font-size: 1.5rem;
 	padding: 0;
 }
+
 
 /* PRZYCISK [DODAJ OGŁOSZENIE]  i [WYLOGUJ] */
 
 .button {
-	width: 15vw;
-	height: 4vw;
-	margin-top: 2vw;
+	width: 20rem;
+	height: 5rem;
+	margin-top: 1vw;
 	padding: 0;
 
 	border-style: solid;
-	border-width: 0.1vw;
-	border-color: #006bb3;
+	border-width: 0.1rem;
+	border-color: #006BB3;
 
-	color: #006bb3;
+	color: #006BB3;
 	font-family: Segoe UI Light;
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 
-	background: white;
+	background: #FFFFFF;
 	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
@@ -43,97 +144,74 @@ p {
 	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 
-
-/* OFERTY */
-
-.offer {
-	display: flex;
-	width: 90%;
-
-	margin-left: 3vw;
-	margin-bottom: 1vw;
-
-	background: white;
-
-	border-style: solid;
-	border-width: 0.1vw;
-	border-color: #006bb3;
-	transition: box-shadow 0.2s;
-}
-
-.offer:hover {
-	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
-}
-.offer-info {
-	width: 100%;
-}
-
-/* --- Pozycja przycisków oferty --- */
-.buttons-offer-container {
-  /* width: 100%; */
-	float: right;
-}
-.buttons-offer-container *{
-  /* float: right; */
-}
-
-/* --- Przyciski oferty --- */
-.buttons-offer {
-	width: 10vw;
-	height: 3vw;
-	padding: 0;
-	margin: 1vw;
-
-	border-style: solid;
-	border-width: 0.1vw;
-	border-color: #006bb3;
-
-	color: #006bb3;
-	font-family: Segoe UI Light;
-	font-weight: bold;
-	font-size: 1.5vw;
-
-	background: white;
-	transition: box-shadow 0.2s;
-	cursor: pointer;
-}
-
-.button-delete {
-	color: red;
-	border-color: red;
+.mobile-only {
+	display: none;
 }
 
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
 
-	/* COMING SOON... */
+	/* GŁÓWNY KONTENER OFERTY */
 
-	.buttons-offer {
-		width: 30vw;
-		height: 8vh;
-		padding:0;
-		/* margin-bottom: 3vh; */
-		border-width: 0.2vw;
-		font-size: 4vw;
+	.offer {
+		width: 90vw;
+		margin-bottom: 2vw;
 	}
 
-	.button{
-		width: 60vw;
-		height: 12vh;
+	/* INFORMACJE O OFERCIE */
 
-		margin-top:5vh;
-		margin-bottom:5vh;
-
-		font-size: 5vw;
-		border-width: 0.2vw;
+	.offer-A {
+		width: 75rem;
+		padding: 1vw;
 	}
 
 	.offer-title {
-		font-size: 3vh;
-	}
-	.offer-city {
-		font-size: 2vh;
-		color: rgba(100, 100, 100, 1);
+		font-size: 5.5rem;
+		margin-left: 0;
 	}
 
+	.offer-info {
+		color: #777777;
+		font-size: 3.5rem;
+	}
+
+	i {
+		margin-left: 1.5vw;
+	}
+
+
+	/* FORMATOWANIE TEKSTU */
+
+	h1 {
+		font-size: 6rem;
+		padding-top: 5vw;
+		padding-bottom: 2vw;
+		
+		margin:0;
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+
+	h2 {
+		font-size: 3.5rem;
+		padding-top: 5vw;
+	}
+
+	p {
+		font-size: 3rem;
+	}
+
+	/* PRZYCISK [DODAJ OGŁOSZENIE]  i [WYLOGUJ] */
+
+	.button {
+		width: 60rem;
+		height: 15rem;
+		font-size: 4rem;
+
+	}
+	
+	.mobile-only {
+		display: block;
+	}
+	
 }

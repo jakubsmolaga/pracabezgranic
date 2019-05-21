@@ -36,18 +36,18 @@ a {
 
 .logo {
 	float: left;
-	margin-left: 9vw;
-	margin-top: 0.4rem;
+	margin-left: 7.2vw;
+	margin-top: 0.3rem;
 
-	color: #006bb3;
-	font-size: 1.9rem;
+	color: #006BB3;
+	font-size: 2rem;
 	font-weight: bold;
 	text-decoration: none;
 }
 
 .logo img{
-	width: 2.5vw;
-	margin-bottom: -0.4vw;
+	width: 2rem;
+	margin-bottom: -0.3rem;
 }
 
 /* MENU */
@@ -55,7 +55,7 @@ a {
 .menu {
 	float: right;
 	margin-top: 0.5vw;
-	margin-right: 9vw;
+	margin-right: 7.2vw;
 }
 
 .menu a {
@@ -71,15 +71,14 @@ a {
 .menu-button {
 	color: #000000;
 	font-size: 1.2rem;
-	margin-left: 1.5rem;
+	margin-left: 1rem;
 	margin-right: 0.5rem;
 }
 
 /* PRZYCISKI ZMIANY KONTRASTU */
 
 .contrast-1 {
-	width: 1.3rem;
-	color: #006bb3;
+	width: 2vw;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
@@ -87,7 +86,7 @@ a {
 }
 
 .contrast-2 {
-	width: 1.3rem;
+	width: 2vw;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
@@ -95,8 +94,7 @@ a {
 }
 
 .contrast-3 {
-	width: 1.3rem;
-	color: #FFA500;
+	width: 2vw;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
@@ -106,8 +104,8 @@ a {
 /* PRZYCISKI ZMIANY ROZMIARU CZCIONKI */
 
 .font-1 {
-	width: 1.3rem;
-	color: #006bb3;
+	width: 1.5rem;
+	color: #006BB3;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
@@ -115,8 +113,8 @@ a {
 }
 
 .font-2 {
-	width: 1.3rem;
-	color: #006bb3;
+	width: 1.5rem;
+	color: #006BB3;
 	font-size: 1.5rem;
 	font-weight: bold;
 	text-align: center;
@@ -124,8 +122,8 @@ a {
 }
 
 .font-3 {
-	width: 1.3rem;
-	color: #006bb3;
+	width: 1.5rem;
+	color: #006BB3;
 	font-size: 1.8rem;
 	font-weight: bold;
 	text-align: center;
@@ -154,6 +152,11 @@ a {
 	margin-bottom: 4vw;
 }
 
+	
+.desktop-only {
+	display: block;
+}
+
 .mobile-only {
 	display: none;
 }
@@ -169,8 +172,8 @@ a {
 	}
 
 	.logo {
-		font-size: 6rem;
-		margin-top: 0.5rem;
+		font-size: 6.5rem;
+		margin-top: 0.3rem;
 		margin-bottom: 1.5rem;
 		margin-left: 5vw;
 	}
@@ -276,7 +279,8 @@ a {
 	}
 
 	.menu img {
-	display: none;
+		width: 7rem;
+		margin-bottom: -1.5rem;
 	}
 
 	.menu-button {
@@ -334,7 +338,12 @@ a {
 		font-size: 2rem;
 	}
 	
+	.desktop-only {
+		display: none;
+	}
+	
 	.mobile-only {
-		display: block;
+		display: inline-block;
+		margin-left: 5vw;
 	}
 }

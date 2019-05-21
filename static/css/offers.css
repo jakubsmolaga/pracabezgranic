@@ -38,7 +38,7 @@ form.open {
 /* FORMATOWANIE TEKSTU */
 
 h1 {
-	color: #006bb3;
+	color: #006BB3;
 	font-size: 2.5vw;
 	font-weight: normal;
 	padding-top: 1.8vw;
@@ -62,7 +62,7 @@ input[type=text]{
 	
 	border-style: solid;
 	border-width: 0.1vw;
-	border-color: #ccc;
+	border-color: #CCCCCC;
 	
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
@@ -243,7 +243,7 @@ i {
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 6vw;
+		font-size: 6rem;
 		margin-top: 3vw;
 	}
 
@@ -295,7 +295,7 @@ i {
 	/* PRZYCISK [FILTRUJ OFERTY] */
 	
 	input[type=submit]{
-		float:none;
+		float: none;
 		width: 90vw;
 		height: 15vw;
 		
@@ -318,22 +318,10 @@ i {
 	.offer {
 		padding: 2vw;
 		margin-top: 5vw;
-
-		border-style: solid;
-		border-width: 0.1vw;
-		border-color: #006bb3;
-
-		background: white;
-		transition: box-shadow 0.2s;
-		cursor: pointer;
 	}
 
 	i {
 		margin: 1.5vw;
-	}
-
-	.mobile-only {
-		display: block;
 	}
 
 	.offer:hover {
@@ -341,12 +329,16 @@ i {
 	}
 
 	.offer-info {
-		font-size: 3.5vw;
+		font-size: 3.5rem;
 	}
 
 	.offer-title {
-		font-size: 5.5vw;
+		font-size: 5.5rem;
 		margin-left:0vw;
+	}
+	
+	.mobile-only {
+		display: block;
 	}
 	
 }

@@ -7,7 +7,7 @@
 
 .info-A {
 	display: inline-block;
-	width: 11vw;
+	width: 10rem;
 }
 
 .info-B {
@@ -20,8 +20,8 @@
 }
 
 .disability-A img {
-	width: 2vw;
-	margin-bottom: -0.6vw;
+	width: 2rem;
+	margin-bottom: -0.6rem;
 }
 
 .disability-B {
@@ -30,21 +30,22 @@
 }
 
 .disability-B img {
-	width: 2vw;
-	margin-bottom: -0.6vw;
+	width: 2rem;
+	margin-bottom: -0.6rem;
 }
 
 .disability {
 	display: inline-block;
 	width: 55vw;
+	font-size: 1.2rem;
 	margin-bottom: 1vw;
 }
 
 /* FORMATOWANIE TEKSTU */
 
 h1 {
-	color: #006bb3;
-	font-size: 2.5vw;
+	color: #006BB3;
+	font-size: 2.5rem;
 	font-weight: normal;
 	text-align: center;
 	
@@ -54,8 +55,8 @@ h1 {
 }
 
 h2 {
-	color: #006bb3;
-	font-size: 2vw;
+	color: #006BB3;
+	font-size: 2rem;
 	font-weight: normal;
 	text-align: center;
 	padding-bottom: 2vw;
@@ -63,9 +64,9 @@ h2 {
 }
 
 p {
-	font-size: 1.5vw;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
+	font-size: 1.2rem;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
 }
 
 .description {
@@ -107,27 +108,27 @@ p {
 
 	.disability {
 		width: 70vw;
-		font-size: 3vw;
+		font-size: 3rem;
 		margin-bottom: 2vw;
 	}
 	
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 6vw;
-		padding-top: 3vh;
-		padding-bottom: 3vh;
+		font-size: 7rem;
+		padding-top: 5vw;
+		padding-bottom: 2vw;
 	}
 	
 	h2 {
-		font-size: 3.5vw;
+		font-size: 3.5rem;
 		text-align: left;
 		padding-top: 3vh;
 		padding-bottom: 1vw;
 	}
 	
 	p {
-		font-size: 3vw;
+		font-size: 3rem;
 	}
 
 	.description {

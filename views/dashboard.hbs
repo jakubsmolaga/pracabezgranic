@@ -1,28 +1,36 @@
 <link rel="stylesheet" href="/css/dashboard.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 <h1>Panel administracyjny profilu firmy {{username}}</h1>
+<h2>Twoje ogłoszenia:</h2>
 {{#each offers}}
 <a class="link" href="/offers/{{this._id}}">
 	<div class="offer">
-		<div class="offer-info">
-			<p class="offer-title">{{this.title}}</p>
-			<p class="offer-city">{{this.city}}</p>
+		<div class="offer-A">
+			<span class="offer-title">{{this.title}}</span>
+			<p class="offer-info">
+				<i class="fas fa-map-marker-alt"></i> {{this.city}}
+				<i class="fas fa-briefcase"></i> {{this.industry}}
+				<br class="mobile-only">
+				<i class="fas fa-clock"></i> {{this.workTime}}
+				<i class="fas fa-calendar-alt"></i> Dodano {{formatDate this.timeStamp}}
+			</p>
 		</div>
-		<div class="buttons-offer-container">
+		<div class="offer-B">
 			<form action="/editoffer" method="post">
 				<input type="text" name="offerId" value="{{this._id}}" hidden/>
-				<input class="buttons-offer" type="submit" value="Edytuj" />
+				<input class="button-edit" type="submit" value="Edytuj" />
 			</form>
 			<form action="/removeoffer" method="post">
 				<input type="text" name="offerId" value="{{this._id}}" hidden/>
-				<input class="buttons-offer button-delete" type="submit" value="Usuń" />
+				<input class="button-delete" type="submit" value="Usuń" />
 			</form>
 		</div>
 	</div>
-	</a>
+</a>
 	{{else}}
 		<p>Aktualnie nie masz żadnych ogłoszeń :(</p>
 {{/each}}
-<p><a href="/newoffer"><button class="button">Dodaj ogłoszenie</button></a></p>
+<p style="text-align:center"><a href="/newoffer"><button class="button">DODAJ OGŁOSZENIE</button></a></p>
 <form action="/logout" method="post">
-	<p><input class="button" type="submit" value="Wyloguj" /></p>
+	<p style="text-align:center"><input class="button" type="submit" value="WYLOGUJ" /></p>
 </form>

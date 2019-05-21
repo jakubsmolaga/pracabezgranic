@@ -35,20 +35,23 @@
 			<!-- MENU -->
 			<div class="menu" id="menu">
 				<a class="menu-button">KONTRAST:
-				</a><a class="contrast-1">A
-				</a><a class="contrast-2">A
-				</a><a class="contrast-3">A
-				</a><br class="mobile-only"><a class="menu-button">CZCIONKA:
+				</a><a class="contrast-1"><img src="/img/contrast-default.png" />
+				</a><a class="contrast-2"><img src="/img/contrast-black.png" />
+				</a><a class="contrast-3"><img src="/img/contrast-yellow.png" />
+				</a><br class="mobile-only">
+				<a class="menu-button">CZCIONKA:
 				</a><a class="font-1" onclick="DefaultFont();">A
 				</a><a class="font-2" onclick="MediumFont();">A
 				</a><a class="font-3" onclick="LargeFont();">A
-				</a>{{#if loggedIn}}<br class="mobile-only"><a class="menu-button" href="/dashboard">MOJE KONTO
-				</a>{{else}}
-				<br class="mobile-only"><a class="menu-button" href="/login">DLA FIRM
-				{{/if}}
-				</a><a><img src="/img/login.png"/>
-				</a><br class="mobile-only"><a class="menu-button" href="">INFORMACJE
-				</a><a><img src="/img/info.png"/>
+				</a>{{#if loggedIn}}<br class="mobile-only" />
+				<img class="mobile-only" src="/img/login.png" /><a class="menu-button" href="/dashboard">MOJE KONTO
+				</a>{{else}}<br class="mobile-only" />
+				<img class="mobile-only" src="/img/login.png" /><a class="menu-button" href="/login">DLA FIRM
+				</a>{{/if}}
+				<a><img class="desktop-only" src="/img/login.png" />
+				</a><br class="mobile-only" />
+				<img class="mobile-only" src="/img/info.png" /><a class="menu-button" href="">INFORMACJE
+				</a><a><img class="desktop-only" src="/img/info.png" />
 				</a>
 			</div>
 		</div>
