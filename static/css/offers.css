@@ -11,11 +11,7 @@
 }
 
 .filter.open {
-	height: 25vw;
-}
-
-.filter p {
-	font-size: 1.2vw;
+	height: 25rem;
 }
 
 /* UKRYJ / POKAŻ FILTRY */
@@ -35,12 +31,19 @@ form.open {
 	margin-top: 1vw;
 }
 
+.form-A {
+	display: inline-block;
+	margin-top: 1vw;
+	font-size: 1.2rem;
+}
+
 /* FORMATOWANIE TEKSTU */
 
 h1 {
 	color: #006BB3;
-	font-size: 2.5vw;
+	font-size: 2.5rem;
 	font-weight: normal;
+	
 	padding-top: 1.8vw;
 	padding-bottom: 1vw;
 	margin: 0;
@@ -71,14 +74,14 @@ input[type=text]{
 }
 
 input:focus {
-	border-color: #006bb3;
+	border-color: #006BB3;
 }
 input:hover {
-	border-color: #006bb3;
+	border-color: #006BB3;
 }
 
 ::placeholder {
-	color: #000;
+	color: #000000;
 	font-family: Segoe UI Light;
 	font-size: 1.2vw;
 }
@@ -89,12 +92,13 @@ select {
 	width: 20.1vw;
 	font-size: 1.2vw;
 	font-family: Segoe UI Light;
+	margin-left: 0.2vw;
 	padding: 0.5vw;
 	outline: none;
 
 	border-style: solid;
 	border-width: 0.1vw;
-	border-color: #ccc;
+	border-color: #CCCCCC;
 	
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
@@ -103,41 +107,40 @@ select {
 }
 
 select:focus {
-	border-color: #006bb3;
+	border-color: #006BB3;
 }
 select:hover {
-	border-color: #006bb3;
+	border-color: #006BB3;
 }
 
 /* POLA WYBORU */
 
 input[type=checkbox]{
+		display: inline-block;
 	width: 1vw;
 	height: 1vw;
-	
 	margin:0;
 	margin-right: 0.5vw;
-	
 	cursor: pointer;
+
 }
 
 /* PRZYCISK [POKAŻ] */
 
 button {
-	width: 10vw;
+	width: 10rem;
 	height: 4vw;
 	margin-top: 3vh;
 	padding: 0;
 
-
 	border-style: solid;
-	border-width: 0.1vw;
-	border-color: #006bb3;
+	border-width: 0.1rem;
+	border-color: #006BB3;
 
-	color: #006bb3;
+	color: #006BB3;
 	font-family: Segoe UI Light;
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 
 	background: white;
 	transition: box-shadow 0.2s;
@@ -151,22 +154,22 @@ button:hover {
 /* PRZYCISK [FILTRUJ OFERTY] */
 
 input[type=submit] {
-	float:right;
-	width: 15vw;
-	height: 4vw;
+	float: right;
+	width: 15rem;
+	height: 4rem;
 	padding: 0;
-	margin-top: 7.5vw;
+	margin-top: 7.5rem;
 
 	border-style: solid;
-	border-width: 0.1vw;
-	border-color: #006bb3;
+	border-width: 0.1rem;
+	border-color: #006BB3;
 
-	color: #006bb3;
+	color: #006BB3;
 	font-family: Segoe UI Light;
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 
-	background: white;
+	background: #FFFFFF;
 	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
@@ -190,10 +193,10 @@ input[type=submit]:hover {
 	margin-top: 1vw;
 
 	border-style: solid;
-	border-width: 0.1vw;
-	border-color: #006bb3;
+	border-width: 0.1rem;
+	border-color: #006BB3;
 
-	background: white;
+	background: #FFFFFF;
 	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
@@ -211,13 +214,13 @@ i {
 }
 
 .offer-info {
-	color: #777;
-	font-size: 1vw;
+	color: #777777;
+	font-size: 1rem;
 }
 
 .offer-title {
-	color:#006bb3;
-	font-size: 2vw;
+	color:#006BB3;
+	font-size: 2rem;
 	margin-left:1vw;
 }
 
@@ -233,17 +236,19 @@ i {
 	}
 
 	.filter.open {
-		height: 117vw;
+		height: 120rem;
 	}
 	
-	.form p {
-		font-size: 4vw;
+	.form-A {
+		width: 92%;
+		margin-top: 2vw;
+		font-size: 4rem;
 	}
 	
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 6rem;
+		font-size: 6vw;
 		margin-top: 3vw;
 	}
 
@@ -255,30 +260,31 @@ i {
 	
 	input[type=text]{
 		width: 90vw;
-		font-size:4vw;
+		font-size:4rem;
 		padding: 2vw;
-		border-width: 0.2vw;
+		border-width: 0.2rem;
 	}
 
 	::placeholder {
-		font-size: 4vw;
+		font-size: 4rem;
 	}
 	
 	/* POLA KOMBI [BRANŻA] i [WYMIAR] */
 	
 	select {
 		width: 90vw;
-		font-size: 4vw;
+		font-size: 4rem;
 		padding: 2vw;
 		margin-top: 3vh;
-		border-width: 0.2vw;
+		border-width: 0.2rem;
 	}
 
 	/* POLA WYBORU */
 
 	input[type=checkbox]{
-		width: 3vw;
-		height: 3vw;
+		display:inline-block;
+		width: 3rem;
+		height: 3rem;
 		margin-right: 2vw;
 	}
 	
@@ -289,7 +295,7 @@ i {
 		height: 12vw;
 		margin-top: 3vw;
 		font-size: 4vw;
-		border-width: 0.2vw;
+		border-width: 0.2rem;
 	}
 	
 	/* PRZYCISK [FILTRUJ OFERTY] */
@@ -297,11 +303,11 @@ i {
 	input[type=submit]{
 		float: none;
 		width: 90vw;
-		height: 15vw;
+		height: 20vw;
 		
 		margin-top: 5vw;
 		margin-bottom: 5vw;
-		font-size: 5vw;
+		font-size: 5rem;
 		border-width: 0.2vw;
 	}
 	
@@ -338,7 +344,6 @@ i {
 	}
 	
 	.mobile-only {
-		display: block;
+		display: inline-block;
 	}
-	
 }

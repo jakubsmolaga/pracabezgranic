@@ -122,8 +122,9 @@ input[type=submit]:hover {
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 7rem;
+		font-size: 6rem;
 		padding-top: 5vw;
+		padding-bottom: 5vw;
 	}
 
 	p {
@@ -158,8 +159,8 @@ input[type=submit]:hover {
 	/* PRZYCISK [ZALOGUJ] */
 	
 	input[type=submit]{
-		width: 60rem;
-		height: 15rem;
+		width: 80vw;
+		height: 20vw;
 		margin: 0;
 		font-size: 5rem;
 		border-width: 0.2vw;

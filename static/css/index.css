@@ -38,10 +38,10 @@ button {
 	padding: 0;
 
 	border-style: solid;
-	border-width: 0.1vw;
+	border-width: 0.1rem;
 	border-color: #006bb3;
 
-	color: #006bb3;
+	color: #006BB3;
 	font-family: Segoe UI Light;
 	font-weight: bold;
 	font-size: 1.7rem;
@@ -74,13 +74,13 @@ button:hover {
 	/* PRZYCISKI [SZUKAM PRACY] i [SZUKAM PRACPWNIKÓW] */
 	
 	button {
-		width: 60rem;
-		height: 15rem;
+		width: 90vw;
+		height: 20vw;
 		
 		margin-top: 2.5vw;
 		margin-bottom: 2.5vw;
 		
-		font-size: 4.5rem;
-		border-width: 0.2vw;
+		font-size: 5rem;
+		border-width: 0.2rem;
 	}
 }

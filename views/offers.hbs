@@ -6,8 +6,7 @@
 	<form action="/offers" method="post" id="form">
 		<div class="form">
 			<p>
-				<input type="text" name="city"/ value="{{city}}" placeholder="Dowolne miasto" />
-				<select name="industry">
+				<input type="text" name="city"/ value="{{city}}" placeholder="Dowolne miasto" /><select name="industry">
 					<option value="0">Dowolna branża</option>
 					<option value="1">Architektura, budownictwo</option>
 					<option value="2">Biotechnologia</option>
@@ -35,8 +34,7 @@
 					<option value="24">Turystyka, hotele</option>
 					<option value="25">Usługi - inne</option>
 					<option value="26">Inna branża</option>
-				</select>
-				<select name="workTime">
+				</select><select name="workTime">
 					<option value="0">Dowolny wymiar pracy</option>
 					<option value="1">Pełny etat</option>
 					<option value="2">Część etatu</option>
@@ -46,10 +44,10 @@
 			</p>
 		</div>
 		<div class="form">
-			<p><input type="checkbox" name="upperbody" {{#if upperbody}} checked {{/if}} />Dostosowane do osób z ograniczoną sprawnością górnych kończyn</p>
-			<p><input type="checkbox" name="wheelchair" {{#if wheelchair}} checked {{/if}} />Dostosowane do osób na wózkach inwalidzkich</p>
-			<p><input type="checkbox" name="blind" {{#if blind}} checked {{/if}} />Dostosowane do osób niewidomych</p>
-			<p><input type="checkbox" name="deaf" {{#if deaf}} checked {{/if}} />Dostosowane do osób niesłyszących</p>
+			<input type="checkbox" name="upperbody" {{#if upperbody}} checked {{/if}} /><div class="form-A">Dostosowane do osób z ograniczoną sprawnością górnych kończyn</div><br />
+			<input type="checkbox" name="wheelchair" {{#if wheelchair}} checked {{/if}} /><div class="form-A">Dostosowane do osób na wózkach inwalidzkich</div><br />
+			<input type="checkbox" name="blind" {{#if blind}} checked {{/if}} /><div class="form-A">Dostosowane do osób niewidomych</div><br />
+			<input type="checkbox" name="deaf" {{#if deaf}} checked {{/if}} /><div class="form-A">Dostosowane do osób niesłyszących</div><br />
 		</div>
 		<input type="submit" value="FILTRUJ OFERTY" />
 	</form>

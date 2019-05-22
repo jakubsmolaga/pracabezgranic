@@ -85,7 +85,7 @@ p {
 	}
 
 	.info-A {
-		width: 25vw;
+		display: none;
 	}
 
 	.disability-A {
@@ -108,27 +108,27 @@ p {
 
 	.disability {
 		width: 70vw;
-		font-size: 3rem;
+		font-size: 4rem;
 		margin-bottom: 2vw;
 	}
 	
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 7rem;
+		font-size: 6rem;
 		padding-top: 5vw;
 		padding-bottom: 2vw;
 	}
 	
 	h2 {
-		font-size: 3.5rem;
+		font-size: 4.5rem;
 		text-align: left;
 		padding-top: 3vh;
 		padding-bottom: 1vw;
 	}
 	
 	p {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 
 	.description {
