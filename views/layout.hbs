@@ -7,7 +7,7 @@
 	<html class="legacy">
 <![endif]-->
 
-<html lang="pl-PL" id="html">
+<html lang="pl-PL" class="contrast" id="html">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,15 +17,15 @@
 	<body>
 
 		<!-- NAGŁÓWEK -->
-		<div class="header">
+		<div class="header contrast contrast-header">
 
 			<!-- LOGO -->
-			<a class="logo" href="/"><img src="/img/logo.png"/>Pracabezgranic.pl
+			<a class="logo contrast" href="/"><img src="/img/logo.png"/>Pracabezgranic.pl
 
 			<!-- PRZYCISK MENU (TRYB MOBILNY) -->
 			</a>
 
-			<div class="icon" id="icon">
+			<div class="icon contrast" id="icon">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -34,30 +34,30 @@
 
 			<!-- MENU -->
 			<div class="menu" id="menu">
-				<a class="menu-button">KONTRAST:
-				</a><a class="contrast-1"><img src="/img/contrast-default.png" />
-				</a><a class="contrast-2"><img src="/img/contrast-black.png" />
-				</a><a class="contrast-3"><img src="/img/contrast-yellow.png" />
+				<a class="menu-button contrast">KONTRAST:
+				</a><a class="contrast-1" onclick="ContrastDefault();"><img src="/img/contrast-default.png" />
+				</a><a class="contrast-2" onclick="ContrastBlack();"><img src="/img/contrast-black.png" />
+				</a><a class="contrast-3" onclick="ContrastYellow();"><img src="/img/contrast-yellow.png" />
 				</a><br class="mobile-only">
-				<a class="menu-button">CZCIONKA:
-				</a><a class="font-1" onclick="DefaultFont();">A
-				</a><a class="font-2" onclick="MediumFont();">A
-				</a><a class="font-3" onclick="LargeFont();">A
+				<a class="menu-button contrast">CZCIONKA:
+				</a><a class="font-1 contrast" onclick="FontDefault();">A
+				</a><a class="font-2 contrast" onclick="FontMedium();">A
+				</a><a class="font-3 contrast" onclick="FontLarge();">A
 				</a>{{#if loggedIn}}<br class="mobile-only" />
-				<img class="mobile-only" src="/img/login.png" /><a class="menu-button" href="/dashboard">MOJE KONTO
+				<img class="mobile-only" src="/img/login.png" /><a class="menu-button contrast" href="/dashboard">MOJE KONTO
 				</a>{{else}}<br class="mobile-only" />
-				<img class="mobile-only" src="/img/login.png" /><a class="menu-button" href="/login">DLA FIRM
+				<img class="mobile-only" src="/img/login.png" /><a class="menu-button contrast" href="/login">DLA FIRM
 				</a>{{/if}}
 				<a><img class="desktop-only" src="/img/login.png" />
 				</a><br class="mobile-only" />
-				<img class="mobile-only" src="/img/info.png" /><a class="menu-button" href="/info">INFORMACJE
+				<img class="mobile-only" src="/img/info.png" /><a class="menu-button contrast" href="">INFORMACJE
 				</a><a><img class="desktop-only" src="/img/info.png" />
 				</a>
 			</div>
 		</div>
 
 		<!-- TREŚĆ -->
-		<div class="container">
+		<div class="container contrast-container">
 			{{{body}}}
 		</div>
 
@@ -79,17 +79,63 @@
 		
 		<script type="text/javascript">
 		
-			function DefaultFont() {
+			<!-- ROZMIAR CZCIONKI -->
+			function FontDefault() {
 			  document.getElementById('html').style.fontSize = '1vw';
 			}
-			function MediumFont() {
+			function FontMedium() {
 			  document.getElementById('html').style.fontSize = '1.2vw';
 			}
-			function LargeFont() {
+			function FontLarge() {
 			  document.getElementById('html').style.fontSize = '1.4vw';
 			}
 			
 		</script>
+		
+		<script type="text/javascript">
+		
+			<!-- KONTRAST -->
+			function ContrastDefault(){
+			let elementy = document.getElementsByClassName("contrast");
+			for(e of elementy) e.style.color = "";
+			elementy = document.getElementsByClassName("contrast");
+			for(e of elementy) e.style.background = "";
+			elementy = document.getElementsByClassName("contrast-container");
+			for(e of elementy) e.style.boxShadow = "";
+			for(e of elementy) e.style.background = "";
+			elementy = document.getElementsByClassName("contrast-header");
+			for(e of elementy) e.style.boxShadow = "";
+			elementy = document.getElementsByClassName("contrast-button");
+			for(e of elementy) e.style.color = "";
+			for(e of elementy) e.style.borderColor = "";
+			for(e of elementy) e.style.background = "";
+			elementy = document.getElementsByClassName("contrast-input");
+			for(e of elementy) e.style.color = "";
+			for(e of elementy) e.style.borderColor = "";
+			for(e of elementy) e.style.background = "";
+			}
+			
+			function ContrastYellow(){
+			let elementy = document.getElementsByClassName("contrast");
+			for(e of elementy) e.style.color = "yellow";
+			elementy = document.getElementsByClassName("contrast");
+			for(e of elementy) e.style.background = "black";
+			elementy = document.getElementsByClassName("contrast-container");
+			for(e of elementy) e.style.boxShadow = "none";
+			for(e of elementy) e.style.background = "black";
+			elementy = document.getElementsByClassName("contrast-header");
+			for(e of elementy) e.style.boxShadow = "0vw 0.1vw 0vw yellow";
+			elementy = document.getElementsByClassName("contrast-button");
+			for(e of elementy) e.style.color = "yellow";
+			for(e of elementy) e.style.borderColor = "yellow";
+			for(e of elementy) e.style.background = "black";
+			elementy = document.getElementsByClassName("contrast-input");
+			for(e of elementy) e.style.color = "yellow";
+			for(e of elementy) e.style.borderColor = "yellow";
+			for(e of elementy) e.style.background = "black";
+			}
+			
+		</script>	
 
 	</body>
 </html>

@@ -2,11 +2,11 @@
 
 .form-A {
 	margin: 0 auto;
-	width: 30rem;
+	width: 30vw;
 }
 
 .form-A p {
-	font-size: 1.5rem;
+	font-size: 1.5vw;
 	text-align: left;
 	margin-top: 1vh;
 	margin-bottom:1vh;
@@ -15,16 +15,23 @@
 /* KONTENER PÓL WYBORU */
 
 .form-B {
-	width: 45rem;
 	margin: 0 auto;
-	margin-top: 2vw;
+	width: 45vw;
+	margin-top: 5vh;
+}
+
+.form-B p {
+	font-size: 1.5vw;
+	text-align: left;
+	margin-top: 2vh;
+	margin-bottom:2vh;
 }
 
 /* FORMATOWANIE TEKSTU */
 
 h1 {
-	color: #006BB3;
-	font-size: 2.5rem;
+	color: #006bb3;
+	font-size: 2.5vw;
 	font-weight: normal;
 	text-align: center;
 	
@@ -33,29 +40,20 @@ h1 {
 	margin: 0;
 }
 
-.disability {
-	width: 42rem;
-	display: inline-block;
-	
-	font-size: 1.5rem;
-	margin-top: 2vh;
-	margin-bottom:2vh;
-}
-
 /* POLA TEKSTOWE */
 
 input {
-	width: 30rem;
-	margin-bottom: 2vw;
+	width: 30vw;
+	margin-bottom: 2vh;
 	
 	font-family: Segoe UI Light;
-	font-size: 1rem;
+	font-size: 1vw;
 	padding: 0.5vw;
 	outline: none;
 	
 	border-style: solid;
-	border-width: 0.1rem;
-	border-color: #CCCCCC;
+	border-width: 0.1vw;
+	border-color: #ccc;
 	
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
@@ -64,32 +62,32 @@ input {
 }
 
 input:focus {
-	border-color: #006BB3;
+	border-color: #006bb3;
 }
 input:hover {
-	border-color: #006BB3;
+	border-color: #006bb3;
 }
 
 ::placeholder {
-	color: #CCCCCC;
+	color: #ccc;
 	font-family: Segoe UI Light;
-	font-size: 1rem;
+	font-size: 1vw;
 }
 
 /* POLA KOMBI */
 
 select {
-	width: 30rem;
-	margin-bottom: 2vw;
+	width: 30vw;
+	margin-bottom: 2vh;
 	
-	font-size: 1rem;
+	font-size: 1vw;
 	font-family: Segoe UI Light;
 	padding: 0.5vw;
 	outline: none;
 	
 	border-style: solid;
-	border-width: 0.1rem;
-	border-color: #CCCCCC;
+	border-width: 0.1vw;
+	border-color: #ccc;
 	
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
@@ -98,27 +96,27 @@ select {
 }
 
 select:focus {
-	border-color: #006BB3;
+	border-color: #006bb3;
 }
 select:hover {
-	border-color: #006BB3;
+	border-color: #006bb3;
 }
 
 /* POLE OPISU */
 
 textarea {
-	width: 30rem;
-	height: 20rem;
-	margin-bottom: 2vw;
+	width: 30vw;
+	height: 20vh;
+	margin-bottom: 2vh;
 	
 	font-family: Segoe UI Light;
-	font-size: 1rem;
+	font-size: 1vw;
 	padding: 0.5vw;
 	outline: none;
 	
 	border-style: solid;
-	border-width: 0.1rem;
-	border-color: #CCCCCC;
+	border-width: 0.1vw;
+	border-color: #ccc;
 	
 	-webkit-transition: border 0.5s;
 	-moz-transition: border 0.5s;
@@ -127,42 +125,42 @@ textarea {
 }
 
 textarea:focus {
-	border-color: #006BB3;
+	border-color: #006bb3;
 }
 textarea:hover {
-	border-color: #006BB3;
+	border-color: #006bb3;
 }
 
 /* POLA WYBORU */
 
 input[type=checkbox]{
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	cursor: pointer;
+	width: 2vw;
+	height: 2.5vh;
 	
-	margin: 0;
+	margin:0;
 	margin-right: 1vw;
+	
+	cursor: pointer;
 }
 
 /* PRZYCISK [DODAJ / ZAPISZ OGŁOSZENIE] */
 
 input[type=submit]{
-	width: 20rem;
-	height: 5rem;
-	margin-top: 4vw;
+	width: 15vw;
+	height: 4vw;
 	padding: 0;
-	
-	border-style: solid;
-	border-width: 0.1rem;
-	border-color: #006BB3;
+	margin-top: 4vw;
 
-	color: #006BB3;
+	border-style: solid;
+	border-width: 0.1vw;
+	border-color: #006bb3;
+
+	color: #006bb3;
 	font-family: Segoe UI Light;
 	font-weight: bold;
-	font-size: 1.5rem;
+	font-size: 1.5vw;
 
-	background: #FFFFFF;
+	background: white;
 	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
@@ -181,7 +179,7 @@ input[type=submit]:hover {
 	}
 
 	.form-A p {
-		font-size: 5rem;
+		font-size: 5vw;
 		text-align: left;
 		margin-top: 2vh;
 	}
@@ -193,67 +191,85 @@ input[type=submit]:hover {
 		width: 80vw;
 		margin-top: 5vh;
 	}
+
+	.form-B p {
+		font-size: 5vw;
+		margin-top: 3vh;
+		margin-bottom:2vh;
+	}
 	
 	/* FORMATOWANIE TEKSTU */
 	
 	h1 {
-		font-size: 6rem;
+		font-size: 6vw;
 		padding-top: 3vh;
 		padding-bottom: 3vh;
 	}
 
-	.disability {
-		width: 70vw;
-		font-size: 5rem;
+	p {
+		text-align: center;
+		font-size: 5vw;
+		padding: 0;
+	}
+	
+	.error {
+		margin-top: 3vh;
+		font-size: 5vw;
 	}
 	
 	/* POLA TEKSTOWE */
 	
 	input {
 		width: 80vw;
-		font-size: 5rem;
+		font-size: 5vw;
 		padding: 2vw;
-		border-width: 0.2rem;
+		border: 0.2vw solid #ccc;
 	}
 	
 	::placeholder {
-		font-size: 5rem;
+		font-size: 5vw;
 	}
 	
 	/* POLA KOMBI */
 
 	select {
 		width: 80vw;
-		font-size: 5rem;
+		font-size: 5vw;
 		padding: 2vw;
-		border-width: 0.2rem;
+		border: 0.2vw solid #ccc;
 	}
 	
 	/* POLE OPISU */
 	
 	textarea {
 		width: 80vw;
-		height: 40rem;
-		font-size: 5rem;
+		height: 40vh;
+		font-size: 5vw;
 		padding: 2vw;
-		border-width: 0.2rem;
+		border: 0.2vw solid #ccc;
 	}
 	
 	/* POLA WYBORU */
 
 	input[type=checkbox]{
-		width: 4rem;
-		height: 4rem;
-		margin-right: 4vw;
+		width: 4vw;
+		height: 3.5vh;
+		margin:0;
+		margin-right: 1vw;
+		
+		cursor: pointer;
 	}
 	
 	/* PRZYCISK [DODAJ OGŁOSZENIE] */
 	
 	input[type=submit]{
-		width: 80vw;
+		width: 75vw;
 		height: 20vw;
 		font-size: 5rem;
-		border-width: 0.2rem;
+		border-width: 0.2vw;
 		
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+		margin-left: 2.5vw;
 	}
 }

@@ -1,17 +1,17 @@
 <link rel="stylesheet" href="/css/login.css" />
-<h1>Rejestracja profilu pracodawcy</h1>
+<h1 class="contrast">Rejestracja profilu pracodawcy</h1>
 <form action="/register" method="POST">
 	<div class="form">
-		<p>Nazwa firmy</p>
-		<p><input type="text" name="username" placeholder="Nazwa Firmy" required></p>
-		<p>Adres email</p>
-		<p><input type="email" name="email" placeholder="Email" required></p>
-		<p>Hasło</p>
-		<p><input type="password" name="password" placeholder="Hasło" required></p>
-		<p>Numer telefonu</p>
-		<p><input type="tel" onkeydown="return (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode==8 || event.keyCode==13" maxlength="9" name="phonenumber" placeholder="Numer telefonu" required></p>
+		<p class="contrast">Nazwa firmy</p>
+		<p><input class="contrast-input" type="text" name="username" placeholder="Nazwa Firmy" required></p>
+		<p class="contrast">Adres email</p>
+		<p><input class="contrast-input" type="email" name="email" placeholder="Email" required></p>
+		<p class="contrast">Hasło</p>
+		<p><input class="contrast-input" type="password" name="password" placeholder="Hasło" required></p>
+		<p class="contrast">Numer telefonu</p>
+		<p><input class="contrast-input" type="tel" onkeydown="return (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode==8 || event.keyCode==13" maxlength="9" name="phonenumber" placeholder="Numer telefonu" required></p>
 	</div>
-	<p class="error">{{error}}</p>
-	<p><input type="submit" value="UTWÓRZ KONTO"></p>
+	<p class="error contrast">{{error}}</p>
+	<p><input class="contrast-button" type="submit" value="UTWÓRZ KONTO"></p>
 </form>
-<p><a href="/login">lub zaloguj się na istniejące konto.</a></p>
+<p><a class="contrast" href="/login">lub zaloguj się na istniejące konto.</a></p>

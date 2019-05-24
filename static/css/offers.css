@@ -14,6 +14,10 @@
 	height: 25rem;
 }
 
+.filter p {
+	font-size: 1.2rem;
+}
+
 /* UKRYJ / POKAŻ FILTRY */
 
 form {
@@ -29,12 +33,6 @@ form.open {
 .form {
 	display: inline-block;
 	margin-top: 1vw;
-}
-
-.form-A {
-	display: inline-block;
-	margin-top: 1vw;
-	font-size: 1.2rem;
 }
 
 /* FORMATOWANIE TEKSTU */
@@ -154,11 +152,11 @@ button:hover {
 /* PRZYCISK [FILTRUJ OFERTY] */
 
 input[type=submit] {
-	float: right;
+	float:right;
 	width: 15rem;
 	height: 4rem;
 	padding: 0;
-	margin-top: 7.5rem;
+	margin-top: 7.5vw;
 
 	border-style: solid;
 	border-width: 0.1rem;
@@ -239,9 +237,7 @@ i {
 		height: 120rem;
 	}
 	
-	.form-A {
-		width: 92%;
-		margin-top: 2vw;
+	.form p {
 		font-size: 4rem;
 	}
 	
@@ -282,7 +278,6 @@ i {
 	/* POLA WYBORU */
 
 	input[type=checkbox]{
-		display:inline-block;
 		width: 3rem;
 		height: 3rem;
 		margin-right: 2vw;

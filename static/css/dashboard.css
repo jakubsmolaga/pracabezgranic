@@ -181,7 +181,6 @@ p {
 
 	/* PRZYCISKI OFERTY */
 	.offer-B {
-		display: none;
 		padding: 0.5vw;
 		width: 10vw;
 	}
@@ -237,9 +236,8 @@ p {
 	}
 
 	h2 {
-		font-size: 5rem;
+		font-size: 3.5rem;
 		padding-top: 5vw;
-		padding-bottom: 5vw;
 	}
 
 	p {
@@ -256,7 +254,7 @@ p {
 	}
 	
 	.mobile-only {
-		display: inline-block;
+		display: block;
 	}
 	
 }
