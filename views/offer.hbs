@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/offer.css">
 <div class="form">
-	<h1>{{offerData.title}}</h1>
-	<h2>Oferta firmy {{offerData.username}}</h2>
+	<h1 class="contrast">{{offerData.title}}</h1>
+	<h2 class="contrast">Oferta firmy {{offerData.username}}</h2>
 	<div class="info-A">
 		<p>Wymiar pracy:</p>
 		<p>Miejscowość:</p>
@@ -14,19 +14,19 @@
 	</div>
 	<p class="description">{{offerData.description}}</p>
 	{{#if offerData.blind}}
-		<div class="disability-A"><img src="/img/tick.png" /></div>
+		<div class="disability-A"><i class="contrast fas fa-eye-slash"></i></div>
 		<div class="disability">Sprzyjamy osobom niewidomym.</div>
 	{{/if}}
 	{{#if offerData.deaf}}
-		<div class="disability-A"><img src="/img/tick.png" /></div>
+		<div class="disability-A"><i class="contrast fas fa-deaf"></i></div>
 		<div class="disability">Sprzyjamy osobom niesłyszącym.</div>
 	{{/if}}
 	{{#if offerData.wheelchair}}
-		<div class="disability-B"><img src="/img/tick.png" /></div>
+		<div class="disability-B"><i class="contrast fas fa-wheelchair"></i></div>
 		<div class="disability">Sprzyjamy osobom poruszającym się na wózku inwalidzkim.</div>
 	{{/if}}
 	{{#if offerData.upperbody}}
-		<div class="disability-B"><img src="/img/tick.png" /></div>
+		<div class="disability-B"><i class="contrast fas fa-child"></i></div>
 		<div class="disability">Sprzyjamy osobom z niepełnosprawnościami górnych partii ciała.</div>
 	{{/if}}
 </div>

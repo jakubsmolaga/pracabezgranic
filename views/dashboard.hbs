@@ -1,13 +1,12 @@
 <link rel="stylesheet" href="/css/dashboard.css" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-<h1>Panel administracyjny profilu firmy {{username}}</h1>
-<h2>Twoje ogłoszenia:</h2>
+<h1 class="contrast">Panel administracyjny profilu firmy {{username}}</h1>
+<h2 class="contrast">Twoje ogłoszenia:</h2>
 {{#each offers}}
 <a class="link" href="/offers/{{this._id}}">
-	<div class="offer">
+	<div class="offer contrast-button">
 		<div class="offer-A">
-			<span class="offer-title">{{this.title}}</span>
-			<p class="offer-info">
+			<span class="offer-title contrast">{{this.title}}</span>
+			<p class="offer-info contrast">
 				<i class="fas fa-map-marker-alt"></i> {{this.city}}
 				<i class="fas fa-briefcase"></i> {{this.industry}}
 				<br class="mobile-only">
@@ -18,11 +17,11 @@
 		<div class="offer-B">
 			<form action="/editoffer" method="post">
 				<input type="text" name="offerId" value="{{this._id}}" hidden/>
-				<input class="button-edit" type="submit" value="EDYTUJ" />
+				<input class="button-edit contrast-button" type="submit" value="EDYTUJ" />
 			</form>
 			<form action="/removeoffer" method="post">
 				<input type="text" name="offerId" value="{{this._id}}" hidden/>
-				<input class="button-delete" type="submit" value="USUŃ" />
+				<input class="button-delete contrast-button" type="submit" value="USUŃ" />
 			</form>
 		</div>
 	</div>
@@ -30,7 +29,7 @@
 	{{else}}
 		<p>Aktualnie nie masz żadnych ogłoszeń :(</p>
 {{/each}}
-<p style="text-align:center"><a href="/newoffer"><button class="button">DODAJ OGŁOSZENIE</button></a></p>
+<p style="text-align:center"><a href="/newoffer"><button class="button contrast-button">DODAJ OGŁOSZENIE</button></a></p>
 <form action="/logout" method="post">
-	<p style="text-align:center"><input class="button" type="submit" value="WYLOGUJ" /></p>
+	<p style="text-align:center"><input class="button contrast-button" type="submit" value="WYLOGUJ" /></p>
 </form>

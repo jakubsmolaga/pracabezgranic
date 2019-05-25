@@ -19,9 +19,9 @@
 	padding-right: 1vw;
 }
 
-.disability-A img {
-	width: 2rem;
-	margin-bottom: -0.6rem;
+.disability-A i {
+	color: #006BB3;
+	font-size: 1.2rem;
 }
 
 .disability-B {
@@ -29,14 +29,14 @@
 	padding-right: 1vw;
 }
 
-.disability-B img {
-	width: 2rem;
-	margin-bottom: -0.6rem;
+.disability-B i {
+	color: #006BB3;
+	font-size: 1.2rem;
 }
 
 .disability {
 	display: inline-block;
-	width: 55vw;
+	width: 56vw;
 	font-size: 1.2rem;
 	margin-bottom: 1vw;
 }
@@ -92,22 +92,20 @@ p {
 		padding-right: 2vw;
 	}
 
-	.disability-A img {
-		width: 5vw;
-		margin-bottom: -1.1vw;
+	.disability-A i {
+		font-size: 3rem;
 	}
 	
 	.disability-B {
 		padding-right: 2vw;
 	}
 
-	.disability-B img {
-		width: 5vw;
-		padding-bottom: 3.5vw;
+	.disability-B i {
+		font-size: 3rem;
 	}
 
 	.disability {
-		width: 70vw;
+		width: 71vw;
 		font-size: 3rem;
 		margin-bottom: 2vw;
 	}

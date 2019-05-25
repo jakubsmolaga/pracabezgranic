@@ -1,12 +1,11 @@
 <link rel="stylesheet" href="/css/offers.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-<div style="float:left;margin-left:2vw"><h1>Ustawienia filtrowania</h1></div>
-<div style="float:right;margin-right:2vw"><button id="button">POKAŻ</button></div>
-<div class="filter" id="filter">
+<div class="filter-A"><h1 class="contrast">Ustawienia filtrowania</h1></div>
+<div class="filter-B"><i class="contrast fas fa-eye" id="show/hide"></i></div>
+<div class="filter contrast-header" id="filter">
 	<form action="/offers" method="post" id="form">
 		<div class="form">
 			<p>
-				<input type="text" name="city"/ value="{{city}}" placeholder="Dowolne miasto" /><select name="industry">
+				<input class="contrast-input" type="text" name="city"/ value="{{city}}" placeholder="Dowolne miasto" /><select class="contrast-input" name="industry">
 					<option value="0">Dowolna branża</option>
 					<option value="1">Architektura, budownictwo</option>
 					<option value="2">Biotechnologia</option>
@@ -34,7 +33,7 @@
 					<option value="24">Turystyka, hotele</option>
 					<option value="25">Usługi - inne</option>
 					<option value="26">Inna branża</option>
-				</select><select name="workTime">
+				</select><select class="contrast-input" name="workTime">
 					<option value="0">Dowolny wymiar pracy</option>
 					<option value="1">Pełny etat</option>
 					<option value="2">Część etatu</option>
@@ -49,19 +48,19 @@
 			<p><input type="checkbox" name="blind" {{#if blind}} checked {{/if}} />Dostosowane do osób niewidomych</p>
 			<p><input type="checkbox" name="deaf" {{#if deaf}} checked {{/if}} />Dostosowane do osób niesłyszących</p>
 		</div>
-		<input type="submit" value="FILTRUJ OFERTY" />
+		<input class="contrast-button" type="submit" value="FILTRUJ OFERTY" />
 	</form>
 </div>
 <div class="offers">
-	<h1>Lista aktualnych ofert</h1>
+	<h1 class="contrast">Lista aktualnych ofert</h1>
 	{{#each offers}}
 	<a href="/offers/{{this._id}}">
-		<div class="offer">
-			<span class="offer-title">{{this.title}}</span>
-			<p class="offer-info">
+		<div class="offer contrast-button">
+			<span class="offer-title contrast">{{this.title}}</span>
+			<p class="offer-info contrast">
 				<i class="fas fa-map-marker-alt"></i> {{this.city}}
 				<i class="fas fa-briefcase"></i> {{this.industry}}
-				<br class="mobile-only">
+				<br class="mobile-only"/>
 				<i class="fas fa-clock"></i> {{this.workTime}}
 				<i class="fas fa-calendar-alt"></i> Dodano {{formatDate this.timeStamp}}
 			</p>
@@ -75,11 +74,12 @@
 <script>
 
 	<!-- SEKCJA FILTROWANIA OFERT -->
-	var z = document.getElementById("button");
+	var z = document.getElementById("show/hide");
 	var v = document.getElementById("filter");
 	var q = document.getElementById("form");
 
 	z.onclick = function(event) {
+	z.classList.toggle('fa-eye-slash');
 	v.classList.toggle('open');
 	q.classList.toggle('open');
 	}

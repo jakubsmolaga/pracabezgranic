@@ -37,7 +37,7 @@
 	font-size: 1rem;
 }
 
-i {
+.offer i {
 	margin-left: 1vw;
 }
 
@@ -144,10 +144,6 @@ p {
 	box-shadow: 0vw 0vw 0.5vw 0vw rgba(0,0,0,0.5);
 }
 
-.mobile-only {
-	display: none;
-}
-
 /* --- WERSJA MOBILNA --- */
 @media only screen and (max-width: 768px) {
 
@@ -161,7 +157,7 @@ p {
 	/* INFORMACJE O OFERCIE */
 
 	.offer-A {
-		width: 75rem;
+		width: 100%;
 		padding: 1vw;
 	}
 
@@ -175,52 +171,14 @@ p {
 		font-size: 3.5rem;
 	}
 
-	i {
+	.offer i {
+		margin-top: 2vw;
 		margin-left: 1.5vw;
 	}
 
 	/* PRZYCISKI OFERTY */
 	.offer-B {
-		padding: 0.5vw;
-		width: 10vw;
-	}
-
-	.button-edit {
-		width: 9vw;
-		height: 3rem;
-		margin-bottom: 0.5vw;
-
-		border-style: solid;
-		border-width: 0.1rem;
-		border-color: #006BB3;
-
-		color: #006BB3;
-		font-family: Segoe UI Light;
-		font-weight: bold;
-		font-size: 1.5rem;
-
-		background: #FFFFFF;
-		transition: box-shadow 0.2s;
-		cursor: pointer;
-	}
-
-	.button-delete {
-		width: 9vw;
-		height: 3rem;
-		margin-top: 0.5vw;
-
-		border-style: solid;
-		border-width: 0.1rem;
-		border-color: #FF0000;
-
-		color: #FF0000;
-		font-family: Segoe UI Light;
-		font-weight: bold;
-		font-size: 1.5rem;
-
-		background: #FFFFFF;
-		transition: box-shadow 0.2s;
-		cursor: pointer;
+		display: none;	
 	}
 	
 	/* FORMATOWANIE TEKSTU */
@@ -236,8 +194,9 @@ p {
 	}
 
 	h2 {
-		font-size: 3.5rem;
+		font-size: 5rem;
 		padding-top: 5vw;
+		padding-bottom: 5vw;
 	}
 
 	p {
@@ -250,11 +209,5 @@ p {
 		width: 90vw;
 		height: 20vw;
 		font-size: 5rem;
-
 	}
-	
-	.mobile-only {
-		display: block;
-	}
-	
 }

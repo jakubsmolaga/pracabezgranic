@@ -1,13 +1,26 @@
-/* SEKCJA FILTOWANIA */
+/* SEKCJA FILTROWANIA */
 
 .filter {
 	margin: 0 auto;
 	width: 70vw;
-	height: 7vw;
+	height: 7rem;
 	padding: 2vw;
-	background: white;
+	background: #FFFFFF;
 	box-shadow: 0vw 0.5vw 0.5vw 0vh lightgrey;
 	transition: 0.1s;
+}
+
+.filter-A {
+	float: left;
+	margin-left: 2vw;
+}
+
+.filter-B {
+	float: right;
+	margin-top: 1.5vw;
+	margin-right: 3vw;
+	color: #006BB3;
+	font-size: 3rem;
 }
 
 .filter.open {
@@ -199,7 +212,7 @@ input[type=submit]:hover {
 	cursor: pointer;
 }
 
-i {
+.offer i {
 	margin-left: 1vw;
 }
 
@@ -233,6 +246,11 @@ i {
 		box-shadow: 0vw 1vw 1vh 0vh lightgrey;
 	}
 
+	.filter-B {
+		margin-top: 3.5vw;
+		font-size: 8rem;
+	}
+	
 	.filter.open {
 		height: 120rem;
 	}
