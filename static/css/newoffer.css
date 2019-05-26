@@ -164,7 +164,7 @@ input[type=checkbox]{
 /* PRZYCISK [DODAJ / ZAPISZ OGŁOSZENIE] */
 
 input[type=submit]{
-	width: 15rem;
+	width: 20rem;
 	height: 5rem;
 	padding: 0;
 	margin-top: 4vw;
