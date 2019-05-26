@@ -290,7 +290,7 @@ input[type=submit]:hover {
 	}
 	
 	.filter.open {
-		height: 120rem;
+		height: 122rem;
 	}
 	
 	.form p {
@@ -352,12 +352,10 @@ input[type=submit]:hover {
 	/* PRZYCISK [FILTRUJ OFERTY] */
 	
 	input[type=submit]{
-		float: none;
+		position: static;
 		width: 90vw;
 		height: 20vw;
-		
-		margin-top: 5vw;
-		margin-bottom: 5vw;
+		margin-top: 7vw;
 		font-size: 5rem;
 		border-width: 0.2vw;
 	}
