@@ -4,6 +4,7 @@ const mongodb = require('mongodb');
 const hbs     = require('hbs');
 const auth    = require('./auth');
 const offers  = require('./offers');
+const NAMES   = require('./NAMES');
 const PORT = process.env.PORT || 3000;
 const staticDirectoryPath = path.join(__dirname, '../static');
 const MongoClient = mongodb.MongoClient;
@@ -55,7 +56,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   });
   app.get('/offers', (req, res) => {
     offers.getAll(db).then((result) => {
-      render(req,res,'offers', {offers: result});
+      render(req,res,'offers', {offers: result, cities: NAMES.cities});
     });
   });
   app.get('/logout', (req, res) => {
@@ -117,6 +118,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
     if(req.body.city == '') delete req.body.city;
     offers.getAll(db, req.body).then((result) => {
       req.body.offers = result;
+      req.body.cities = NAMES.cities;
       render(req,res,'offers', req.body);
     });
   });

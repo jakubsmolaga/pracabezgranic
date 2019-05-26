@@ -5,7 +5,13 @@
 	<form action="/offers" method="post" id="form">
 		<div class="form">
 			<p>
-				<input class="contrast-input" type="text" name="city"/ value="{{city}}" placeholder="Dowolne miasto" /><select class="contrast-input" name="industry">
+				<input class="contrast-input" type="text" list="miasta" name="city"/ value="{{city}}" placeholder="Dowolne miasto" />
+				<datalist id="miasta">
+					{{#each cities}}
+					<option>{{this}}</option>
+					{{/each}}
+				</datalist>
+				<select class="contrast-input" name="industry">
 					<option value="0">Dowolna branża</option>
 					<option value="1">Architektura, budownictwo</option>
 					<option value="2">Biotechnologia</option>

@@ -28,6 +28,10 @@ let getById = async (offerId, db) => {
 
 let getAll = async (db, filters) => {
   if(filters && filters.workTime == 0) delete filters.workTime;
+  if(filters && filters.city) {
+    let tmp = filters.city.trim()
+    filters.city = tmp.charAt(0).toUpperCase() + tmp.slice(1);
+  }
   let offers = await db.collection('offers').find(filters);
   offers = await offers.toArray();
   for(offer of offers) offer.industry = NAMES.industry[offer.industry];
