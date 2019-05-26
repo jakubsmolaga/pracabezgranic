@@ -32,6 +32,7 @@ let getAll = async (db, filters) => {
   offers = await offers.toArray();
   for(offer of offers) offer.industry = NAMES.industry[offer.industry];
   for(offer of offers) offer.workTime = NAMES.workTime[offer.workTime];
+  offers.reverse();
   return offers;
 };
 

@@ -22,7 +22,7 @@
 
 			<!-- LOGO -->
 			<a class="logo contrast" href="/"><i class="fas fa-wheelchair"></i>Pracabezgranic.pl</a>
-			
+
 			<!-- PRZYCISK MENU (TRYB MOBILNY) -->
 			<div class="icon" id="icon">
 				<span class="X"></span>
@@ -38,25 +38,25 @@
 				</a><a class="contrast-2" onclick="ContrastBlack();"><i class="contrast-reverse fas fa-tint"></i>
 				</a><a class="contrast-3" onclick="ContrastYellow();"><i class="fas fa-tint"></i>
 				</a><br class="mobile-only">
-				
+
 				<a class="menu-button contrast">CZCIONKA:
 				</a><a class="font-1 contrast" onclick="FontDefault();">A
 				</a><a class="font-2 contrast" onclick="FontMedium();">A
 				</a><a class="font-3 contrast" onclick="FontLarge();">A
 				</a><br class="mobile-only"/>
-				
+
 				{{#if loggedIn}}
 				<a href="/dashboard"><i class="mobile-only contrast-icon fas fa-user-circle"></i>
 				</a><a class="menu-button contrast" href="/dashboard">MOJE KONTO
 				</a><a href="/dashboard"><i class="desktop-only contrast-icon fas fa-user-circle"></i>
 				</a><br class="mobile-only"/>
-				
+
 				{{else}}
 				<a href="/login"><i class="mobile-only contrast-icon fas fa-user-circle"></i>
 				</a><a class="menu-button contrast" href="/login">DLA FIRM
 				</a><a href="/login"><i class="desktop-only contrast-icon fas fa-user-circle"></i>
 				</a><br class="mobile-only"/>
-				
+
 				{{/if}}
 				<a href="/info"><i class="mobile-only contrast-icon fas fa-info-circle"></i>
 				</a><a class="menu-button contrast" href="/info">INFORMACJE
@@ -73,116 +73,7 @@
 		<!-- STOPKA -->
 		<div class="footer">&#169; 2019 ZSEIL</div>
 
-		<script type="text/javascript">
-
-			<!-- MENU (TRYB MOBILNY) -->
-			var x = document.getElementById("icon");
-			var y = document.getElementById("menu");
-
-			x.onclick = function(event) {
-				x.classList.toggle('open');
-				y.classList.toggle('open');
-			}
-			
-		</script>
-		
-		<script type="text/javascript">
-		
-			<!-- ROZMIAR CZCIONKI -->
-			function FontDefault() {
-			  document.getElementById('html').style.fontSize = '1vw';
-			}
-			function FontMedium() {
-			  document.getElementById('html').style.fontSize = '1.2vw';
-			}
-			function FontLarge() {
-			  document.getElementById('html').style.fontSize = '1.4vw';
-			}
-			
-		</script>
-		
-		<script type="text/javascript">
-		
-			<!-- KONTRAST -->
-			function ContrastDefault(){
-			let elementy = document.getElementsByClassName("contrast");
-			for(e of elementy) e.style.color = "";
-			for(e of elementy) e.style.background = "";
-			elementy = document.getElementsByClassName("X");
-			for(e of elementy) e.style.background = "";
-			elementy = document.getElementsByClassName("contrast-container");
-			for(e of elementy) e.style.boxShadow = "";
-			for(e of elementy) e.style.background = "";
-			elementy = document.getElementsByClassName("contrast-header");
-			for(e of elementy) e.style.background = "";
-			for(e of elementy) e.style.boxShadow = "";
-			elementy = document.getElementsByClassName("contrast-button");
-			for(e of elementy) e.style.color = "";
-			for(e of elementy) e.style.borderColor = "";
-			for(e of elementy) e.style.background = "";
-			elementy = document.getElementsByClassName("contrast-input");
-			for(e of elementy) e.style.color = "";
-			for(e of elementy) e.style.borderColor = "";
-			for(e of elementy) e.style.background = "";
-			elementy = document.getElementsByClassName("contrast-reverse");
-			for(e of elementy) e.style.color = "";
-			elementy = document.getElementsByClassName("contrast-icon");
-			for(e of elementy) e.style.color = "";
-			}
-			
-			function ContrastBlack(){
-			let elementy = document.getElementsByClassName("contrast");
-			for(e of elementy) e.style.color = "white";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("X");
-			for(e of elementy) e.style.background = "white";
-			elementy = document.getElementsByClassName("contrast-container");
-			for(e of elementy) e.style.boxShadow = "none";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("contrast-header");
-			for(e of elementy) e.style.background = "black";
-			for(e of elementy) e.style.boxShadow = "0vw 0.1vw 0vw white";
-			elementy = document.getElementsByClassName("contrast-button");
-			for(e of elementy) e.style.color = "white";
-			for(e of elementy) e.style.borderColor = "white";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("contrast-input");
-			for(e of elementy) e.style.color = "white";
-			for(e of elementy) e.style.borderColor = "white";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("contrast-icon");
-			for(e of elementy) e.style.color = "white";
-			elementy = document.getElementsByClassName("contrast-reverse");
-			for(e of elementy) e.style.color = "white";
-			}
-			
-			function ContrastYellow(){
-			let elementy = document.getElementsByClassName("contrast");
-			for(e of elementy) e.style.color = "yellow";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("X");
-			for(e of elementy) e.style.background = "yellow";
-			elementy = document.getElementsByClassName("contrast-container");
-			for(e of elementy) e.style.boxShadow = "none";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("contrast-header");
-			for(e of elementy) e.style.background = "black";
-			for(e of elementy) e.style.boxShadow = "0vw 0.1vw 0vw yellow";
-			elementy = document.getElementsByClassName("contrast-button");
-			for(e of elementy) e.style.color = "yellow";
-			for(e of elementy) e.style.borderColor = "yellow";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("contrast-input");
-			for(e of elementy) e.style.color = "yellow";
-			for(e of elementy) e.style.borderColor = "yellow";
-			for(e of elementy) e.style.background = "black";
-			elementy = document.getElementsByClassName("contrast-icon");
-			for(e of elementy) e.style.color = "yellow";
-			elementy = document.getElementsByClassName("contrast-reverse");
-			for(e of elementy) e.style.color = "white";
-			}
-			
-		</script>	
+		<script src="js/layout.js"></script>
 
 	</body>
 </html>

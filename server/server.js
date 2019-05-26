@@ -120,6 +120,9 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
       render(req,res,'offers', req.body);
     });
   });
+  app.get('/info', (req, res) => {
+    return res.render('info');
+  });
 
   app.get('*', (req,res) => res.redirect('/'));
   app.listen(PORT, ()=>console.log(`server running on port ${PORT}`));
