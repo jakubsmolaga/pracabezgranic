@@ -8,6 +8,7 @@
 .info-A {
 	display: inline-block;
 	width: 10rem;
+	margin-bottom: 2vw;
 }
 
 .info-B {
@@ -63,6 +64,13 @@ h2 {
 	margin: 0;
 }
 
+h3 {
+	color: #006BB3;
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin: 0;
+}
+
 p {
 	font-size: 1.2rem;
 	margin-top: 0.5vw;
@@ -71,8 +79,8 @@ p {
 
 .description {
 	text-align: justify;
-	margin-top: 2vw;
-	margin-bottom: 2vw;
+	margin-top: 0.5vw;
+	margin-bottom: 3vw;
 }
 
 /* --- WERSJA MOBILNA --- */
@@ -86,6 +94,7 @@ p {
 
 	.info-A {
 		width: 30vw;
+		margin-bottom: 5vw;
 	}
 
 	.disability-A {
@@ -119,10 +128,14 @@ p {
 	}
 	
 	h2 {
-		font-size: 3.5rem;
+		font-size: 4rem;
 		text-align: left;
-		padding-top: 3vh;
-		padding-bottom: 1vw;
+		padding-top: 3vw;
+		padding-bottom: 2vw;
+	}
+	
+	h3 {
+		font-size: 4rem;
 	}
 	
 	p {
@@ -130,7 +143,7 @@ p {
 	}
 
 	.description {
-		margin-top: 5vw;
-		margin-bottom: 5vw;
+		margin-top: 1vw;
+		margin-bottom: 6vw;
 	}
 }

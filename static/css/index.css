@@ -45,9 +45,13 @@ button {
 	font-family: Segoe UI Light;
 	font-weight: bold;
 	font-size: 1.7rem;
-
+	
+	-webkit-transition: box-shadow 0.1s;
+	-moz-transition: box-shadow 0.1s;
+	-o-transition: box-shadow 0.1s;
+	transition: box-shadow 0.1s;
+	
 	background: white;
-	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
 

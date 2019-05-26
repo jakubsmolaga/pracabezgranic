@@ -7,6 +7,10 @@
 	padding: 2vw;
 	background: #FFFFFF;
 	box-shadow: 0vw 0.5vw 0.5vw 0vh lightgrey;
+	
+	-webkit-transition:0.1s;
+	-moz-transition: 0.1s;
+	-o-transition:0.1s;
 	transition: 0.1s;
 }
 
@@ -78,10 +82,10 @@ input[type=text]{
 	border-width: 0.1vw;
 	border-color: #CCCCCC;
 	
-	-webkit-transition: border 0.5s;
-	-moz-transition: border 0.5s;
-	-o-transition: border 0.5s;
-	transition: border 0.5s;
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
 }
 
 input:focus {
@@ -92,6 +96,26 @@ input:hover {
 }
 
 ::placeholder {
+	color: #000000;
+	font-family: Segoe UI Light;
+	font-size: 1.2vw;
+}
+::-webkit-input-placeholder {
+	color: #000000;
+	font-family: Segoe UI Light;
+	font-size: 1.2vw;
+}
+::-moz-placeholder {
+	color: #000000;
+	font-family: Segoe UI Light;
+	font-size: 1.2vw;
+}
+:-moz-placeholder {
+	color: #000000;
+	font-family: Segoe UI Light;
+	font-size: 1.2vw;
+}
+:-ms-input-placeholder {
 	color: #000000;
 	font-family: Segoe UI Light;
 	font-size: 1.2vw;
@@ -111,10 +135,10 @@ select {
 	border-width: 0.1vw;
 	border-color: #CCCCCC;
 	
-	-webkit-transition: border 0.5s;
-	-moz-transition: border 0.5s;
-	-o-transition: border 0.5s;
-	transition: border 0.5s;
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
 }
 
 select:focus {
@@ -152,9 +176,13 @@ button {
 	font-family: Segoe UI Light;
 	font-weight: bold;
 	font-size: 1.5rem;
-
+	
+	-webkit-transition: box-shadow 0.1s;
+	-moz-transition: box-shadow 0.1s;
+	-o-transition: box-shadow 0.1s;
+	transition: box-shadow 0.1s;
+	
 	background: white;
-	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
 
@@ -165,11 +193,13 @@ button:hover {
 /* PRZYCISK [FILTRUJ OFERTY] */
 
 input[type=submit] {
-	float:right;
+	position: absolute;
+	right:17vw;
 	width: 15rem;
 	height: 4rem;
+	margin-top: 7.5rem;
 	padding: 0;
-	margin-top: 7.5vw;
+	z-index: 1;
 
 	border-style: solid;
 	border-width: 0.1rem;
@@ -179,9 +209,13 @@ input[type=submit] {
 	font-family: Segoe UI Light;
 	font-weight: bold;
 	font-size: 1.5rem;
-
+	
+	-webkit-transition: box-shadow 0.1s;
+	-moz-transition: box-shadow 0.1s;
+	-o-transition: box-shadow 0.1s;
+	transition: box-shadow 0.1s;
+	
 	background: #FFFFFF;
-	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
 
@@ -206,9 +240,13 @@ input[type=submit]:hover {
 	border-style: solid;
 	border-width: 0.1rem;
 	border-color: #006BB3;
-
+	
+	-webkit-transition: box-shadow 0.1s;
+	-moz-transition: box-shadow 0.1s;
+	-o-transition: box-shadow 0.1s;
+	transition: box-shadow 0.1s;
+	
 	background: #FFFFFF;
-	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
 

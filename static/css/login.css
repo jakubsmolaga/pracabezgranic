@@ -59,10 +59,10 @@ input {
 	border-width: 0.1vw;
 	border-color: #CCCCCC;
 	
-	-webkit-transition: border 0.5s;
-	-moz-transition: border 0.5s;
-	-o-transition: border 0.5s;
-	transition: border 0.5s;
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
 }
 
 input:focus {
@@ -93,9 +93,13 @@ input[type=submit]{
 	font-family: Segoe UI Light;
 	font-weight: bold;
 	font-size: 1.5rem;
-
+	
+	-webkit-transition: box-shadow 0.1s;
+	-moz-transition: box-shadow 0.1s;
+	-o-transition: box-shadow 0.1s;
+	transition: box-shadow 0.1s;
+	
 	background: #FFFFFF;
-	transition: box-shadow 0.2s;
 	cursor: pointer;
 }
 
