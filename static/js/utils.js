@@ -1,7 +1,7 @@
 function setCookie(key, value){
   key = escape(key);
   value = escape(value)
-  var cookie = key + '=' + value;
+  var cookie = key + '=' + value + ';path=/';
   document.cookie = cookie;
 }
 
