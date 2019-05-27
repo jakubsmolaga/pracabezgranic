@@ -83,6 +83,19 @@ p {
 	margin-bottom: 3vw;
 }
 
+.regulations {
+	text-align: justify;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+}
+
+.regulations-point {
+	text-align: justify;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+	margin-left: 2vw;
+}
+
 /* PRZYCISKI [POWRÓT] */
 
 button {

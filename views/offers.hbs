@@ -5,13 +5,11 @@
 	<form action="/offers" method="post" id="form">
 		<div class="form">
 			<p>
-				<input class="contrast-input" type="text" list="miasta" name="city"/ value="{{city}}" placeholder="Dowolne miasto" />
-				<datalist id="miasta">
+				<input class="contrast-input" type="text" list="miasta" name="city"/ value="{{city}}" placeholder="Dowolne miasto" /><datalist id="miasta">
 					{{#each cities}}
 					<option>{{this}}</option>
 					{{/each}}
-				</datalist>
-				<select class="contrast-input" name="industry" id="industrySelector">
+				</datalist><select class="contrast-input" name="industry" id="industrySelector">
 					<option value="0">Dowolna branża</option>
 					<option value="1">Architektura, budownictwo</option>
 					<option value="2">Biotechnologia</option>
@@ -73,7 +71,7 @@
 		</div>
 	</a>
 	{{else}}
-	<p>Nie znaleziono żadnych ogłoszeń :(</p>
+		<div class="no-offers">Trochę tu pusto... Nie znaleziono żadnych ogłoszeń :(</div>
 	{{/each}}
 </div>
 <script src="js/offers.js"></script>

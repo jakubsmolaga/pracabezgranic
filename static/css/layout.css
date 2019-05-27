@@ -37,7 +37,7 @@ a {
 
 .logo {
 	float: left;
-	margin-left: 7.2vw;
+	margin-left: 8.5vw;
 	margin-top: 0.3rem;
 
 	color: #006BB3;
@@ -46,16 +46,12 @@ a {
 	text-decoration: none;
 }
 
-.logo i {
-	font-size: 1.6rem;
-}
-
 /* MENU */
 
 .menu {
 	float: right;
 	margin-top: 0.5vw;
-	margin-right: 7.2vw;
+	margin-right: 8.5vw;
 }
 
 .menu a {
@@ -184,10 +180,6 @@ a {
 		margin-top: 0.5rem;
 		margin-bottom: 1.5rem;
 		margin-left: 5vw;
-	}
-
-	.logo i{
-		font-size: 4.8rem;
 	}
 
 	/* PRZYCISK MENU */
