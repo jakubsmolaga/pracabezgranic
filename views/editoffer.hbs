@@ -8,15 +8,20 @@
 		<p>Opis:</p>
 		<p><textarea class="contrast-input" name="description" rows="8" cols="80" maxlength="2000" placeholder="Opis ogłoszenia">{{offer.description}}</textarea></p>
 		<p>Wymagania:</p>
-		<p><textarea class="contrast-input" name="requirements" maxlength="2000" placeholder="Nasze wymagania to..."></textarea></p>
+		<p><textarea class="contrast-input" name="requirements" maxlength="2000" placeholder="Nasze wymagania to...">{{offer.requirements}}</textarea></p>
 		<p>Oferujemy:</p>
-		<p><textarea class="contrast-input" name="benefits" maxlength="2000" placeholder="Oferujemy..."></textarea></p>
+		<p><textarea class="contrast-input" name="benefits" maxlength="2000" placeholder="Oferujemy...">{{offer.benefits}}</textarea></p>
 		<p>Miejscowość</p>
-		<p><input class="contrast-input" type="text" name="city" value="{{offer.city}}" placeholder="Miejscowość"/></p>
+		<p><input class="contrast-input" type="text" list="miasta" name="city" value="{{offer.city}}" placeholder="Miejscowość"/></p>
+		<datalist id="miasta">
+			{{#each cities}}
+			<option>{{this}}</option>
+			{{/each}}
+		</datalist>
 		<p>Email kontaktowy</p>
 	    <p><input class="contrast-input" type="text" name="email" value="{{offer.email}}" placeholder="Email"/></p>
 		<p>Branża</p>
-	    <select class="contrast-input" name="industry">
+	    <select class="contrast-input" name="industry" id="industrySelector">
 			<option value="1">Architektura, budownictwo</option>
 			<option value="2">Biotechnologia</option>
 			<option value="3">Chemia</option>
@@ -45,8 +50,7 @@
 			<option value="26">Inna branża</option>
 		</select>
 		<p>Wymiar pracy</p>
-		<select class="contrast-input" name="workTime">
-			<option value="0">Dowolny Wymiar</option>
+		<select class="contrast-input" name="workTime" id="workTime">
 			<option value="1">Pełny Etat</option>
 			<option value="2">Część Etatu</option>
 			<option value="3">Praca Czasowa</option>
@@ -61,3 +65,13 @@
 		<p style="text-align:center"><input class="contrast-button" type="submit" value="ZAPISZ ZMIANY" /></p>
 	</div>
 </form>
+<script>
+	{{#if offer.industryId}}
+	let industry = {{offer.industryId}};
+	document.getElementById("industrySelector").selectedIndex = industry-1;
+	{{/if}}
+	{{#if offer.workTimeId}}
+	let workTime = {{offer.workTimeId}};
+	document.getElementById("workTime").selectedIndex = workTime-1;
+	{{/if}}
+</script>

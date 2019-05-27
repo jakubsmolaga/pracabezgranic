@@ -19,6 +19,7 @@ app.use(express.urlencoded({extended: true}));
 let render = (req,res,page,data) => {
   if(!data) data = {};
   data.loggedIn = req.session.userId;
+  data.cities = NAMES.cities;
   res.render(page, data);
 }
 hbs.registerHelper('formatDate', (timestamp) => {
@@ -118,7 +119,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
     if(req.body.city == '') delete req.body.city;
     offers.getAll(db, req.body).then((result) => {
       req.body.offers = result;
-      req.body.cities = NAMES.cities;
+      req.body.filters = 'yes';
       render(req,res,'offers', req.body);
     });
   });

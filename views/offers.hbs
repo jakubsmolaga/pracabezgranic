@@ -11,7 +11,7 @@
 					<option>{{this}}</option>
 					{{/each}}
 				</datalist>
-				<select class="contrast-input" name="industry">
+				<select class="contrast-input" name="industry" id="industrySelector">
 					<option value="0">Dowolna branża</option>
 					<option value="1">Architektura, budownictwo</option>
 					<option value="2">Biotechnologia</option>
@@ -39,7 +39,7 @@
 					<option value="24">Turystyka, hotele</option>
 					<option value="25">Usługi - inne</option>
 					<option value="26">Inna branża</option>
-				</select><select class="contrast-input" name="workTime">
+				</select><select class="contrast-input" name="workTime" id="workTime">
 					<option value="0">Dowolny wymiar pracy</option>
 					<option value="1">Pełny etat</option>
 					<option value="2">Część etatu</option>
@@ -76,5 +76,17 @@
 	<p>Nie znaleziono żadnych ogłoszeń :(</p>
 	{{/each}}
 </div>
-
 <script src="js/offers.js"></script>
+<script>
+	{{#if filters}}
+	document.getElementById('show/hide').click();
+	{{/if}}
+	{{#if industry}}
+	let industry = {{industry}};
+	document.getElementById("industrySelector").selectedIndex = industry;
+	{{/if}}
+	{{#if workTime}}
+	let workTime = {{workTime}};
+	document.getElementById("workTime").selectedIndex = workTime;
+	{{/if}}
+</script>

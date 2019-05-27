@@ -11,7 +11,12 @@
 		<p>Oferujemy:</p>
 		<p><textarea class="contrast-input" name="benefits" maxlength="2000" placeholder="Oferujemy..."></textarea></p>
 		<p>Miejscowość</p>
-		<p><input class="contrast-input" type="text" name="city" placeholder="Miejscowość" /></p>
+		<p><input class="contrast-input" type="text" list="miasta" name="city" placeholder="Miejscowość" /></p>
+		<datalist id="miasta">
+			{{#each cities}}
+			<option>{{this}}</option>
+			{{/each}}
+		</datalist>
 		<p>Email kontaktowy</p>
 		<p><input class="contrast-input" type="text" name="email" placeholder="Email" /></p>
 		<p>Branża</p>

@@ -21,8 +21,10 @@ let getById = async (offerId, db) => {
   if (!data) return {error: 'To ogłoszenie nie istnieje'};
   let user = await db.collection('users').findOne({_id: ObjectId(data.userId)});
   data.username = user.username;
+  data.industryId = data.industry;
+  data.workTimeId = data.workTime;
   data.industry = NAMES.industry[data.industry];
-  data.industry = NAMES.workTime[data.workTime];
+  data.workTime = NAMES.workTime[data.workTime];
   return {data};
 };
 
@@ -34,15 +36,21 @@ let getAll = async (db, filters) => {
   }
   let offers = await db.collection('offers').find(filters);
   offers = await offers.toArray();
-  for(offer of offers) offer.industry = NAMES.industry[offer.industry];
-  for(offer of offers) offer.workTime = NAMES.workTime[offer.workTime];
+  for(offer of offers) {
+    offer.industryId = offer.industry;
+    offer.industry = NAMES.industry[offer.industry];
+  }
+  for(offer of offers) {
+    offer.workTimeId = offer.workTime;
+    offer.workTime = NAMES.workTime[offer.workTime];
+  }
   offers.reverse();
   return offers;
 };
 
 let getByPageNumber = async (pageNumber, db) => {
   let from = (pageNumber-1)*RESULTS_PER_PAGE;
-
+  //TODO write this function
 };
 
 let getByUserId = async (db, userId) => {
@@ -55,7 +63,7 @@ let removeById = async (offerId, db) => {
 };
 
 let update = async (offer, db) => {
-  let validationInfo = validateAndNormalize(data);
+  let validationInfo = validateAndNormalize(offer);
   if(validationInfo.error) return {error: validationInfo};
   let idToUpdate = offer._id;
   delete offer._id;
