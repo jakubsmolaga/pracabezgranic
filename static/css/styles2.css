@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+	background: url("/img/background2.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body {
+    margin:0;
+	font-family: Segoe UI Light, Tahoma, Sans-serif;
+}
+
+/* GŁÓWNY KONTENER */
+
+.container {
+	width: 70vw;
+	background-color: rgba(255,255,255,0.9);
+	box-shadow: 1vw 1vw 0.8vw 0vw rgba(0,0,0,0.3);
+	margin: 0 auto;
+	margin-top: 5vw;
+	padding-bottom: 2vw;
+}
+
+.container-news {
+	width: 60vw;
+	margin: 0 auto;
+	margin-top: 4vw;
+	margin-bottom: 4vw;
+}
+
+.news {
+	width: 20vw;
+	display: inline-block;
+}
+
+/* STOPKA */
+
+.footer {
+	width: 70vw;
+	font-size: 1vw;
+
+	margin: 0 auto;
+	margin-top: 4vw;
+	margin-bottom: 4vw;
+}
+
+/* FORMATOWANIE TEKSTU */
+
+h1 {
+	color: #006BB3;
+	font-size: 2.5vw;
+	font-weight: normal;
+	text-align: center;
+
+	padding-top: 2vw;
+	margin:0;
+}
+
+p {
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+i {
+	color: #006BB3;
+	font-size: 4vw;
+}
+
+/* --- WERSJA MOBILNA --- */
+@media only screen and (max-width: 768px) {
+
+
+	/* GŁÓWNY KONTENER ZAWARTOŚCI */
+
+	.container {
+		width: 95vw;
+		margin-top: 3vw;
+		padding-bottom: 5vw;
+	}
+
+	.container-news {
+		width: 95vw;
+		margin-top: 10vw;
+		margin-bottom: 15vw;
+	}
+
+	.news {
+		width: 95vw;
+		display: block;
+	}
+
+	/* STOPKA */
+
+	.footer {
+		width: 95vw;
+		font-size: 3vw;
+	}
+
+	/* FORMATOWANIE TEKSTU */
+
+	h1 {
+		font-size: 8vw;
+		padding-top: 5vw;
+	}
+
+	p {
+		font-size: 5vw;
+		margin-left: 8vw;
+		margin-right: 8vw;
+	}
+
+	i {
+		font-size: 15vw;
+		margin-top: 5vw;
+	}
+
+}

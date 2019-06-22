@@ -1,3 +1,6 @@
+///////////////// PARAMETERS///////////////////
+const WORK_IN_PROGRESS = true;
+//////////////////////////////////////////////
 const express = require('express');
 const path    = require('path');
 const mongodb = require('mongodb');
@@ -35,6 +38,10 @@ hbs.registerHelper('formatDate', (timestamp) => {
 MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
   if(error) return console.log('Unable to connect to database!');
   const db = client.db(clusterName);
+
+  if(WORK_IN_PROGRESS){    
+    app.get('*', (req, res) => res.render('work_in_progress', {layout: false}));
+  }
 
   app.get('/', (req, res) => render(req,res,'index'));
   app.get('/register', (req, res) => {
