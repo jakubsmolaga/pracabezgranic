@@ -1,5 +1,4 @@
 const utils = require('./utils');
-const INDUSTRY_IDS = require('./INDUSTRY_IDS');
 const NAMES = require('./NAMES.js')
 const ObjectId = require('mongodb').ObjectId;
 const RESULTS_PER_PAGE = 5;
@@ -19,12 +18,12 @@ let getById = async (offerId, db) => {
   if(!ObjectId.isValid(offerId)) return {error: 'To ogłoszenie nie istnieje'}
   let data = await db.collection('offers').findOne({_id: ObjectId(offerId)});
   if (!data) return {error: 'To ogłoszenie nie istnieje'};
+  data.workTime = NAMES.workTime[data.workTime];
   let user = await db.collection('users').findOne({_id: ObjectId(data.userId)});
   data.username = user.username;
   data.industryId = data.industry;
   data.workTimeId = data.workTime;
   data.industry = NAMES.industry[data.industry];
-  data.workTime = NAMES.workTime[data.workTime];
   return {data};
 };
 
