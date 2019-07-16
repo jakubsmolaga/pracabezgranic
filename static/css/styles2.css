@@ -2,6 +2,16 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: Montserrat-Regular;
+	src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: Montserrat-light;
+	src: url(/fonts/Montserrat-Light.ttf);
+}
+
 html {
 	min-height: 100%;
 	background: url("/img/background2.jpg");
@@ -9,11 +19,11 @@ html {
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
+	font-family: Montserrat-Light;
 }
 
 body {
     margin:0;
-	font-family: Segoe UI Light, Tahoma, Sans-serif;
 }
 
 /* GŁÓWNY KONTENER */
@@ -55,6 +65,7 @@ body {
 h1 {
 	color: #006BB3;
 	font-size: 2.5vw;
+	font-family: Montserrat-Regular;
 	font-weight: normal;
 	text-align: center;
 
@@ -113,8 +124,8 @@ i {
 
 	p {
 		font-size: 5vw;
-		margin-left: 8vw;
-		margin-right: 8vw;
+		margin-left: 3vw;
+		margin-right: 3vw;
 	}
 
 	i {
